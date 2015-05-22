@@ -21,5 +21,14 @@ This can be a useful shortcut when a function returns the opposite of what you n
 compact <- function(x) Filter(Negate(is.null), x)
 foo <- list(NULL, 1, 5, NULL)
 compact(foo)
+
+# Create a function that evalues the even-ness of a number
+is_even <- function(n) return(n \%\% 2 == 0)
+is_even(4)
+is_even(5)
+# Use Negate to create a function that evaluates the odd-ness of a number
+is_odd <- Negate(is_even)
+is_odd(4)
+is_odd(5)
 }
 
