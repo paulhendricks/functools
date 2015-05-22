@@ -73,3 +73,56 @@ Plucker <- function(field) {
   }
 }
 
+#' Withdraw
+#'
+#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
+#' This can be a useful shortcut when a function returns the opposite of what you need.
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#' new_model <- lm(mtcars, formula = hp ~ wt)
+#' getCoefficients <- Plucker("coefficients")
+#' getCoefficients(new_model)
+Withdraw <- function(obj, variables) {
+  if (length(variables) == 1) return(obj[[variables]])
+  Withdraw(obj[[variables[1]]], variables[-1])
+}
+
+#' Min
+#'
+#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
+#' This can be a useful shortcut when a function returns the opposite of what you need.
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#' new_model <- lm(mtcars, formula = hp ~ wt)
+#' getCoefficients <- Plucker("coefficients")
+#' getCoefficients(new_model)
+Min <- function(obj, variables) {
+  if (length(variables) == 1) return(obj[[variables]])
+  Withdraw(obj[[variables[1]]], variables[-1])
+}
+
+#' Max
+#'
+#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
+#' This can be a useful shortcut when a function returns the opposite of what you need.
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#' new_model <- lm(mtcars, formula = hp ~ wt)
+#' getCoefficients <- Plucker("coefficients")
+#' getCoefficients(new_model)
+Max <- function(obj, variables) {
+  if (length(variables) == 1) return(obj[[variables]])
+  Withdraw(obj[[variables[1]]], variables[-1])
+}
+
+
+
