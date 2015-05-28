@@ -7,15 +7,18 @@
 Identity(x)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{x}{an object.}
 }
 \value{
-the negation of that function.
+the object.
 }
 \description{
-\code{Identity()}
+\code{Identity()} returns itself.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
+# Return itself:
+Identity(5)
+Identity(mean)
+Identity(lm(data = mtcars, mpg ~ cyl))
 }
 

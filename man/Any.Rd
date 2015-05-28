@@ -4,7 +4,7 @@
 \alias{Any}
 \title{Any}
 \usage{
-Any(x, f)
+Any(x, f, na.rm = FALSE)
 }
 \arguments{
 \item{x}{an object.}
@@ -24,5 +24,13 @@ Any(mtcars, is.character) # FALSE
 mtcars$am <- factor(mtcars$am)
 Any(mtcars, is.numeric) # TRUE
 Any(mtcars, is.factor) # TRUE
+
+# Handles NAs and NULLs
+Any(list(NA, "3", NULL), is.numeric) # FALSE
+Any(list(NA, "3", NULL, 5), is.numeric) #TRUE
+
+# Use na.rm = TRUE to remove NULLS
+Any(list(NA, FALSE), Identity) # NA
+Any(list(NA, FALSE), Identity, na.rm = TRUE) # FALSE
 }
 

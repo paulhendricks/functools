@@ -6,16 +6,14 @@
 \usage{
 Na()
 }
-\arguments{
-\item{f}{a predicate function.}
-}
 \value{
-the negation of that function.
+NA.
 }
 \description{
-\code{Null()}
+\code{Na()} is a function that returns NA.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
+# Na() returns NA:
+Na()
 }
 

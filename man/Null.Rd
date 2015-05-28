@@ -6,16 +6,14 @@
 \usage{
 Null()
 }
-\arguments{
-\item{f}{a predicate function.}
-}
 \value{
-the negation of that function.
+NULL.
 }
 \description{
-\code{Null()}
+\code{Null()} is a function that returns NULL.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
+# Null() returns NULL:
+Null()
 }
 

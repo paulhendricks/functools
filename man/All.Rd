@@ -4,7 +4,7 @@
 \alias{All}
 \title{All}
 \usage{
-All(x, f)
+All(x, f, na.rm = FALSE)
 }
 \arguments{
 \item{x}{an object.}
@@ -24,5 +24,13 @@ All(mtcars, is.character) # FALSE
 mtcars$am <- factor(mtcars$am)
 All(mtcars, is.numeric) # FALSE
 All(mtcars, is.factor) # FALSE
+
+# Handles NAs and NULLs
+All(list(NA, "3", NULL), is.numeric) # FALSE
+All(list(NA, "3", NULL, 5), is.numeric) # FALSE
+
+# Use na.rm = TRUE to remove NULLS
+All(list(NA, TRUE), Identity) # NA
+All(list(NA, TRUE), Identity, na.rm = TRUE) # TRUE
 }
 

@@ -6,16 +6,14 @@
 \usage{
 False()
 }
-\arguments{
-\item{f}{a predicate function.}
-}
 \value{
-the negation of that function.
+FALSE.
 }
 \description{
-\code{False()}
+\code{False()} is a function that returns FALSE.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
+# False() returns FALSE:
+False()
 }
 

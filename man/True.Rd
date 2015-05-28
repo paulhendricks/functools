@@ -6,16 +6,14 @@
 \usage{
 True()
 }
-\arguments{
-\item{f}{a predicate function.}
-}
 \value{
-the negation of that function.
+TRUE.
 }
 \description{
-\code{True()}
+\code{True()} is a function that returns TRUE.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
+# True() returns TRUE:
+True()
 }
 

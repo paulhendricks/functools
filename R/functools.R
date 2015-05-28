@@ -6,12 +6,15 @@ NULL
 
 #' Identity
 #'
-#' \code{Identity()}
+#' \code{Identity()} returns itself.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @param x an object.
+#' @return the object.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
+#' # Return itself:
+#' Identity(5)
+#' Identity(mean)
+#' Identity(lm(data = mtcars, mpg ~ cyl))
 #'
 Identity <- function(x) {
   return(x)
@@ -19,52 +22,48 @@ Identity <- function(x) {
 
 #' True
 #'
-#' \code{True()}
+#' \code{True()} is a function that returns TRUE.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @return TRUE.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#'
+#' # True() returns TRUE:
+#' True()
 True <- function() {
   return(TRUE)
 }
 
 #' False
 #'
-#' \code{False()}
+#' \code{False()} is a function that returns FALSE.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @return FALSE.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#'
+#' # False() returns FALSE:
+#' False()
 False <- function() {
   return(FALSE)
 }
 
 #' Null
 #'
-#' \code{Null()}
+#' \code{Null()} is a function that returns NULL.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @return NULL.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#'
+#' # Null() returns NULL:
+#' Null()
 Null <- function() {
   return(NULL)
 }
 
 #' Na
 #'
-#' \code{Null()}
+#' \code{Na()} is a function that returns NA.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @return NA.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#'
+#' # Na() returns NA:
+#' Na()
 Na <- function() {
   return(NA)
 }
@@ -116,25 +115,6 @@ Truthy <- function(x) {
   return(x == True() && Existy(x))
 }
 
-#' All
-#'
-#' \code{All()}
-#'
-#' @param x an object.
-#' @param f a predicate function.
-#' @return a logical value.
-#' @examples
-#' # comment here
-#' All(mtcars, is.numeric) # TRUE
-#' All(mtcars, is.character) # FALSE
-#' mtcars$am <- factor(mtcars$am)
-#' All(mtcars, is.numeric) # FALSE
-#' All(mtcars, is.factor) # FALSE
-All <- function(x, f) {
-  force(f); f <- match.fun(f)
-  return(all(unlist(lapply(x, f))))
-}
-
 #' Any
 #'
 #' \code{Any()}
@@ -149,11 +129,45 @@ All <- function(x, f) {
 #' mtcars$am <- factor(mtcars$am)
 #' Any(mtcars, is.numeric) # TRUE
 #' Any(mtcars, is.factor) # TRUE
-Any <- function(x, f) {
+#'
+#' # Handles NAs and NULLs
+#' Any(list(NA, "3", NULL), is.numeric) # FALSE
+#' Any(list(NA, "3", NULL, 5), is.numeric) #TRUE
+#'
+#' # Use na.rm = TRUE to remove NULLS
+#' Any(list(NA, FALSE), Identity) # NA
+#' Any(list(NA, FALSE), Identity, na.rm = TRUE) # FALSE
+Any <- function(x, f, na.rm = FALSE) {
   force(f); f <- match.fun(f)
-  return(any(unlist(lapply(x, f))))
+  return(any(unlist(lapply(x, f)), na.rm = na.rm))
 }
 
+#' All
+#'
+#' \code{All()}
+#'
+#' @param x an object.
+#' @param f a predicate function.
+#' @return a logical value.
+#' @examples
+#' # comment here
+#' All(mtcars, is.numeric) # TRUE
+#' All(mtcars, is.character) # FALSE
+#' mtcars$am <- factor(mtcars$am)
+#' All(mtcars, is.numeric) # FALSE
+#' All(mtcars, is.factor) # FALSE
+#'
+#' # Handles NAs and NULLs
+#' All(list(NA, "3", NULL), is.numeric) # FALSE
+#' All(list(NA, "3", NULL, 5), is.numeric) # FALSE
+#'
+#' # Use na.rm = TRUE to remove NULLS
+#' All(list(NA, TRUE), Identity) # NA
+#' All(list(NA, TRUE), Identity, na.rm = TRUE) # TRUE
+All <- function(x, f, na.rm = FALSE) {
+  force(f); f <- match.fun(f)
+  return(all(unlist(lapply(x, f)), na.rm = na.rm))
+}
 
 #' Compact
 #'
@@ -194,18 +208,20 @@ Reject <- function (f, x)
 #' \code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
 #' The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @param default default value.
+#' @param f any function that throws an error.
+#' @param silent logical: should the report of error messages be suppressed?.
+#' @return a function that returns a default value when there's an error.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' new_model <- lm(mtcars, formula = hp ~ wt)
-#' getCoefficients <- Plucker("coefficients")
-#' getCoefficients(new_model)
-Failwith <- function(default = NULL, f, quiet = FALSE) {
+#' # Comment
+#'
+#'
+#'
+FailWith <- function(default = NULL, f, silent = FALSE) {
   force(f); f <- match.fun(f)
   return(function(...) {
     out <- default
-    try(out <- f(...), silent = quiet)
+    try(out <- f(...), silent = silent)
     return(out)
   })
 }
