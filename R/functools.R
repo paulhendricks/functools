@@ -75,7 +75,7 @@ Compact <- function(x) return(Filter(Negate(is.null), x))
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 Failwith <- function(default = NULL, f, quiet = FALSE) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(function(...) {
     out <- default
     try(out <- f(...), silent = quiet)
@@ -95,7 +95,8 @@ Failwith <- function(default = NULL, f, quiet = FALSE) {
 #' lu <- Compose(length, unique)
 #' lu(c(1:10, 5:15, 20:25))
 Compose <- function(f, g) {
-  force(f); force(g)
+  force(f); f <- match.fun(f)
+  force(g); g <- match.fun(g)
   return(function(...) f(g(...)))
 }
 
@@ -112,7 +113,7 @@ Compose <- function(f, g) {
 #' foo <- list(NULL, 1, 5, NULL)
 #' compact(foo)
 Splat <- function(f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(function(vector) {
     return(f(vector))
   })
@@ -173,7 +174,7 @@ Withdraw <- function(obj, fields) {
 #' # This comparison function prefers values that begin with l
 #' Best(letters, function(x, y) return(x[1] == "l"))
 Finder <- function(x, f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(Reduce(function(x, y) {
     return(ifelse(f(x, y), x, y))
   }, x))
@@ -194,7 +195,7 @@ Finder <- function(x, f) {
 #' # This comparison function prefers values that begin with l
 #' Best(letters, function(x, y) return(x[1] == "l"))
 Best <- function(x, f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(Reduce(function(x, y) {
     return(ifelse(f(x, y), x, y))
   }, x))
@@ -213,7 +214,7 @@ Best <- function(x, f) {
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 Min <- function(x, f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }
 
@@ -230,7 +231,7 @@ Min <- function(x, f) {
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 Max <- function(x, f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }
 
@@ -247,7 +248,7 @@ Max <- function(x, f) {
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 Repeat <- function(x, f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }
 
@@ -264,7 +265,7 @@ Repeat <- function(x, f) {
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 Repeatedly <- function(x, f) {
-  force(f)
+  force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }
 
@@ -282,7 +283,8 @@ Repeatedly <- function(x, f) {
 #' function(n) { return(n <= 1024) },
 #' 1)
 IterateUntil <- function(f, check, init) {
-  force(f); force(check)
+  force(f); f <- match.fun(f)
+  force(check); check <- match.fun(check)
   ret <- list()
   result <- f(init)
   while(check(result)) {
