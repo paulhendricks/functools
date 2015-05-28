@@ -131,6 +131,25 @@ Truthy <- function(x) {
 #'
 Compact <- function(x) return(Filter(Negate(is.null), x))
 
+#' Reject
+#'
+#' \code{Compact()} takes a vector x and returns it with all NULL values filtered out.
+#'
+#' @param x a vector.
+#' @examples
+#' # Removes all null elements from a vector:
+#' a <- list(NULL, 1, 5, NULL)
+#' Compact(a)
+#'
+#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
+#' Compact(b)
+#'
+Reject <- function (f, x)
+{
+  ind <- as.logical(unlist(lapply(x, Negate(f))))
+  x[!is.na(ind) & ind]
+}
+
 #' Failwith
 #'
 #' \code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
