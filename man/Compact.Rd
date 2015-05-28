@@ -7,19 +7,17 @@
 Compact(x)
 }
 \arguments{
-\item{f}{a predicate function.}
-}
-\value{
-the negation of that function.
+\item{x}{a vector.}
 }
 \description{
-\code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-This can be a useful shortcut when a function returns the opposite of what you need.
+\code{Compact()} takes a vector x and returns it with all NULL values filtered out.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
-compact <- function(x) Filter(Negate(is.null), x)
-foo <- list(NULL, 1, 5, NULL)
-compact(foo)
+# Removes all null elements from a vector:
+a <- list(NULL, 1, 5, NULL)
+Compact(a)
+
+b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
+Compact(b)
 }
 

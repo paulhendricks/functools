@@ -32,16 +32,17 @@ Negate <- function(f) {
 
 #' Compact
 #'
-#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-#' This can be a useful shortcut when a function returns the opposite of what you need.
+#' \code{Compact()} takes a vector x and returns it with all NULL values filtered out.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @param x a vector.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' compact <- function(x) Filter(Negate(is.null), x)
-#' foo <- list(NULL, 1, 5, NULL)
-#' compact(foo)
+#' # Removes all null elements from a vector:
+#' a <- list(NULL, 1, 5, NULL)
+#' Compact(a)
+#'
+#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
+#' Compact(b)
+#'
 Compact <- function(x) Filter(Negate(is.null), x)
 
 #' Splat
@@ -121,7 +122,7 @@ Best <- function(x, fun) {
 
 #' Min
 #'
-#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
+#' \code{Min()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
 #' This can be a useful shortcut when a function returns the opposite of what you need.
 #'
 #' @param f a predicate function.
@@ -131,9 +132,10 @@ Best <- function(x, fun) {
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Min <- function(obj, variables) {
-  if (length(variables) == 1) return(obj[[variables]])
-  Withdraw(obj[[variables[1]]], variables[-1])
+Min <- function(x) {
+  return(Reduce(function(x, y) {
+    return(ifelse(x > y, x, y))
+  }, x))
 }
 
 #' Max
