@@ -27,7 +27,7 @@ Identity <- function(x) {
 #' @examples
 #' # Returns if a value exists or not:
 #' Existy(4) # TRUE
-#' Existy("foo) # TRUE
+#' Existy("foo") # TRUE
 #' Existy(NULL) # FALSE
 #' Existy(NA) # FALSE
 #'
@@ -56,6 +56,10 @@ Existy <- function(x) {
 #' Truthy(FALSE) # FALSE
 #' Truthy(NULL) # FALSE
 #' Truthy(NA) # FALSE
+#' Truthy(2L) # TRUE
+#' Truthy(1L) # TRUE
+#' Truthy(0L) # FALSE
+#' Truthy("a") # TRUE
 #'
 Truthy <- function(x) {
   return(x != FALSE && Existy(x))

@@ -18,7 +18,7 @@ a logical value.
 \examples{
 # Returns if a value exists or not:
 Existy(4) # TRUE
-Existy("foo) # TRUE
+Existy("foo") # TRUE
 Existy(NULL) # FALSE
 Existy(NA) # FALSE
 
