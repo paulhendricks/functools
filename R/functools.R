@@ -6,8 +6,7 @@ NULL
 
 #' Identity
 #'
-#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-#' This can be a useful shortcut when a function returns the opposite of what you need.
+#' \code{Identity()}
 #'
 #' @param f a predicate function.
 #' @return  the negation of that function.
@@ -16,6 +15,58 @@ NULL
 #'
 Identity <- function(x) {
   return(x)
+}
+
+#' True
+#'
+#' \code{True()}
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#'
+True <- function() {
+  return(TRUE)
+}
+
+#' False
+#'
+#' \code{False()}
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#'
+False <- function() {
+  return(FALSE)
+}
+
+#' Null
+#'
+#' \code{Null()}
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#'
+Null <- function() {
+  return(NULL)
+}
+
+#' Na
+#'
+#' \code{Null()}
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#'
+Na <- function() {
+  return(NA)
 }
 
 #' Existy
@@ -62,9 +113,8 @@ Existy <- function(x) {
 #' Truthy("a") # TRUE
 #'
 Truthy <- function(x) {
-  return(x != FALSE && Existy(x))
+  return(x == True() && Existy(x))
 }
-
 
 #' Compact
 #'
