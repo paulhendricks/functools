@@ -4,7 +4,7 @@
 \alias{Min}
 \title{Min}
 \usage{
-Min(x)
+Min(x, f)
 }
 \arguments{
 \item{f}{a predicate function.}

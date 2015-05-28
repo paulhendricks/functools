@@ -2,21 +2,38 @@
 % Please edit documentation in R/functools.R
 \name{Best}
 \alias{Best}
-\title{Best}
+\title{Finder}
 \usage{
-Best(x, fun)
+Best(x, f)
+
+Best(x, f)
 }
 \arguments{
+\item{x}{a vector.}
+
 \item{x}{a vector.}
 }
 \value{
 a two-argument function that returns a logical constant.
+
+a two-argument function that returns a logical constant.
 }
 \description{
-\code{best()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
+\code{Finder()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
+and returns the that function reduced over that vector. It is assumed that:
+* The two-argument function evaluates its two arguments and returns TRUE if the first argument is "better" than the second argument.
+* The two-argument function knows how to "unwrap" its arguments.
+
+\code{Best()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
 and returns the that function reduced over that vector.
 }
 \examples{
+# Simulate the behavior of max with numerics
+Best(1:10, function(x, y) return(x > y))
+# Simulate the behavior of min with numerics
+Best(1:10, function(x, y) return(x < y))
+# This comparison function prefers values that begin with l
+Best(letters, function(x, y) return(x[1] == "l"))
 # Simulate the behavior of max with numerics
 Best(1:10, function(x, y) return(x > y))
 # Simulate the behavior of min with numerics

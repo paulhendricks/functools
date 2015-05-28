@@ -4,17 +4,18 @@
 \alias{Withdraw}
 \title{Withdraw}
 \usage{
-Withdraw(obj, variables)
+Withdraw(obj, fields)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{obj}{a predicate function.}
+
+\item{fields}{a character vector of fields.}
 }
 \value{
 the negation of that function.
 }
 \description{
-\code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-This can be a useful shortcut when a function returns the opposite of what you need.
+Withdraw
 }
 \examples{
 # Create a function, compact(), that removes all null elements from a list:

@@ -4,7 +4,7 @@
 \alias{Max}
 \title{Max}
 \usage{
-Max(obj, variables)
+Max(x, f)
 }
 \arguments{
 \item{f}{a predicate function.}

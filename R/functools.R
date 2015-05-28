@@ -85,24 +85,49 @@ Plucker <- function(field) {
 
 #' Withdraw
 #'
-#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-#' This can be a useful shortcut when a function returns the opposite of what you need.
 #'
-#' @param f a predicate function.
+#' @param obj a predicate function.
+#' @param fields a character vector of fields.
 #' @return  the negation of that function.
 #' @examples
 #' # Create a function, compact(), that removes all null elements from a list:
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Withdraw <- function(obj, variables) {
-  if (length(variables) == 1) return(obj[[variables]])
-  Withdraw(obj[[variables[1]]], variables[-1])
+Withdraw <- function(obj, fields) {
+  if (length(fields) == 1) {
+    return(obj[[fields]])
+  } else {
+    return(Withdraw(obj[[fields[1]]], fields[-1]))
+  }
+}
+
+#' Finder
+#'
+#' \code{Finder()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
+#' and returns the that function reduced over that vector. It is assumed that:
+#' * The two-argument function evaluates its two arguments and returns TRUE if the first argument is "better" than the second argument.
+#' * The two-argument function knows how to "unwrap" its arguments.
+#'
+#' @param x a vector.
+#' @return  a two-argument function that returns a logical constant.
+#' @examples
+#' # Simulate the behavior of max with numerics
+#' Best(1:10, function(x, y) return(x > y))
+#' # Simulate the behavior of min with numerics
+#' Best(1:10, function(x, y) return(x < y))
+#' # This comparison function prefers values that begin with l
+#' Best(letters, function(x, y) return(x[1] == "l"))
+Best <- function(x, f) {
+  force(f)
+  return(Reduce(function(x, y) {
+    return(ifelse(f(x, y), x, y))
+  }, x))
 }
 
 #' Best
 #'
-#' \code{best()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
+#' \code{Best()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
 #' and returns the that function reduced over that vector.
 #'
 #' @param x a vector.
@@ -114,9 +139,10 @@ Withdraw <- function(obj, variables) {
 #' Best(1:10, function(x, y) return(x < y))
 #' # This comparison function prefers values that begin with l
 #' Best(letters, function(x, y) return(x[1] == "l"))
-Best <- function(x, fun) {
+Best <- function(x, f) {
+  force(f)
   return(Reduce(function(x, y) {
-    return(ifelse(fun(x, y), x, y))
+    return(ifelse(f(x, y), x, y))
   }, x))
 }
 
@@ -132,10 +158,9 @@ Best <- function(x, fun) {
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Min <- function(x) {
-  return(Reduce(function(x, y) {
-    return(ifelse(x > y, x, y))
-  }, x))
+Min <- function(x, f) {
+  force(f)
+  return(1L) # Placeholder
 }
 
 #' Max
@@ -150,9 +175,9 @@ Min <- function(x) {
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Max <- function(obj, variables) {
-  if (length(variables) == 1) return(obj[[variables]])
-  Withdraw(obj[[variables[1]]], variables[-1])
+Max <- function(x, f) {
+  force(f)
+  return(1L) # Placeholder
 }
 
 #' Failwith
@@ -169,26 +194,27 @@ Max <- function(obj, variables) {
 #' getCoefficients(new_model)
 Failwith <- function(default = NULL, f, quiet = FALSE) {
   force(f)
-  function(...) {
+  return(function(...) {
     out <- default
     try(out <- f(...), silent = quiet)
-    out
-  }
+    return(out)
+  })
 }
 
 #' Compose
 #'
-#' \code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
-#' The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
+#' \code{Compose()} takes two functions that throws an error into a function that returns a default value when there’s an error.
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @param f a function.
+#' @param g a function.
+#' @return a function.
 #' @examples
-#' # Compose length and unique
+#' # Compose a function using length and unique
 #' lu <- Compose(length, unique)
 #' lu(c(1:10, 5:15, 20:25))
 Compose <- function(f, g) {
-  function(...) f(g(...))
+  force(f); force(g)
+  return(function(...) f(g(...)))
 }
 
 
