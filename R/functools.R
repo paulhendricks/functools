@@ -4,6 +4,20 @@
 #' @name functools
 NULL
 
+#' Identity
+#'
+#' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
+#' This can be a useful shortcut when a function returns the opposite of what you need.
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#'
+Identity <- function(x) {
+  return(x)
+}
+
 #' Negate
 #'
 #' \code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
@@ -27,7 +41,7 @@ NULL
 #' is_odd(5)
 Negate <- function(f) {
   force(f)
-  function(...) !f(...)
+  return(function(...) !f(...))
 }
 
 #' Compact
@@ -43,7 +57,44 @@ Negate <- function(f) {
 #' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
 #' Compact(b)
 #'
-Compact <- function(x) Filter(Negate(is.null), x)
+Compact <- function(x) return(Filter(Negate(is.null), x))
+
+#' Failwith
+#'
+#' \code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
+#' The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#' new_model <- lm(mtcars, formula = hp ~ wt)
+#' getCoefficients <- Plucker("coefficients")
+#' getCoefficients(new_model)
+Failwith <- function(default = NULL, f, quiet = FALSE) {
+  force(f)
+  return(function(...) {
+    out <- default
+    try(out <- f(...), silent = quiet)
+    return(out)
+  })
+}
+
+#' Compose
+#'
+#' \code{Compose()} takes two functions that throws an error into a function that returns a default value when there’s an error.
+#'
+#' @param f a function.
+#' @param g a function.
+#' @return a function.
+#' @examples
+#' # Compose a function using length and unique
+#' lu <- Compose(length, unique)
+#' lu(c(1:10, 5:15, 20:25))
+Compose <- function(f, g) {
+  force(f); force(g)
+  return(function(...) f(g(...)))
+}
 
 #' Splat
 #'
@@ -59,9 +110,9 @@ Compact <- function(x) Filter(Negate(is.null), x)
 #' compact(foo)
 Splat <- function(f) {
   force(f)
-  function(vector) {
+  return(function(vector) {
     return(f(vector))
-  }
+  })
 }
 
 #' Plucker
@@ -77,10 +128,10 @@ Splat <- function(f) {
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 Plucker <- function(field) {
-  function(obj) {
+  return(function(obj) {
     if (is.null(obj[[field]])) stop(paste0(field, " does not exist."))
     obj[[field]]
-  }
+  })
 }
 
 #' Withdraw
@@ -118,7 +169,7 @@ Withdraw <- function(obj, fields) {
 #' Best(1:10, function(x, y) return(x < y))
 #' # This comparison function prefers values that begin with l
 #' Best(letters, function(x, y) return(x[1] == "l"))
-Best <- function(x, f) {
+Finder <- function(x, f) {
   force(f)
   return(Reduce(function(x, y) {
     return(ifelse(f(x, y), x, y))
@@ -180,9 +231,9 @@ Max <- function(x, f) {
   return(1L) # Placeholder
 }
 
-#' Failwith
+#' Repeat
 #'
-#' \code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
+#' \code{Repeat()} turns a function that throws an error into a function that returns a default value when there’s an error.
 #' The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
 #'
 #' @param f a predicate function.
@@ -192,29 +243,52 @@ Max <- function(x, f) {
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Failwith <- function(default = NULL, f, quiet = FALSE) {
+Repeat <- function(x, f) {
   force(f)
-  return(function(...) {
-    out <- default
-    try(out <- f(...), silent = quiet)
-    return(out)
-  })
+  return(1L) # Placeholder
 }
 
-#' Compose
+#' Repeatedly
 #'
-#' \code{Compose()} takes two functions that throws an error into a function that returns a default value when there’s an error.
+#' \code{Repeat()} turns a function that throws an error into a function that returns a default value when there’s an error.
+#' The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
+#'
+#' @param f a predicate function.
+#' @return  the negation of that function.
+#' @examples
+#' # Create a function, compact(), that removes all null elements from a list:
+#' new_model <- lm(mtcars, formula = hp ~ wt)
+#' getCoefficients <- Plucker("coefficients")
+#' getCoefficients(new_model)
+Repeatedly <- function(x, f) {
+  force(f)
+  return(1L) # Placeholder
+}
+
+#' IterateUntil
+#'
+#' \code{IterateUntil}
 #'
 #' @param f a function.
-#' @param g a function.
-#' @return a function.
+#' @param check a function.
+#' @param init a valie.
+#' @return a list.
 #' @examples
-#' # Compose a function using length and unique
-#' lu <- Compose(length, unique)
-#' lu(c(1:10, 5:15, 20:25))
-Compose <- function(f, g) {
-  force(f); force(g)
-  return(function(...) f(g(...)))
+#' # Iterate until the check condition is met
+#' IterateUntil(function(n) { return(n + n) },
+#' function(n) { return(n <= 1024) },
+#' 1)
+IterateUntil <- function(f, check, init) {
+  force(f); force(check)
+  ret <- list()
+  result <- f(init)
+  while(check(result)) {
+    ret <- c(ret, result)
+    result <- f(result)
+  }
+  return(ret)
 }
+
+
 
 
