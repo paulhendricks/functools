@@ -116,6 +116,45 @@ Truthy <- function(x) {
   return(x == True() && Existy(x))
 }
 
+#' All
+#'
+#' \code{All()}
+#'
+#' @param x an object.
+#' @param f a predicate function.
+#' @return a logical value.
+#' @examples
+#' # comment here
+#' All(mtcars, is.numeric) # TRUE
+#' All(mtcars, is.character) # FALSE
+#' mtcars$am <- factor(mtcars$am)
+#' All(mtcars, is.numeric) # FALSE
+#' All(mtcars, is.factor) # FALSE
+All <- function(x, f) {
+  force(f); f <- match.fun(f)
+  return(all(unlist(lapply(x, f))))
+}
+
+#' Any
+#'
+#' \code{Any()}
+#'
+#' @param x an object.
+#' @param f a predicate function.
+#' @return a logical value.
+#' @examples
+#' # comment here
+#' Any(mtcars, is.numeric) # TRUE
+#' Any(mtcars, is.character) # FALSE
+#' mtcars$am <- factor(mtcars$am)
+#' Any(mtcars, is.numeric) # TRUE
+#' Any(mtcars, is.factor) # TRUE
+Any <- function(x, f) {
+  force(f); f <- match.fun(f)
+  return(any(unlist(lapply(x, f))))
+}
+
+
 #' Compact
 #'
 #' \code{Compact()} takes a vector x and returns it with all NULL values filtered out.
