@@ -7,16 +7,19 @@
 Truthy(x)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{x}{an object.}
 }
 \value{
-the negation of that function.
+a logical value.
 }
 \description{
-\code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-This can be a useful shortcut when a function returns the opposite of what you need.
+\code{Truthy()}
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
+# Returns if a value exists or not:
+Truthy(TRUE) # TRUE
+Truthy(FALSE) # FALSE
+Truthy(NULL) # FALSE
+Truthy(NA) # FALSE
 }
 
