@@ -124,20 +124,20 @@ Truthy <- function(x) {
 #' @return a logical value.
 #' @examples
 #' # comment here
-#' Any(mtcars, is.numeric) # TRUE
-#' Any(mtcars, is.character) # FALSE
+#' Any(is.numeric, mtcars) # TRUE
+#' Any(is.character, mtcars) # FALSE
 #' mtcars$am <- factor(mtcars$am)
-#' Any(mtcars, is.numeric) # TRUE
-#' Any(mtcars, is.factor) # TRUE
+#' Any(is.numeric, mtcars) # TRUE
+#' Any(is.factor, mtcars) # TRUE
 #'
 #' # Handles NAs and NULLs
-#' Any(list(NA, "3", NULL), is.numeric) # FALSE
-#' Any(list(NA, "3", NULL, 5), is.numeric) #TRUE
+#' Any(is.numeric, list(NA, "3", NULL)) # FALSE
+#' Any(is.numeric, list(NA, "3", NULL, 5)) #TRUE
 #'
 #' # Use na.rm = TRUE to remove NULLS
-#' Any(list(NA, FALSE), Identity) # NA
-#' Any(list(NA, FALSE), Identity, na.rm = TRUE) # FALSE
-Any <- function(x, f, na.rm = FALSE) {
+#' Any(Identity, list(NA, FALSE)) # NA
+#' Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
+Any <- function(f, x, na.rm = FALSE) {
   force(f); f <- match.fun(f)
   return(any(unlist(lapply(x, f)), na.rm = na.rm))
 }
@@ -164,14 +164,14 @@ Any <- function(x, f, na.rm = FALSE) {
 #' # Use na.rm = TRUE to remove NULLS
 #' All(list(NA, TRUE), Identity) # NA
 #' All(list(NA, TRUE), Identity, na.rm = TRUE) # TRUE
-All <- function(x, f, na.rm = FALSE) {
+All <- function(f, x, na.rm = FALSE) {
   force(f); f <- match.fun(f)
   return(all(unlist(lapply(x, f)), na.rm = na.rm))
 }
 
 #' Compact
 #'
-#' \code{Compact()} takes a vector x and returns it with all NULL values filtered out.
+#' \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
 #'
 #' @param x a vector.
 #' @examples
@@ -182,11 +182,11 @@ All <- function(x, f, na.rm = FALSE) {
 #' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
 #' Compact(b)
 #'
-Compact <- function(x) return(Filter(Negate(is.null), x))
+Compact <- function(x) return(Filter(Negate(Existy), x))
 
 #' Reject
 #'
-#' \code{Compact()} takes a vector x and returns it with all NULL values filtered out.
+#' \code{Reject()} takes a vector x and returns it with all NULL values filtered out.
 #'
 #' @param x a vector.
 #' @examples
@@ -390,7 +390,7 @@ Max <- function(x, f) {
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Repeat <- function(x, f) {
+Repeat <- function(f, x) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }
@@ -407,7 +407,7 @@ Repeat <- function(x, f) {
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
-Repeatedly <- function(x, f) {
+Repeatedly <- function(f, x) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }
@@ -435,6 +435,40 @@ IterateUntil <- function(f, check, init) {
     result <- f(result)
   }
   return(ret)
+}
+
+#' Apply
+#'
+#' \code{Apply}
+#'
+#' @param f a function.
+#' @param check a function.
+#' @param init a valie.
+#' @return a list.
+#' @examples
+#' # Iterate until the check condition is met
+#' IterateUntil(function(n) { return(n + n) },
+#' function(n) { return(n <= 1024) },
+#' 1)
+Apply <- function(f, x, margin, ...) {
+  return(apply(X = x, MARGIN = margin, FUN = f, ...))
+}
+
+#' Lapply
+#'
+#' \code{Lapply}
+#'
+#' @param f a function.
+#' @param check a function.
+#' @param init a valie.
+#' @return a list.
+#' @examples
+#' # Iterate until the check condition is met
+#' IterateUntil(function(n) { return(n + n) },
+#' function(n) { return(n <= 1024) },
+#' 1)
+Lapply <- function(f, x, margin, ...) {
+  return(apply(X = x, MARGIN = margin, FUN = f, ...))
 }
 
 

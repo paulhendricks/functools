@@ -4,7 +4,7 @@
 \alias{Repeatedly}
 \title{Repeatedly}
 \usage{
-Repeatedly(x, f)
+Repeatedly(f, x)
 }
 \arguments{
 \item{f}{a predicate function.}

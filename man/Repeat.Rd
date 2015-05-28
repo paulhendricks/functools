@@ -4,7 +4,7 @@
 \alias{Repeat}
 \title{Repeat}
 \usage{
-Repeat(x, f)
+Repeat(f, x)
 }
 \arguments{
 \item{f}{a predicate function.}

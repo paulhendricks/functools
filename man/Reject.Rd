@@ -10,7 +10,7 @@ Reject(f, x)
 \item{x}{a vector.}
 }
 \description{
-\code{Compact()} takes a vector x and returns it with all NULL values filtered out.
+\code{Reject()} takes a vector x and returns it with all NULL values filtered out.
 }
 \examples{
 # Removes all null elements from a vector:

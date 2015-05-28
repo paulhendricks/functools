@@ -4,12 +4,12 @@
 \alias{All}
 \title{All}
 \usage{
-All(x, f, na.rm = FALSE)
+All(f, x, na.rm = FALSE)
 }
 \arguments{
-\item{x}{an object.}
-
 \item{f}{a predicate function.}
+
+\item{x}{an object.}
 }
 \value{
 a logical value.

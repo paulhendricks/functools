@@ -4,12 +4,12 @@
 \alias{Any}
 \title{Any}
 \usage{
-Any(x, f, na.rm = FALSE)
+Any(f, x, na.rm = FALSE)
 }
 \arguments{
-\item{x}{an object.}
-
 \item{f}{a predicate function.}
+
+\item{x}{an object.}
 }
 \value{
 a logical value.
@@ -19,18 +19,18 @@ a logical value.
 }
 \examples{
 # comment here
-Any(mtcars, is.numeric) # TRUE
-Any(mtcars, is.character) # FALSE
+Any(is.numeric, mtcars) # TRUE
+Any(is.character, mtcars) # FALSE
 mtcars$am <- factor(mtcars$am)
-Any(mtcars, is.numeric) # TRUE
-Any(mtcars, is.factor) # TRUE
+Any(is.numeric, mtcars) # TRUE
+Any(is.factor, mtcars) # TRUE
 
 # Handles NAs and NULLs
-Any(list(NA, "3", NULL), is.numeric) # FALSE
-Any(list(NA, "3", NULL, 5), is.numeric) #TRUE
+Any(is.numeric, list(NA, "3", NULL)) # FALSE
+Any(is.numeric, list(NA, "3", NULL, 5)) #TRUE
 
 # Use na.rm = TRUE to remove NULLS
-Any(list(NA, FALSE), Identity) # NA
-Any(list(NA, FALSE), Identity, na.rm = TRUE) # FALSE
+Any(Identity, list(NA, FALSE)) # NA
+Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
 }
 
