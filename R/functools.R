@@ -169,6 +169,76 @@ All <- function(f, x, na.rm = FALSE) {
   return(all(unlist(lapply(x, f)), na.rm = na.rm))
 }
 
+#' Partial apply a function, filling in some arguments.
+#'
+#' Partial function application allows you to modify a function by pre-filling some of the arguments. It is particularly useful in conjunction with functionals and other function operators.
+#'
+#' @param _f a function. For the output source to read well, this should be an be a named function. This argument has the weird (non-syntactic) name _f so it doesn't accidentally capture any argument names begining with f.
+#' @param ... named arguments to f that should be partially applied.
+#' @param .env the environment of the created function. Defaults to parent.frame and you should rarely need to modify this.
+#' @param .lazy If TRUE arguments evaluated lazily, if FALSE, evaluated when partial is called.
+#' @examples
+#' # Removes all null elements from a vector:
+#' a <- list(NULL, 1, 5, NULL)
+#' Compact(a)
+#'
+#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
+#' Compact(b)
+#'
+Partial <- function (`_f`, ..., .env = parent.frame(), .lazy = TRUE)
+{
+  stopifnot(is.function(`_f`))
+  if (.lazy) {
+    fcall <- substitute(`_f`(...))
+  }
+  else {
+    fcall <- make_call(substitute(`_f`), .args = list(...))
+  }
+  fcall[[length(fcall) + 1]] <- quote(...)
+  args <- list(... = quote(expr = ))
+  make_function(args, fcall, .env)
+}
+
+#' make_function
+#'
+#' \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
+#'
+#' @param x a vector.
+#' @examples
+#' # Removes all null elements from a vector:
+#' a <- list(NULL, 1, 5, NULL)
+#' Compact(a)
+#'
+#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
+#' Compact(b)
+#'
+make_function <- function (args, body, env = parent.frame())
+{
+  args <- as.pairlist(args)
+  stopifnot(all_named(args), is.language(body))
+  env <- to_env(env)
+  eval(call("function", args, body), env)
+}
+
+#' make_call
+#'
+#' \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
+#'
+#' @param x a vector.
+#' @examples
+#' # Removes all null elements from a vector:
+#' a <- list(NULL, 1, 5, NULL)
+#' Compact(a)
+#'
+#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
+#' Compact(b)
+#'
+make_call <- function (f, ..., .args = list()) {
+  if (is.character(f))
+    f <- as.name(f)
+  as.call(c(f, ..., .args))
+}
+
 #' Compact
 #'
 #' \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
@@ -182,7 +252,7 @@ All <- function(f, x, na.rm = FALSE) {
 #' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
 #' Compact(b)
 #'
-Compact <- function(x) return(Filter(Negate(Existy), x))
+Compact <- function(x) return(Filter(Existy, x))
 
 #' Reject
 #'
