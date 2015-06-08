@@ -11,7 +11,7 @@ Lapply(f, x, margin, ...)
 
 \item{check}{a function.}
 
-\item{init}{a valie.}
+\item{init}{a value.}
 }
 \value{
 a list.
