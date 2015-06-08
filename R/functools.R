@@ -70,12 +70,13 @@ Na <- function() {
 
 #' Existy
 #'
-#' \code{Existy()}
+#' \code{Existy()} returns TRUE or FALSE if an object exists or not.
+#' An object exists if it is not NULL or NA.
 #'
 #' @param x an object.
 #' @return a logical value.
 #' @examples
-#' # Returns if a value exists or not:
+#' # Some examples:
 #' Existy(4) # TRUE
 #' Existy("foo") # TRUE
 #' Existy(NULL) # FALSE
@@ -96,7 +97,8 @@ Existy <- function(x) {
 
 #' Truthy
 #'
-#' \code{Truthy()}
+#' \code{Truthy()} returns TRUE or FALSE if an object is TRUE or not.
+#' An object is is "TRUE" if it is exists and is TRUE.
 #'
 #' @param x an object.
 #' @return a logical value.
@@ -112,7 +114,7 @@ Existy <- function(x) {
 #' Truthy("a") # TRUE
 #'
 Truthy <- function(x) {
-  return(x == True() && Existy(x))
+  return(Existy(x) && x == True())
 }
 
 #' Any
@@ -538,9 +540,22 @@ Apply <- function(f, x, margin, ...) {
 #' function(n) { return(n <= 1024) },
 #' 1)
 Lapply <- function(f, x, margin, ...) {
-  return(apply(X = x, MARGIN = margin, FUN = f, ...))
+  return(lapply(X = x, FUN = f, ...))
 }
 
 
-
+#' Value Matching
+#'
+#' %notin% is a more intuitive interface as a binary operator, which returns a logical vector indicating if there is a match or not for its left operand.
+#'
+#' @param x vector or NULL: the values to be matched. Long vectors are supported.
+#' @param table vector or NULL: the values to be matched against. Long vectors are not supported
+#' @return A vector of the same length as x.
+#' @examples
+#' # Some examples:
+#' "bc" %notin% letters # TRUE
+#' "b" %notin% letters # FALSE
+#' "c" %notin% letters # FALSE
+#'
+`%notin%` <- Negate(`%in%`)
 

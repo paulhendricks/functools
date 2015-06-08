@@ -13,10 +13,11 @@ Existy(x)
 a logical value.
 }
 \description{
-\code{Existy()}
+\code{Existy()} returns TRUE or FALSE if an object exists or not.
+An object exists if it is not NULL or NA.
 }
 \examples{
-# Returns if a value exists or not:
+# Some examples:
 Existy(4) # TRUE
 Existy("foo") # TRUE
 Existy(NULL) # FALSE

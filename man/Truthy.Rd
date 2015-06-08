@@ -13,7 +13,8 @@ Truthy(x)
 a logical value.
 }
 \description{
-\code{Truthy()}
+\code{Truthy()} returns TRUE or FALSE if an object is TRUE or not.
+An object is is "TRUE" if it is exists and is TRUE.
 }
 \examples{
 # Returns if a value exists or not:
