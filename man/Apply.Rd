@@ -20,9 +20,6 @@ a list.
 \code{Apply}
 }
 \examples{
-# Iterate until the check condition is met
-IterateUntil(function(n) { return(n + n) },
-function(n) { return(n <= 1024) },
-1)
+Some examples:
 }
 

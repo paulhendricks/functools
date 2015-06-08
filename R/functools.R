@@ -180,12 +180,10 @@ All <- function(f, x, na.rm = FALSE) {
 #' @param .env the environment of the created function. Defaults to parent.frame and you should rarely need to modify this.
 #' @param .lazy If TRUE arguments evaluated lazily, if FALSE, evaluated when partial is called.
 #' @examples
-#' # Removes all null elements from a vector:
-#' a <- list(NULL, 1, 5, NULL)
-#' Compact(a)
+#' Some examples:
 #'
-#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
-#' Compact(b)
+#'
+#'
 #'
 Partial <- function (`_f`, ..., .env = parent.frame(), .lazy = TRUE)
 {
@@ -207,12 +205,10 @@ Partial <- function (`_f`, ..., .env = parent.frame(), .lazy = TRUE)
 #'
 #' @param x a vector.
 #' @examples
-#' # Removes all null elements from a vector:
-#' a <- list(NULL, 1, 5, NULL)
-#' Compact(a)
+#' Some examples:
 #'
-#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
-#' Compact(b)
+#'
+#'
 #'
 make_function <- function (args, body, env = parent.frame())
 {
@@ -228,12 +224,10 @@ make_function <- function (args, body, env = parent.frame())
 #'
 #' @param x a vector.
 #' @examples
-#' # Removes all null elements from a vector:
-#' a <- list(NULL, 1, 5, NULL)
-#' Compact(a)
+#' Some examples:
 #'
-#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
-#' Compact(b)
+#'
+#'
 #'
 make_call <- function (f, ..., .args = list()) {
   if (is.character(f))
@@ -262,12 +256,10 @@ Compact <- function(x) return(Filter(Existy, x))
 #'
 #' @param x a vector.
 #' @examples
-#' # Removes all null elements from a vector:
-#' a <- list(NULL, 1, 5, NULL)
-#' Compact(a)
+#' Some examples:
 #'
-#' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
-#' Compact(b)
+#'
+#'
 #'
 Reject <- function (f, x)
 {
@@ -285,7 +277,8 @@ Reject <- function (f, x)
 #' @param silent logical: should the report of error messages be suppressed?.
 #' @return a function that returns a default value when there's an error.
 #' @examples
-#' # Comment
+#' Some examples:
+#'
 #'
 #'
 #'
@@ -323,10 +316,11 @@ Compose <- function(f, g) {
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' compact <- function(x) Filter(Negate(is.null), x)
-#' foo <- list(NULL, 1, 5, NULL)
-#' compact(foo)
+#' Some examples:
+#'
+#'
+#'
+#'
 Splat <- function(f) {
   force(f); f <- match.fun(f)
   return(function(vector) {
@@ -342,7 +336,7 @@ Splat <- function(f) {
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
+#' # Pluck a value from a list or S3 object:
 #' new_model <- lm(mtcars, formula = hp ~ wt)
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
@@ -360,10 +354,11 @@ Plucker <- function(field) {
 #' @param fields a character vector of fields.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' new_model <- lm(mtcars, formula = hp ~ wt)
-#' getCoefficients <- Plucker("coefficients")
-#' getCoefficients(new_model)
+#' Some examples:
+#'
+#'
+#'
+#'
 Withdraw <- function(obj, fields) {
   if (length(fields) == 1) {
     return(obj[[fields]])
@@ -382,12 +377,11 @@ Withdraw <- function(obj, fields) {
 #' @param x a vector.
 #' @return  a two-argument function that returns a logical constant.
 #' @examples
-#' # Simulate the behavior of max with numerics
-#' Best(1:10, function(x, y) return(x > y))
-#' # Simulate the behavior of min with numerics
-#' Best(1:10, function(x, y) return(x < y))
-#' # This comparison function prefers values that begin with l
-#' Best(letters, function(x, y) return(x[1] == "l"))
+#' Some examples:
+#'
+#'
+#'
+#'
 Finder <- function(x, f) {
   force(f); f <- match.fun(f)
   return(Reduce(function(x, y) {
@@ -424,10 +418,11 @@ Best <- function(x, f) {
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' new_model <- lm(mtcars, formula = hp ~ wt)
-#' getCoefficients <- Plucker("coefficients")
-#' getCoefficients(new_model)
+#' Some examples:
+#'
+#'
+#'
+#'
 Min <- function(x, f) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
@@ -441,10 +436,11 @@ Min <- function(x, f) {
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' new_model <- lm(mtcars, formula = hp ~ wt)
-#' getCoefficients <- Plucker("coefficients")
-#' getCoefficients(new_model)
+#' Some examples:
+#'
+#'
+#'
+#'
 Max <- function(x, f) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
@@ -458,10 +454,11 @@ Max <- function(x, f) {
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' new_model <- lm(mtcars, formula = hp ~ wt)
-#' getCoefficients <- Plucker("coefficients")
-#' getCoefficients(new_model)
+#' Some examples:
+#'
+#'
+#'
+#'
 Repeat <- function(f, x) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
@@ -475,10 +472,11 @@ Repeat <- function(f, x) {
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' # Create a function, compact(), that removes all null elements from a list:
-#' new_model <- lm(mtcars, formula = hp ~ wt)
-#' getCoefficients <- Plucker("coefficients")
-#' getCoefficients(new_model)
+#' Some examples:
+#'
+#'
+#'
+#'
 Repeatedly <- function(f, x) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
@@ -518,10 +516,11 @@ IterateUntil <- function(f, check, init) {
 #' @param init a valie.
 #' @return a list.
 #' @examples
-#' # Iterate until the check condition is met
-#' IterateUntil(function(n) { return(n + n) },
-#' function(n) { return(n <= 1024) },
-#' 1)
+#' Some examples:
+#'
+#'
+#'
+#'
 Apply <- function(f, x, margin, ...) {
   return(apply(X = x, MARGIN = margin, FUN = f, ...))
 }
@@ -535,10 +534,11 @@ Apply <- function(f, x, margin, ...) {
 #' @param init a valie.
 #' @return a list.
 #' @examples
-#' # Iterate until the check condition is met
-#' IterateUntil(function(n) { return(n + n) },
-#' function(n) { return(n <= 1024) },
-#' 1)
+#' Some examples:
+#'
+#'
+#'
+#'
 Lapply <- function(f, x, margin, ...) {
   return(lapply(X = x, FUN = f, ...))
 }

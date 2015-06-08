@@ -17,9 +17,6 @@ the negation of that function.
 The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
-new_model <- lm(mtcars, formula = hp ~ wt)
-getCoefficients <- Plucker("coefficients")
-getCoefficients(new_model)
+Some examples:
 }
 

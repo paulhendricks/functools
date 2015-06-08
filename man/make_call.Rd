@@ -13,11 +13,6 @@ make_call(f, ..., .args = list())
 \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
 }
 \examples{
-# Removes all null elements from a vector:
-a <- list(NULL, 1, 5, NULL)
-Compact(a)
-
-b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
-Compact(b)
+Some examples:
 }
 

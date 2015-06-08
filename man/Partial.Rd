@@ -19,11 +19,6 @@ Partial(`_f`, ..., .env = parent.frame(), .lazy = TRUE)
 Partial function application allows you to modify a function by pre-filling some of the arguments. It is particularly useful in conjunction with functionals and other function operators.
 }
 \examples{
-# Removes all null elements from a vector:
-a <- list(NULL, 1, 5, NULL)
-Compact(a)
-
-b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
-Compact(b)
+Some examples:
 }
 

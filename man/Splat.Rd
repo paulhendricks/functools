@@ -17,9 +17,6 @@ the negation of that function.
 This can be a useful shortcut when a function returns the opposite of what you need.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
-compact <- function(x) Filter(Negate(is.null), x)
-foo <- list(NULL, 1, 5, NULL)
-compact(foo)
+Some examples:
 }
 

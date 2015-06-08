@@ -19,11 +19,6 @@ and returns the that function reduced over that vector. It is assumed that:
 * The two-argument function knows how to "unwrap" its arguments.
 }
 \examples{
-# Simulate the behavior of max with numerics
-Best(1:10, function(x, y) return(x > y))
-# Simulate the behavior of min with numerics
-Best(1:10, function(x, y) return(x < y))
-# This comparison function prefers values that begin with l
-Best(letters, function(x, y) return(x[1] == "l"))
+Some examples:
 }
 

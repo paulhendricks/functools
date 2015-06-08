@@ -17,9 +17,6 @@ the negation of that function.
 This can be a useful shortcut when a function returns the opposite of what you need.
 }
 \examples{
-# Create a function, compact(), that removes all null elements from a list:
-new_model <- lm(mtcars, formula = hp ~ wt)
-getCoefficients <- Plucker("coefficients")
-getCoefficients(new_model)
+Some examples:
 }
 
