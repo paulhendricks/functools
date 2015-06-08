@@ -141,7 +141,7 @@ Truthy <- function(x) {
 #' Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
 Any <- function(f, x, na.rm = FALSE) {
   force(f); f <- match.fun(f)
-  return(any(unlist(lapply(x, f)), na.rm = na.rm))
+  return(any(vapply(x, f, logical(1)), na.rm = na.rm))
 }
 
 #' All
@@ -168,7 +168,7 @@ Any <- function(f, x, na.rm = FALSE) {
 #' All(list(NA, TRUE), Identity, na.rm = TRUE) # TRUE
 All <- function(f, x, na.rm = FALSE) {
   force(f); f <- match.fun(f)
-  return(all(unlist(lapply(x, f)), na.rm = na.rm))
+  return(all(vapply(x, f, logical(1)), na.rm = na.rm))
 }
 
 #' Partial apply a function, filling in some arguments.
@@ -542,7 +542,6 @@ Apply <- function(f, x, margin, ...) {
 Lapply <- function(f, x, margin, ...) {
   return(lapply(X = x, FUN = f, ...))
 }
-
 
 #' Value Matching
 #'
