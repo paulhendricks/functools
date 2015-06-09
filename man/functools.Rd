@@ -3,8 +3,8 @@
 \docType{functools}
 \name{functools}
 \alias{functools}
-\title{functools: A package for implementing functional programming in R.}
+\title{functools: A package for implementing Higher Order Functions in R.}
 \description{
-functools: A package for implementing functional programming in R.
+functools: A package for implementing Higher Order Functions in R.
 }
 

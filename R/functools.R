@@ -1,20 +1,8 @@
-#' functools: A package for implementing functional programming in R.
+#' functools: A package for implementing Higher Order Functions in R.
 #'
 #' @docType functools
 #' @name functools
 NULL
-
-#' Na
-#'
-#' \code{Na()} is a function that returns NA.
-#'
-#' @return NA.
-#' @examples
-#' # Na() returns NA:
-#' Na()
-Na <- function() {
-  return(NA)
-}
 
 #' Existy
 #'
