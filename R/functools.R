@@ -4,18 +4,6 @@
 #' @name functools
 NULL
 
-#' False
-#'
-#' \code{False()} is a function that returns FALSE.
-#'
-#' @return FALSE.
-#' @examples
-#' # False() returns FALSE:
-#' False()
-False <- function() {
-  return(FALSE)
-}
-
 #' Null
 #'
 #' \code{Null()} is a function that returns NULL.
