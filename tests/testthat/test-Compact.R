@@ -1,5 +1,5 @@
 library(functools)
-context("functions within functools")
+context("Testing Compact() function")
 
 foo <- list(NULL, 1, 5, NULL)
 test_that("Compact removes NULLs from lists", {
