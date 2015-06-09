@@ -1,7 +1,7 @@
 library(functools)
 context("Testing Existy() function")
 
-test_that("Existy removes NULLs from lists", {
+test_that("Existy() returns TRUE if an object 'exists'", {
   expect_equal(Existy(NULL), FALSE)
   expect_equal(Existy(NA), FALSE)
 #   expect_equal(Existy(Existy), TRUE)
