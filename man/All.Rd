@@ -19,18 +19,18 @@ a logical value.
 }
 \examples{
 # comment here
-All(mtcars, is.numeric) # TRUE
-All(mtcars, is.character) # FALSE
+All(is.numeric, mtcars) # TRUE
+All(is.character, mtcars) # FALSE
 mtcars$am <- factor(mtcars$am)
-All(mtcars, is.numeric) # FALSE
-All(mtcars, is.factor) # FALSE
+All(is.numeric, mtcars) # FALSE
+All(is.factor, mtcars) # FALSE
 
 # Handles NAs and NULLs
-All(list(NA, "3", NULL), is.numeric) # FALSE
-All(list(NA, "3", NULL, 5), is.numeric) # FALSE
+All(is.numeric, list(NA, "3", NULL)) # FALSE
+All(is.numeric, list(NA, "3", NULL, 5)) # FALSE
 
 # Use na.rm = TRUE to remove NULLS
-All(list(NA, TRUE), Identity) # NA
-All(list(NA, TRUE), Identity, na.rm = TRUE) # TRUE
+All(Identity, list(NA, TRUE)) # NA
+All(Identity, list(NA, TRUE), na.rm = TRUE) # TRUE
 }
 
