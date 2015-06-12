@@ -2,12 +2,12 @@
 % Please edit documentation in R/Compose.R
 \name{Compose}
 \alias{Compose}
-\alias{\%o\%}
+\alias{\%O\%}
 \title{Compose multiple functions}
 \usage{
 Compose(...)
 
-f \%o\% g
+f \%O\% g
 }
 \arguments{
 \item{...}{n functions to apply in order from right to left}
@@ -18,7 +18,7 @@ f \%o\% g
 In infix and prefix forms.
 }
 \examples{
-not_null <- `!` \%o\% is.null
+not_null <- `!` \%O\% is.null
 not_null(4)
 not_null(NULL)
 

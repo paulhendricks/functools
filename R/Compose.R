@@ -7,7 +7,7 @@
 #'
 #' @export
 #' @examples
-#' not_null <- `!` %o% is.null
+#' not_null <- `!` %O% is.null
 #' not_null(4)
 #' not_null(NULL)
 #'
@@ -31,8 +31,8 @@ Compose <- function(...) {
 
 #' @rdname Compose
 #' @export
-#' @usage f \%o\% g
-'%o%' <- function(f, g) {
+#' @usage f \%O\% g
+'%O%' <- function(f, g) {
   f <- match.fun(f)
   g <- match.fun(g)
   function(...) {
