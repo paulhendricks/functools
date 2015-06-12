@@ -1,31 +1,41 @@
-#' Compose
+#' Compose multiple functions
 #'
-#' \code{Compose()} takes two functions and composes them.
+#' In infix and prefix forms.
 #'
-#' @param f a function.
-#' @param g a function.
-#' @return a function.
+#' @param ... n functions to apply in order from right to left
+#' @param f,g two functions to compose for the infix form
+#'
+#' @export
 #' @examples
-#' # Compose a function using length and unique
-#' lu <- Compose(length, unique)
-#' lu(c(1:10, 5:15, 20:25))
-Compose <- function(f, g) {
-  force(f); f <- match.fun(f)
-  force(g); g <- match.fun(g)
-  return(function(...) f(g(...)))
+#' not_null <- `!` %o% is.null
+#' not_null(4)
+#' not_null(NULL)
+#'
+#' add1 <- function(x) x + 1
+#' Compose(add1,add1)(8)
+Compose <- function(...) {
+  fs <- lapply(list(...), match.fun)
+  n <- length(fs)
+
+  last <- fs[[n]]
+  rest <- fs[-n]
+
+  function(...) {
+    out <- last(...)
+    for (f in rev(rest)) {
+      out <- f(out)
+    }
+    out
+  }
 }
 
-#' Compose Operator
-#'
-#' %notin% is a more intuitive interface as a binary operator, which returns a logical vector indicating if there is a match or not for its left operand.
-#'
-#' @param x vector or NULL: the values to be matched. Long vectors are supported.
-#' @param table vector or NULL: the values to be matched against. Long vectors are not supported
-#' @return A vector of the same length as x.
-#' @examples
-#' # Some examples
-#' "bc" %notin% letters # TRUE
-#' "b" %notin% letters # FALSE
-#' "c" %notin% letters # FALSE
-#'
-`%o%` <- Compose
+#' @rdname Compose
+#' @export
+#' @usage f \%o\% g
+'%o%' <- function(f, g) {
+  f <- match.fun(f)
+  g <- match.fun(g)
+  function(...) {
+    f(g(...))
+  }
+}

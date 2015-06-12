@@ -1,5 +1,5 @@
 library(functools)
-context("Testing All() function")
+context("All()")
 
 test_that("All() returns TRUE if a predicate function applied over an iterable returns all TRUE values", {
   expect_equal(All(is.numeric, mtcars), TRUE)

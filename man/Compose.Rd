@@ -2,24 +2,27 @@
 % Please edit documentation in R/Compose.R
 \name{Compose}
 \alias{Compose}
-\title{Compose}
+\alias{\%o\%}
+\title{Compose multiple functions}
 \usage{
-Compose(f, g)
+Compose(...)
+
+f \%o\% g
 }
 \arguments{
-\item{f}{a function.}
+\item{...}{n functions to apply in order from right to left}
 
-\item{g}{a function.}
-}
-\value{
-a function.
+\item{f,g}{two functions to compose for the infix form}
 }
 \description{
-\code{Compose()} takes two functions and composes them.
+In infix and prefix forms.
 }
 \examples{
-# Compose a function using length and unique
-lu <- Compose(length, unique)
-lu(c(1:10, 5:15, 20:25))
+not_null <- `!` \%o\% is.null
+not_null(4)
+not_null(NULL)
+
+add1 <- function(x) x + 1
+Compose(add1,add1)(8)
 }
 

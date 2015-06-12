@@ -2,22 +2,28 @@
 % Please edit documentation in R/Orify.R
 \name{Orify}
 \alias{Orify}
-\title{Orify}
+\title{Create new predicate functions}
 \usage{
-Orify(f, g)
+Orify(...)
 }
 \arguments{
-\item{f}{a predicate function.}
-
-\item{g}{a predicate function.}
-}
-\value{
-a function.
+\item{...}{n functions to apply in order from right to left}
 }
 \description{
-\code{Orify()}
+Create new predicate functions
 }
 \examples{
-# comment here
+# Examples
+even_number_between_10_and_100 <- Orify(is.numeric, function(x) x > 10, function(x) x < 100, function(x) x \%\% 2 == 0)
+even_number_between_10_and_100(8) # FALSE
+even_number_between_10_and_100(9) # FALSE
+even_number_between_10_and_100(10) # FALSE
+even_number_between_10_and_100(11) # FALSE
+even_number_between_10_and_100(12) # TRUE
+even_number_between_10_and_100(49) # FALSE
+even_number_between_10_and_100(50) # TRUE
+even_number_between_10_and_100(100) # FALSE
+even_number_between_10_and_100(101) # FALSE
+even_number_between_10_and_100(102) # FALSE
 }
 
