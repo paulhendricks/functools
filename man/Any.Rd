@@ -15,7 +15,7 @@ Any(f, x, ..., na.rm = FALSE)
 a logical value.
 }
 \description{
-\code{Any()}
+Any() is a predicate functional.
 }
 \examples{
 # comment here
@@ -27,6 +27,7 @@ Any(is.factor, mtcars) # TRUE
 
 # Handles NAs and NULLs
 Any(is.numeric, list(NA, "3", NULL)) # FALSE
+Any(is.numeric, list(NA, 3, NULL)) # TRUE
 Any(is.numeric, list(NA, "3", NULL, 5)) #TRUE
 
 # Use na.rm = TRUE to remove NULLS

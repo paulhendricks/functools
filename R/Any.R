@@ -1,6 +1,6 @@
 #' Any
 #'
-#' \code{Any()}
+#' Any() is a predicate functional.
 #'
 #' @param x an object.
 #' @param f a predicate function.
@@ -15,12 +15,13 @@
 #'
 #' # Handles NAs and NULLs
 #' Any(is.numeric, list(NA, "3", NULL)) # FALSE
+#' Any(is.numeric, list(NA, 3, NULL)) # TRUE
 #' Any(is.numeric, list(NA, "3", NULL, 5)) #TRUE
 #'
 #' # Use na.rm = TRUE to remove NULLS
 #' Any(Identity, list(NA, FALSE)) # NA
 #' Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
 Any <- function(f, x, ..., na.rm = FALSE) {
-  force(f); f <- match.fun(f)
+  f <- match.fun(f)
   return(any(vapply(x, f, logical(1), ...), na.rm = na.rm))
 }
