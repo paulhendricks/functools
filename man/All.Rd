@@ -15,7 +15,7 @@ All(f, x, ..., na.rm = FALSE)
 a logical value.
 }
 \description{
-\code{All()}
+All() is a predicate functional.
 }
 \examples{
 # comment here

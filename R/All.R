@@ -1,6 +1,6 @@
 #' All
 #'
-#' \code{All()}
+#' All() is a predicate functional.
 #'
 #' @param x an object.
 #' @param f a predicate function.
@@ -22,6 +22,6 @@
 #' All(Identity, list(NA, TRUE)) # NA
 #' All(Identity, list(NA, TRUE), na.rm = TRUE) # TRUE
 All <- function(f, x, ..., na.rm = FALSE) {
-  force(f); f <- match.fun(f)
+  f <- match.fun(f)
   return(all(vapply(x, f, logical(1), ...), na.rm = na.rm))
 }
