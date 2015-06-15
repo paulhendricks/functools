@@ -1,5 +1,5 @@
 library(functools)
-context("Testing Null() function")
+context("Null()")
 
 test_that("Null() returns NULL", {
   expect_equal(Null(), NULL)
