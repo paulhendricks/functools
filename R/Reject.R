@@ -17,3 +17,8 @@ Reject <- function (f, x)
   ind <- as.logical(unlist(lapply(x, Negate(f))))
   x[!is.na(ind) & ind]
 }
+
+# Reject <- function (f, x)
+# {
+#   Filter(Negate(f), x)
+# }
