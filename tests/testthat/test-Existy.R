@@ -1,13 +1,24 @@
 library(functools)
-context("Testing Existy() function")
+context("Existy()")
+
+test_that("Existy() returns values of type 'logical'", {
+  expect_is(unlist(Lapply(Existy, foo)), "logical")
+  })
+
+foo <- list(NA_integer_, TRUE, NA_character_, 1, NULL,
+            "a", NA_complex_, 4.5, FALSE, NA_real_)
+bar <- c(FALSE, TRUE, FALSE, TRUE, FALSE,
+         TRUE, FALSE, TRUE, TRUE, FALSE)
 
 test_that("Existy() returns TRUE if an object 'exists'", {
+  expect_equal(unlist(Lapply(Existy, foo)), bar)
   expect_equal(Existy(NULL), FALSE)
   expect_equal(Existy(NA), FALSE)
-#   expect_equal(Existy(Existy), TRUE)
+  expect_warning(Existy(Existy), "is.na() applied to non-(list or vector) of type 'closure'", fixed = TRUE)
   expect_equal(Existy(1), TRUE)
   expect_equal(Existy(2.4), TRUE)
   expect_equal(Existy("hello"), TRUE)
   expect_equal(Existy(FALSE), TRUE)
   expect_equal(Existy(TRUE), TRUE)
 })
+
