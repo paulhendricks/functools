@@ -1,6 +1,8 @@
 library(functools)
-context("Testing Reject() function")
+context("Reject()")
 
-test_that("Reject() does something", {
-  expect_equal(Reject(function(x) x < 5, 1:10), 5:10)
+new_function <- function(x) x < 5
+foo <- 1:10
+test_that("Reject() does opposite of Filter where function is Negate()'d ", {
+  expect_equal(Reject(new_function, foo), Filter(Negate(new_function), foo))
 })
