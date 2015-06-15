@@ -1,14 +1,15 @@
 library(functools)
 context("Existy()")
 
-test_that("Existy() returns values of type 'logical'", {
-  expect_is(unlist(Lapply(Existy, foo)), "logical")
-  })
 
 foo <- list(NA_integer_, TRUE, NA_character_, 1, NULL,
             "a", NA_complex_, 4.5, FALSE, NA_real_)
 bar <- c(FALSE, TRUE, FALSE, TRUE, FALSE,
          TRUE, FALSE, TRUE, TRUE, FALSE)
+
+test_that("Existy() returns values of type 'logical'", {
+  expect_is(unlist(Lapply(Existy, foo)), "logical")
+})
 
 test_that("Existy() returns TRUE if an object 'exists'", {
   expect_equal(unlist(Lapply(Existy, foo)), bar)
