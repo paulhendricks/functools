@@ -1,5 +1,5 @@
 library(functools)
-context("Testing Na() function")
+context("Na()")
 
 test_that("Na() returns NA", {
   expect_equal(Na(), NA)
