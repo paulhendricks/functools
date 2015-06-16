@@ -4,7 +4,7 @@
 \alias{Best}
 \title{Best}
 \usage{
-Best(x, f)
+Best(f, x)
 }
 \arguments{
 \item{x}{a vector.}

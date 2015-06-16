@@ -1,9 +1,11 @@
 Package: functools
-Title: What the package does (one line)
+Title: An R package for extending functional programming in R.
 Version: 0.1
-Authors@R: "First Last <first.last@example.com> [aut, cre]"
-Description: What the package does (one paragraph)
+Authors@R: "Paul Hendricks <paul.hendricks.2013@owu.edu> [aut, cre]"
+Description: functools is a utility-belt library for R that adds support to the usual higher order functional suspects (Map, Reduce, Filter, etc.) without extending any core R objects.
 Depends: R (>= 3.1.2)
-License: What license is it under?
+License: MIT
 LazyData: true
-Suggests: testthat
+Suggests: testthat,
+    knitr
+VignetteBuilder: knitr

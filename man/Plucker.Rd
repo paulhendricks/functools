@@ -13,8 +13,7 @@ Plucker(field)
 the negation of that function.
 }
 \description{
-\code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-This can be a useful shortcut when a function returns the opposite of what you need.
+Pluck objects from S3 and S4 object slots!
 }
 \examples{
 # Pluck a value from a list or S3 object:

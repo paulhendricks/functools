@@ -12,7 +12,7 @@
 #' Best(1:10, function(x, y) return(x < y))
 #' # This comparison function prefers values that begin with l
 #' Best(letters, function(x, y) return(x[1] == "l"))
-Best <- function(x, f) {
+Best <- function(f, x) {
   force(f); f <- match.fun(f)
   return(Reduce(function(x, y) {
     return(ifelse(f(x, y), x, y))

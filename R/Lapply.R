@@ -12,6 +12,6 @@
 #'
 #'
 #'
-Lapply <- function(f, x, margin, ...) {
+Lapply <- function(f, x, ...) {
   return(lapply(X = x, FUN = f, ...))
 }

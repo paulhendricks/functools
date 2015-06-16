@@ -4,7 +4,7 @@
 \alias{Lapply}
 \title{Lapply}
 \usage{
-Lapply(f, x, margin, ...)
+Lapply(f, x, ...)
 }
 \arguments{
 \item{f}{a function.}
