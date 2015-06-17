@@ -11,7 +11,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Apply <- function(f, x, margin, ...) {
   return(apply(X = x, MARGIN = margin, FUN = f, ...))
 }
