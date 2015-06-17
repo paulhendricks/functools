@@ -6,6 +6,7 @@
 #' @examples
 #' # False() returns FALSE:
 #' False()
+#' @export
 False <- function() {
   return(FALSE)
 }
