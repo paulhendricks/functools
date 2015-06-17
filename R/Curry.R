@@ -7,6 +7,7 @@
 #' @examples
 #' # comment here
 #'
+#' @export
 Curry <- function(x) {
   return(1)
 }
