@@ -17,7 +17,7 @@
 #' even_number_between_10_and_100(102) # FALSE
 #' # checker <- Andify(Compose(Not, is.numeric), Compose(Not, is.character))
 #'
-#'
+#' @export
 Andify <- function(...) {
   fs <- lapply(list(...), match.fun)
   if (length(fs) == 0) stop("Must pass at least one argument.")
