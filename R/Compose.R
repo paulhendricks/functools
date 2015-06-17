@@ -13,6 +13,8 @@
 #'
 #' add1 <- function(x) x + 1
 #' Compose(add1,add1)(8)
+#'
+#' @export
 Compose <- function(...) {
   fs <- lapply(list(...), match.fun)
   n <- length(fs)
