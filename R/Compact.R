@@ -11,4 +11,5 @@
 #' b <- c(1, 2, 0, 4, NULL, 1, 3, NULL)
 #' Compact(b)
 #'
+#' @export
 Compact <- function(x) return(Filter(Existy, x))
