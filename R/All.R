@@ -21,6 +21,7 @@
 #' # Use na.rm = TRUE to remove NULLS
 #' All(Identity, list(NA, TRUE)) # NA
 #' All(Identity, list(NA, TRUE), na.rm = TRUE) # TRUE
+#' @export
 All <- function(f, x, ..., na.rm = FALSE) {
   f <- match.fun(f)
   return(all(vapply(x, f, logical(1), ...), na.rm = na.rm))
