@@ -11,6 +11,8 @@
 #' IterateUntil(function(n) { return(n + n) },
 #' function(n) { return(n <= 1024) },
 #' 1)
+#'
+#' @export
 IterateUntil <- function(f, check, init) {
   force(f); f <- match.fun(f)
   force(check); check <- match.fun(check)

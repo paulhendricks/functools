@@ -11,7 +11,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Lapply <- function(f, x, ...) {
   return(lapply(X = x, FUN = f, ...))
 }

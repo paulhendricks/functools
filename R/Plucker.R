@@ -10,7 +10,7 @@
 #' getCoefficients <- Plucker("coefficients")
 #' getCoefficients(new_model)
 #'
-#'
+#' @export
 Plucker <- function(field) {
   return(function(obj) {
     if (is.null(obj[[field]])) stop(paste0(field, " does not exist."))

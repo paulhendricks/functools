@@ -6,6 +6,7 @@
 #' @examples
 #' # True() returns TRUE:
 #' True()
+#' @export
 True <- function() {
   return(TRUE)
 }

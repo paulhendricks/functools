@@ -16,6 +16,7 @@
 #' Truthy(0L) # FALSE
 #' Truthy("a") # TRUE
 #'
+#' @export
 Truthy <- function(x) {
   return(Existy(x) && identical(x, True()))
 }

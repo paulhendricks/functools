@@ -10,7 +10,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Repeatedly <- function(f, x) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder

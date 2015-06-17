@@ -10,6 +10,7 @@
 #' Identity(mean)
 #' Identity(lm(data = mtcars, mpg ~ cyl))
 #'
+#' @export
 Identity <- function(x) {
   return(x)
 }

@@ -7,6 +7,7 @@
 #' @examples
 #' # comment here
 #'
+#' @export
 Partial <- function(x) {
   return(1)
 }

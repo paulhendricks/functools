@@ -11,7 +11,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Reject <- function (f, x)
 {
   ind <- as.logical(unlist(lapply(x, Negate(f))))

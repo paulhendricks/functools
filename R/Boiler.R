@@ -7,6 +7,7 @@
 #' @examples
 #' # comment here
 #'
+#' @export
 Boiler <- function(x) {
   return(1)
 }

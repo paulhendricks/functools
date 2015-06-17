@@ -10,7 +10,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Splat <- function(f) {
   force(f); f <- match.fun(f)
   return(function(vector) {

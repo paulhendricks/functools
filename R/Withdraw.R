@@ -9,7 +9,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Withdraw <- function(obj, fields) {
   if (length(fields) == 1) {
     return(obj[[fields]])

@@ -12,7 +12,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Failwith <- function(default = NULL, f, silent = FALSE) {
   force(f); f <- match.fun(f)
   return(function(...) {

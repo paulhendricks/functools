@@ -16,6 +16,7 @@
 #' even_number_between_10_and_100(101) # FALSE
 #' even_number_between_10_and_100(102) # FALSE
 #'
+#' @export
 Orify <- function(...) {
   fs <- lapply(list(...), match.fun)
   first <- fs[[1]]

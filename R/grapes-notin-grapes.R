@@ -11,4 +11,5 @@
 #' "b" %notin% letters # FALSE
 #' "c" %notin% letters # FALSE
 #'
+#' @export
 `%notin%` <- Negate(`%in%`)

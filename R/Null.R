@@ -6,6 +6,8 @@
 #' @examples
 #' # Null() returns NULL:
 #' Null()
+#'
+#' @export
 Null <- function() {
   return(NULL)
 }

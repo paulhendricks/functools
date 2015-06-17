@@ -7,6 +7,7 @@
 #' @examples
 #' # comment here
 #'
+#' @export
 Memoize <- function(x) {
   return(1)
 }

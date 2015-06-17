@@ -10,7 +10,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Max <- function(x, f) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder

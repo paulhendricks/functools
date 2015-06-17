@@ -13,6 +13,7 @@
 #' x || y
 #' xor(x, y)
 #' isTRUE(x)
+#' @export
 And <- `&&`
 Or <- `||`
 Not <- `!`

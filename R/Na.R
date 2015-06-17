@@ -6,6 +6,7 @@
 #' @examples
 #' # Na() returns NA:
 #' Na()
+#' @export
 Na <- function() {
   return(NA)
 }

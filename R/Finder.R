@@ -12,7 +12,7 @@
 #'
 #'
 #'
-#'
+#' @export
 Finder <- function(x, f) {
   force(f); f <- match.fun(f)
   return(Reduce(function(x, y) {

@@ -21,6 +21,7 @@
 #'
 #' # Works with applying over lists
 #' lapply(list(4, "foo", NULL, NA), Existy) # TRUE, TRUE, FALSE, FALSE
+#' @export
 Existy <- function(x) {
   return(!is.null(x) && !is.na(x))
 }
