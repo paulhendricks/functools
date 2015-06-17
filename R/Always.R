@@ -11,7 +11,7 @@
 #' always_true <- Always(TRUE)
 #' always_true() # TRUE
 #'
-#'
+#' @export
 Always <- function(x) {
   return(function() {return(x)})
 }
