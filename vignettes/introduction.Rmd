@@ -4,7 +4,7 @@ author: "Paul Hendricks"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{functools}
+  %\VignetteIndexEntry{Introduction to functools}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---

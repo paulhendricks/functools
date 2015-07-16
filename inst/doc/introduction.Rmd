@@ -1,0 +1,26 @@
+---
+title: "Introduction to functools"
+author: "Paul Hendricks"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to functools}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(functools)
+```
+
+## Header
+
+Copy
+
+```{r}
+lu <- Compose(length, unique)
+
+lu(sample(x = 1:10, size = 10000, replace = TRUE))
+```
+
