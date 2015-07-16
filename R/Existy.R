@@ -6,14 +6,14 @@
 #' @param x an object.
 #' @return a logical value.
 #' @examples
-#' # Some examples:
+#' # Some examples
 #' Existy(4) # TRUE
 #' Existy("foo") # TRUE
 #' Existy(NULL) # FALSE
 #' Existy(NA) # FALSE
 #'
 #' # Works with lists
-#' Exist(list(4, "foo", NULL, NA)) # TRUE
+#' Existy(list(4, "foo", NULL, NA)) # TRUE
 #' Existy(list(4, "foo")) # TRUE
 #' Existy(list(NULL, NA)) # TRUE
 #' Existy(list(NULL)) # TRUE

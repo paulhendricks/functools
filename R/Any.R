@@ -1,12 +1,15 @@
 #' Any
 #'
-#' Any() is a predicate functional.
+#' \code{Any()} is a predicate functional.
 #'
-#' @param x an object.
 #' @param f a predicate function.
+#' @param x an object.
+#' @param ... further arguments passed to or from other methods.
+#' @param na.rm a logical value indicating whether NA values should be stripped before the computation proceeds.
 #' @return a logical value.
 #' @examples
 #' # comment here
+#' data(mtcars)
 #' Any(is.numeric, mtcars) # TRUE
 #' Any(is.character, mtcars) # FALSE
 #' mtcars$am <- factor(mtcars$am)

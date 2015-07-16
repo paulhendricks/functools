@@ -13,7 +13,8 @@ Always(x)
 a function that itself returns x.
 }
 \description{
-Always(x) is a closure function that always returns a function returning object x.
+\code{Always(x)} is a closure function that always returns a function
+returning object x.
 }
 \examples{
 # comment here

@@ -5,15 +5,16 @@
 #' * The two-argument function evaluates its two arguments and returns TRUE if the first argument is "better" than the second argument.
 #' * The two-argument function knows how to "unwrap" its arguments.
 #'
-#' @param x a vector.
+#' @param f a function.
+#' @param x a value.
 #' @return  a two-argument function that returns a logical constant.
 #' @examples
-#' Some examples:
+#' # Some examples:
 #'
 #'
 #'
 #' @export
-Finder <- function(x, f) {
+Finder <- function(f, x) {
   force(f); f <- match.fun(f)
   return(Reduce(function(x, y) {
     return(ifelse(f(x, y), x, y))

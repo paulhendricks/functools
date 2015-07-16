@@ -17,10 +17,12 @@ Failwith(default = NULL, f, silent = FALSE)
 a function that returns a default value when there's an error.
 }
 \description{
-\code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
-The essence of Failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
+Failwith() turns a function that throws an error into a function that
+returns a default value when there is an error. The essence of Failwith()
+is simple: it is just a wrapper around try(), the function that
+captures errors and allows execution to continue.
 }
 \examples{
-Some examples:
+# Some examples:
 }
 

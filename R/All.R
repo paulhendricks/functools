@@ -1,9 +1,11 @@
 #' All
 #'
-#' All() is a predicate functional.
+#' \code{All()} is a predicate functional.
 #'
-#' @param x an object.
 #' @param f a predicate function.
+#' @param x an object.
+#' @param ... further arguments passed to or from other methods.
+#' @param na.rm a logical value indicating whether NA values should be stripped before the computation proceeds.
 #' @return a logical value.
 #' @examples
 #' # comment here

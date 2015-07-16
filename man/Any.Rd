@@ -10,15 +10,20 @@ Any(f, x, ..., na.rm = FALSE)
 \item{f}{a predicate function.}
 
 \item{x}{an object.}
+
+\item{...}{further arguments passed to or from other methods.}
+
+\item{na.rm}{a logical value indicating whether NA values should be stripped before the computation proceeds.}
 }
 \value{
 a logical value.
 }
 \description{
-Any() is a predicate functional.
+\code{Any()} is a predicate functional.
 }
 \examples{
 # comment here
+data(mtcars)
 Any(is.numeric, mtcars) # TRUE
 Any(is.character, mtcars) # FALSE
 mtcars$am <- factor(mtcars$am)

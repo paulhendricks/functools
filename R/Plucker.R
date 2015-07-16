@@ -2,8 +2,8 @@
 #'
 #' Pluck objects from S3 and S4 object slots!
 #'
-#' @param f a predicate function.
-#' @return  the negation of that function.
+#' @param field a character vector.
+#' @return  something.
 #' @examples
 #' # Pluck a value from a list or S3 object:
 #' new_model <- lm(mtcars, formula = hp ~ wt)

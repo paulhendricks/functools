@@ -5,7 +5,7 @@
 #' @param fields a character vector of fields.
 #' @return  the negation of that function.
 #' @examples
-#' Some examples:
+#' # Some examples
 #'
 #'
 #'

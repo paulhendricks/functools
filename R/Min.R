@@ -1,17 +1,17 @@
 #' Min
 #'
-#' \code{Min()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-#' This can be a useful shortcut when a function returns the opposite of what you need.
+#' \code{Min()}
 #'
 #' @param f a predicate function.
-#' @return  the negation of that function.
+#' @param x a value.
+#' @return  something.
 #' @examples
-#' Some examples:
+#' # Some examples
 #'
 #'
 #'
 #' @export
-Min <- function(x, f) {
+Min <- function(f, x) {
   force(f); f <- match.fun(f)
   return(1L) # Placeholder
 }

@@ -9,9 +9,9 @@ Lapply(f, x, ...)
 \arguments{
 \item{f}{a function.}
 
-\item{check}{a function.}
+\item{x}{a value.}
 
-\item{init}{a value.}
+\item{...}{optional arguments to f.}
 }
 \value{
 a list.
@@ -20,6 +20,6 @@ a list.
 \code{Lapply}
 }
 \examples{
-Some examples:
+# Some examples
 }
 

@@ -4,19 +4,20 @@
 \alias{Min}
 \title{Min}
 \usage{
-Min(x, f)
+Min(f, x)
 }
 \arguments{
 \item{f}{a predicate function.}
+
+\item{x}{a value.}
 }
 \value{
-the negation of that function.
+something.
 }
 \description{
-\code{Min()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-This can be a useful shortcut when a function returns the opposite of what you need.
+\code{Min()}
 }
 \examples{
-Some examples:
+# Some examples
 }
 

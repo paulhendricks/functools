@@ -3,11 +3,11 @@
 #' \code{Lapply}
 #'
 #' @param f a function.
-#' @param check a function.
-#' @param init a value.
+#' @param x a value.
+#' @param ... optional arguments to f.
 #' @return a list.
 #' @examples
-#' Some examples:
+#' # Some examples
 #'
 #'
 #'

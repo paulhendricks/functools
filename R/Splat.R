@@ -6,7 +6,7 @@
 #' @param f a predicate function.
 #' @return  the negation of that function.
 #' @examples
-#' Some examples:
+#' # Some examples
 #'
 #'
 #'

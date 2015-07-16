@@ -10,12 +10,16 @@ All(f, x, ..., na.rm = FALSE)
 \item{f}{a predicate function.}
 
 \item{x}{an object.}
+
+\item{...}{further arguments passed to or from other methods.}
+
+\item{na.rm}{a logical value indicating whether NA values should be stripped before the computation proceeds.}
 }
 \value{
 a logical value.
 }
 \description{
-All() is a predicate functional.
+\code{All()} is a predicate functional.
 }
 \examples{
 # comment here

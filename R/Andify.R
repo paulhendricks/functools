@@ -4,7 +4,12 @@
 #'
 #' @examples
 #' # Examples
-#' even_number_between_10_and_100 <- Andify(is.numeric, function(x) x > 10, function(x) x < 100, function(x) x %% 2 == 0)
+#' is_numeric <- is.numeric
+#' is_even <- function(x) x %% 2 == 0
+#' greater_than_10 <- function(x) x > 10
+#' less_than_100 <- function(x) x < 100
+#' even_number_between_10_and_100 <-
+#' Andify(is_numeric, is_even, greater_than_10, less_than_100)
 #' even_number_between_10_and_100(8) # FALSE
 #' even_number_between_10_and_100(9) # FALSE
 #' even_number_between_10_and_100(10) # FALSE
@@ -28,7 +33,7 @@ Andify <- function(...) {
     out <- first(...)
     for (f in rest) {
       if (!out) return(FALSE)
-      out <- And(out, f(...))
+      out <- `&&`(out, f(...))
     }
     out
   }

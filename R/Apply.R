@@ -2,12 +2,13 @@
 #'
 #' \code{Apply}
 #'
-#' @param f a function.
-#' @param check a function.
-#' @param init a valie.
-#' @return a list.
+#' @param f the function to be applied.
+#' @param x an array, including a matrix.
+#' @param margin a vector giving the subscripts which the function will be applied over.
+#' @param ... optional arguments to f.
+#' @return something.
 #' @examples
-#' Some examples:
+#' # Some examples
 #'
 #'
 #'

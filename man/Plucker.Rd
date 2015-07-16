@@ -7,10 +7,10 @@
 Plucker(field)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{field}{a character vector.}
 }
 \value{
-the negation of that function.
+something.
 }
 \description{
 Pluck objects from S3 and S4 object slots!

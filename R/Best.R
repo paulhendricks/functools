@@ -1,17 +1,19 @@
 #' Best
 #'
-#' \code{Best()} takes a vector and a two-argument function that returns a logical constant (either TRUE or FALSE),
-#' and returns the that function reduced over that vector.
+#' \code{Best()} takes a vector and a two-argument function that returns
+#' a logical constant (either TRUE or FALSE), and returns that function
+#' reduced over that vector.
 #'
-#' @param x a vector.
+#' @param f a function.
+#' @param x a value.
 #' @return  a two-argument function that returns a logical constant.
 #' @examples
 #' # Simulate the behavior of max with numerics
-#' Best(1:10, function(x, y) return(x > y))
+#' Best(function(x, y) return(x > y), 1:10)
 #' # Simulate the behavior of min with numerics
-#' Best(1:10, function(x, y) return(x < y))
+#' Best(function(x, y) return(x < y), 1:10)
 #' # This comparison function prefers values that begin with l
-#' Best(letters, function(x, y) return(x[1] == "l"))
+#' Best(function(x, y) return(x[1] == "l"), letters)
 #' @export
 Best <- function(f, x) {
   force(f); f <- match.fun(f)

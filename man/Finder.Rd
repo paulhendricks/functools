@@ -4,10 +4,12 @@
 \alias{Finder}
 \title{Finder}
 \usage{
-Finder(x, f)
+Finder(f, x)
 }
 \arguments{
-\item{x}{a vector.}
+\item{f}{a function.}
+
+\item{x}{a value.}
 }
 \value{
 a two-argument function that returns a logical constant.
@@ -19,6 +21,6 @@ and returns the that function reduced over that vector. It is assumed that:
 * The two-argument function knows how to "unwrap" its arguments.
 }
 \examples{
-Some examples:
+# Some examples:
 }
 

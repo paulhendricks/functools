@@ -8,15 +8,16 @@ Repeatedly(f, x)
 }
 \arguments{
 \item{f}{a predicate function.}
+
+\item{x}{a value.}
 }
 \value{
-the negation of that function.
+something.
 }
 \description{
-\code{Repeat()} turns a function that throws an error into a function that returns a default value when there’s an error.
-The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
+Explanation
 }
 \examples{
-Some examples:
+# Some examples
 }
 

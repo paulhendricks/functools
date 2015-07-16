@@ -4,19 +4,20 @@
 \alias{Max}
 \title{Max}
 \usage{
-Max(x, f)
+Max(f, x)
 }
 \arguments{
 \item{f}{a predicate function.}
+
+\item{x}{a value.}
 }
 \value{
-the negation of that function.
+something.
 }
 \description{
-\code{Failwith()} turns a function that throws an error into a function that returns a default value when there’s an error.
-The essence of failwith() is simple; it’s just a wrapper around try(), the function that captures errors and allows execution to continue.
+\code{Max()}
 }
 \examples{
-Some examples:
+# Some examples
 }
 

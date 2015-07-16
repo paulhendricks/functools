@@ -17,6 +17,6 @@ the negation of that function.
 This can be a useful shortcut when a function returns the opposite of what you need.
 }
 \examples{
-Some examples:
+# Some examples
 }
 

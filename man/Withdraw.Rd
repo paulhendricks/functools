@@ -18,6 +18,6 @@ the negation of that function.
 Withdraw
 }
 \examples{
-Some examples:
+# Some examples
 }
 

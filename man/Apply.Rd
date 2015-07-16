@@ -7,19 +7,21 @@
 Apply(f, x, margin, ...)
 }
 \arguments{
-\item{f}{a function.}
+\item{f}{the function to be applied.}
 
-\item{check}{a function.}
+\item{x}{an array, including a matrix.}
 
-\item{init}{a valie.}
+\item{margin}{a vector giving the subscripts which the function will be applied over.}
+
+\item{...}{optional arguments to f.}
 }
 \value{
-a list.
+something.
 }
 \description{
 \code{Apply}
 }
 \examples{
-Some examples:
+# Some examples
 }
 
