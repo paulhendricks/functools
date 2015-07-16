@@ -1,5 +1,5 @@
 ---
-title: "functools"
+title: "Introduction to functools"
 author: "Paul Hendricks"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -17,3 +17,8 @@ library(functools)
 ## Header
 
 Copy
+
+```{r}
+
+```
+

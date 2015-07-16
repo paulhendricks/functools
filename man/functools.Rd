@@ -6,8 +6,8 @@
 \alias{functools-package}
 \title{functools: An R package for extending functional programming in R.}
 \description{
-functools is a utility-belt library for R that adds support to the
-usual higher order functional suspects (Map, Reduce, Filter, etc.) without
+functools is a utility-belt library for R that adds support to the usual
+higher order functional suspects (Map, Reduce, Filter, etc.) without
 extending any core R objects.
 }
 \details{
