@@ -7,3 +7,5 @@ lu <- Compose(length, unique)
 
 lu(sample(x = 1:10, size = 10000, replace = TRUE))
 
+
+
