@@ -1,4 +1,4 @@
-#' Always
+#' Create a function that that always returns a specific object.
 #'
 #' \code{Always(x)} is a closure function that always returns a function
 #' returning object x.

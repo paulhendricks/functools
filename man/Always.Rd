@@ -2,7 +2,7 @@
 % Please edit documentation in R/Always.R
 \name{Always}
 \alias{Always}
-\title{Always}
+\title{Create a function that that always returns a specific object.}
 \usage{
 Always(x)
 }
