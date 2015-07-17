@@ -2,7 +2,7 @@
 % Please edit documentation in R/Any.R
 \name{Any}
 \alias{Any}
-\title{Any}
+\title{Any.}
 \usage{
 Any(f, x, ..., na.rm = FALSE)
 }
@@ -19,7 +19,10 @@ Any(f, x, ..., na.rm = FALSE)
 a logical value.
 }
 \description{
-\code{Any()} is a predicate functional.
+\code{Any()} is a predicate functional that takes a predicate function
+\code{f} and an object \code{x} and loops over each value \code{i} in
+object \code{x}, evaluates \code{f(i)}, and returns TRUE if any values
+\code{i} in object \code{x} evaluate as TRUE.
 }
 \examples{
 # comment here

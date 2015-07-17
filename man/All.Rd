@@ -2,7 +2,7 @@
 % Please edit documentation in R/All.R
 \name{All}
 \alias{All}
-\title{All}
+\title{All.}
 \usage{
 All(f, x, ..., na.rm = FALSE)
 }
@@ -19,7 +19,10 @@ All(f, x, ..., na.rm = FALSE)
 a logical value.
 }
 \description{
-\code{All()} is a predicate functional.
+\code{All()} is a predicate functional that takes a predicate function
+\code{f} and an object \code{x} and loops over each value \code{i} in
+object \code{x}, evaluates \code{f(i)}, and returns TRUE if all values
+\code{i} in object \code{x} evaluate as TRUE.
 }
 \examples{
 # comment here
