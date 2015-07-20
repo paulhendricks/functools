@@ -16,8 +16,6 @@
 #' Best(function(x, y) return(x[1] == "l"), letters)
 #' @export
 Best <- function(f, x) {
-  force(f); f <- match.fun(f)
-  return(Reduce(function(x, y) {
-    return(ifelse(f(x, y), x, y))
-  }, x))
+  f <- match.fun(f)
+  return(Reduce(function(x, y) ifelse(f(x, y), x, y), x))
 }
