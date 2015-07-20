@@ -6,7 +6,10 @@
 #' @seealso \code{\link{Andify}} to create new predicate functions linked by the && operator.
 #' @examples
 #' # Examples
-#'
+#' is_character_or_factor <- Orify(is.character, is.factor)
+#' is_character_or_factor(letters)
+#' is_character_or_factor(factor(state.abb))
+#' is_character_or_factor(1:100)
 #' @export
 Orify <- function(...) {
   fs <- lapply(list(...), match.fun)
@@ -16,7 +19,7 @@ Orify <- function(...) {
   function(...) {
     out <- first(...)
     for (f in rest) {
-      if (!out) return(FALSE)
+      if (out) return(TRUE)
       out <- `||`(out, f(...))
     }
     out

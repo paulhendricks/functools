@@ -22,8 +22,6 @@
 #' even_number_between_10_and_100(100) # FALSE
 #' even_number_between_10_and_100(101) # FALSE
 #' even_number_between_10_and_100(102) # FALSE
-#' # checker <- Andify(Compose(Not, is.numeric), Compose(Not, is.character))
-#'
 #' @export
 Andify <- function(...) {
   fs <- lapply(list(...), match.fun)

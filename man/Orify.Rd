@@ -17,6 +17,10 @@ Predicate function operator that creates new predicate functions linked by the |
 }
 \examples{
 # Examples
+is_character_or_factor <- Orify(is.character, is.factor)
+is_character_or_factor(letters)
+is_character_or_factor(factor(state.abb))
+is_character_or_factor(1:100)
 }
 \seealso{
 \code{\link{Andify}} to create new predicate functions linked by the && operator.

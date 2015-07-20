@@ -33,7 +33,6 @@ even_number_between_10_and_100(50) # TRUE
 even_number_between_10_and_100(100) # FALSE
 even_number_between_10_and_100(101) # FALSE
 even_number_between_10_and_100(102) # FALSE
-# checker <- Andify(Compose(Not, is.numeric), Compose(Not, is.character))
 }
 \seealso{
 \code{\link{Orify}} to create new predicate functions linked by the || operator.
