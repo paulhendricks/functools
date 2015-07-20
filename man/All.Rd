@@ -2,16 +2,16 @@
 % Please edit documentation in R/All.R
 \name{All}
 \alias{All}
-\title{All.}
+\title{Test if all items in an object evaluate to TRUE.}
 \usage{
 All(f, x, ..., na.rm = FALSE)
 }
 \arguments{
 \item{f}{a predicate function.}
 
-\item{x}{an object.}
+\item{x}{an iterable object.}
 
-\item{...}{further arguments passed to or from other methods.}
+\item{...}{further arguments passed to the predicate function.}
 
 \item{na.rm}{a logical value indicating whether NA values should be stripped before the computation proceeds.}
 }
@@ -20,12 +20,16 @@ a logical value.
 }
 \description{
 \code{All()} is a predicate functional that takes a predicate function
-\code{f} and an object \code{x} and loops over each value \code{i} in
-object \code{x}, evaluates \code{f(i)}, and returns TRUE if all values
-\code{i} in object \code{x} evaluate as TRUE.
+\code{f} and an iterable object \code{x} and:
+\enumerate{
+  \item iterates over each item \code{i} in object \code{x},
+  \item evaluates \code{f(i)},
+  \item and ultimately returns TRUE if all items \code{i} in object \code{x} evaluate as TRUE.
+  }
 }
 \examples{
-# comment here
+# Examples
+data(mtcars)
 All(is.numeric, mtcars) # TRUE
 All(is.character, mtcars) # FALSE
 mtcars$am <- factor(mtcars$am)
@@ -37,7 +41,7 @@ All(is.numeric, list(NA, "3", NULL)) # FALSE
 All(is.numeric, list(NA, 3, NULL)) # FALSE
 All(is.numeric, list(NA, "3", NULL, 5)) # FALSE
 
-# Use na.rm = TRUE to remove NULLS
+# Use na.rm = TRUE to remove NAs and NULLS
 All(Identity, list(NA, TRUE)) # NA
 All(Identity, list(NA, TRUE), na.rm = TRUE) # TRUE
 }
