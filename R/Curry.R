@@ -9,5 +9,5 @@
 #'
 #' @export
 Curry <- function(x) {
-  return(1)
+  return(1L) # Placeholder
 }
