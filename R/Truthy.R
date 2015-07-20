@@ -5,6 +5,7 @@
 #'
 #' @param x an object.
 #' @return a logical value.
+#' @family predicate functions
 #' @examples
 #' # Returns if a value exists or not:
 #' Truthy(TRUE) # TRUE

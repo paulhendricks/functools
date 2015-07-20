@@ -33,4 +33,7 @@ Existy(list(NA)) # FALSE
 # Works with applying over lists
 lapply(list(4, "foo", NULL, NA), Existy) # TRUE, TRUE, FALSE, FALSE
 }
+\seealso{
+Other predicate functions: \code{\link{Truthy}}
+}
 

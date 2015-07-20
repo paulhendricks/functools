@@ -27,4 +27,7 @@ Truthy(1L) # TRUE
 Truthy(0L) # FALSE
 Truthy("a") # TRUE
 }
+\seealso{
+Other predicate functions: \code{\link{Existy}}
+}
 

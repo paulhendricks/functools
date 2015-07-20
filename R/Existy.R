@@ -5,6 +5,7 @@
 #'
 #' @param x an object.
 #' @return a logical value.
+#' @family predicate functions
 #' @examples
 #' # Some examples
 #' Existy(4) # TRUE
