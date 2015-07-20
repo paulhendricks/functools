@@ -45,4 +45,9 @@ Any(is.numeric, list(NA, "3", NULL, 5)) #TRUE
 Any(Identity, list(NA, FALSE)) # NA
 Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
 }
+\seealso{
+\code{\link{All}} to test if all items in an object evaluate to TRUE.
+
+Other predicate.functionals: \code{\link{All}}
+}
 

@@ -2,17 +2,25 @@
 % Please edit documentation in R/Orify.R
 \name{Orify}
 \alias{Orify}
-\title{Create new predicate functions}
+\title{Predicate function operator that creates new predicate functions linked by the || operator.}
 \usage{
 Orify(...)
 }
 \arguments{
 \item{...}{n functions to apply in order from right to left}
 }
+\value{
+a function
+}
 \description{
-Create new predicate functions
+Predicate function operator that creates new predicate functions linked by the || operator.
 }
 \examples{
 # Examples
+}
+\seealso{
+\code{\link{Andify}} to create new predicate functions linked by the && operator.
+
+Other predicate.function.operators: \code{\link{Andify}}
 }
 

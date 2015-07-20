@@ -1,7 +1,9 @@
-#' Create new predicate functions
+#' Predicate function operator that creates new predicate functions linked by the || operator.
 #'
 #' @param ... n functions to apply in order from right to left
-#'
+#' @return a function
+#' @family predicate function operators
+#' @seealso \code{\link{Andify}} to create new predicate functions linked by the && operator.
 #' @examples
 #' # Examples
 #'

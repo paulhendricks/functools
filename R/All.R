@@ -13,6 +13,8 @@
 #' @param ... further arguments passed to the predicate function.
 #' @param na.rm a logical value indicating whether NA values should be stripped before the computation proceeds.
 #' @return a logical value.
+#' @family predicate functionals
+#' @seealso \code{\link{Any}} to test if all items in an object evaluate to TRUE.
 #' @examples
 #' # Examples
 #' data(mtcars)

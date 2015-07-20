@@ -2,15 +2,18 @@
 % Please edit documentation in R/Andify.R
 \name{Andify}
 \alias{Andify}
-\title{Create new predicate functions}
+\title{Predicate function operator that creates new predicate functions linked by the && operator.}
 \usage{
 Andify(...)
 }
 \arguments{
 \item{...}{n functions to apply in order from right to left}
 }
+\value{
+a function
+}
 \description{
-Create new predicate functions
+Predicate function operator that creates new predicate functions linked by the && operator.
 }
 \examples{
 # Examples
@@ -31,5 +34,10 @@ even_number_between_10_and_100(100) # FALSE
 even_number_between_10_and_100(101) # FALSE
 even_number_between_10_and_100(102) # FALSE
 # checker <- Andify(Compose(Not, is.numeric), Compose(Not, is.character))
+}
+\seealso{
+\code{\link{Orify}} to create new predicate functions linked by the || operator.
+
+Other predicate.function.operators: \code{\link{Orify}}
 }
 
