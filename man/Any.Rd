@@ -48,6 +48,6 @@ Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
 \seealso{
 \code{\link{All}} to test if all items in an object evaluate to TRUE.
 
-Other predicate.functionals: \code{\link{All}}
+Other predicate functionals: \code{\link{All}}
 }
 

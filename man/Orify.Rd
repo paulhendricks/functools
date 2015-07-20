@@ -25,6 +25,6 @@ is_character_or_factor(1:100)
 \seealso{
 \code{\link{Andify}} to create new predicate functions linked by the && operator.
 
-Other predicate.function.operators: \code{\link{Andify}}
+Other predicate function operators: \code{\link{Andify}}
 }
 

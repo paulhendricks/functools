@@ -1,6 +1,6 @@
 library(functools)
-context("()")
+context("Apply()")
 
-test_that("() satisfies some condition.", {
+test_that("Apply() satisfies some condition.", {
   expect_equal(1, 1)
 })

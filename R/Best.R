@@ -7,6 +7,8 @@
 #' @param f a function.
 #' @param x a value.
 #' @return  a two-argument function that returns a logical constant.
+#' @family aggregate functions
+#' @seealso \code{\link{Best}}, \code{\link{Max}}, \code{\link{Min}}, \code{\link{Finder}}
 #' @examples
 #' # Simulate the behavior of max with numerics
 #' Best(function(x, y) return(x > y), 1:10)
