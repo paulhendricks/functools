@@ -1,16 +1,11 @@
-#' Lapply
+#' Wrapper for lapply function.
 #'
-#' \code{Lapply}
+#' Wrapper for \code{\link[base]{lapply}}.
 #'
 #' @param f a function.
 #' @param x a value.
 #' @param ... optional arguments to f.
-#' @return a list.
-#' @examples
-#' # Some examples
-#'
-#'
-#'
+#' @seealso \code{\link[base]{lapply}} for code and documentation.
 #' @export
 Lapply <- function(f, x, ...) {
   return(lapply(X = x, FUN = f, ...))

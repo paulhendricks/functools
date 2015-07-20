@@ -2,7 +2,7 @@
 % Please edit documentation in R/Apply.R
 \name{Apply}
 \alias{Apply}
-\title{Apply}
+\title{Wrapper for apply function.}
 \usage{
 Apply(f, x, margin, ...)
 }

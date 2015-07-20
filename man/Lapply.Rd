@@ -2,7 +2,7 @@
 % Please edit documentation in R/Lapply.R
 \name{Lapply}
 \alias{Lapply}
-\title{Lapply}
+\title{Wrapper for lapply function.}
 \usage{
 Lapply(f, x, ...)
 }
@@ -13,13 +13,10 @@ Lapply(f, x, ...)
 
 \item{...}{optional arguments to f.}
 }
-\value{
-a list.
-}
 \description{
-\code{Lapply}
+Wrapper for \code{\link[base]{lapply}}.
 }
-\examples{
-# Some examples
+\seealso{
+\code{\link[base]{lapply}} for code and documentation.
 }
 

@@ -1,4 +1,4 @@
-#' Apply
+#' Wrapper for apply function.
 #'
 #' Wrapper for \code{\link[base]{apply}}.
 #'
