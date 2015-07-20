@@ -20,4 +20,8 @@ something.
 \examples{
 # Some examples
 }
+\seealso{
+Other aggregate functions: \code{\link{Best}};
+  \code{\link{Finder}}; \code{\link{Min}}
+}
 

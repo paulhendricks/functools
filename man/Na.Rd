@@ -17,8 +17,6 @@ NA.
 Na()
 }
 \seealso{
-\code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
-
 Other constants: \code{\link{False}};
   \code{\link{Identity}}; \code{\link{Null}};
   \code{\link{True}}

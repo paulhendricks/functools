@@ -3,7 +3,7 @@
 #' \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
 #'
 #' @param x a vector.
-#' @param vector x but with all NULL and NA values filtered out.
+#' @return vector x but with all NULL and NA values filtered out.
 #' @examples
 #' # Removes all null elements from a vector:
 #' a <- list(NULL, 1, 5, NULL)

@@ -8,6 +8,7 @@
 #' @param f a function.
 #' @param x a value.
 #' @return  a two-argument function that returns a logical constant.
+#' @family aggregate functions
 #' @examples
 #' # Some examples:
 #'
