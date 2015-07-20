@@ -15,13 +15,10 @@ Apply(f, x, margin, ...)
 
 \item{...}{optional arguments to f.}
 }
-\value{
-something.
-}
 \description{
-\code{Apply}
+Wrapper for \code{\link[base]{apply}}.
 }
-\examples{
-# Some examples
+\seealso{
+\code{\link[base]{apply}} for code and documentation.
 }
 
