@@ -8,6 +8,8 @@ Compact(x)
 }
 \arguments{
 \item{x}{a vector.}
+
+\item{vector}{x but with all NULL and NA values filtered out.}
 }
 \description{
 \code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
