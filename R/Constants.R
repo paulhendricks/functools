@@ -1,21 +1,10 @@
-#' False
-#'
-#' \code{False()} is a function that returns FALSE.
-#'
-#' @return FALSE.
-#' @examples
-#' # False() returns FALSE:
-#' False()
-#' @export
-False <- function() {
-  return(FALSE)
-}
-
 #' True
 #'
 #' \code{True()} is a function that returns TRUE.
 #'
 #' @return TRUE.
+#' @family constants
+#' @seealso \code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
 #' @examples
 #' # True() returns TRUE:
 #' True()
@@ -24,12 +13,29 @@ True <- function() {
   return(TRUE)
 }
 
+#' False
+#'
+#' \code{False()} is a function that returns FALSE.
+#'
+#' @return FALSE.
+#' @family constants
+#' @seealso \code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
+#' @examples
+#' # False() returns FALSE:
+#' False()
+#' @export
+False <- function() {
+  return(FALSE)
+}
+
 #' Identity
 #'
 #' \code{Identity()} returns itself.
 #'
 #' @param x an object.
 #' @return the object.
+#' @family constants
+#' @seealso \code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
 #' @examples
 #' # Return itself:
 #' Identity(5)
@@ -46,6 +52,8 @@ Identity <- function(x) {
 #' \code{Null()} is a function that returns NULL.
 #'
 #' @return NULL.
+#' @family constants
+#' @seealso \code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
 #' @examples
 #' # Null() returns NULL:
 #' Null()
@@ -60,6 +68,8 @@ Null <- function() {
 #' \code{Na()} is a function that returns NA.
 #'
 #' @return NA.
+#' @family constants
+#' @seealso \code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
 #' @examples
 #' # Na() returns NA:
 #' Na()

@@ -16,4 +16,10 @@ FALSE.
 # False() returns FALSE:
 False()
 }
+\seealso{
+\code{link{True}}, \code{link{False}}, \code{link{Identity}}, \code{link{Null}}, \code{link{Na}},
+
+Other constants: \code{\link{Identity}}; \code{\link{Na}};
+  \code{\link{Null}}; \code{\link{True}}
+}
 
