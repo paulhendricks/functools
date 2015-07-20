@@ -7,7 +7,7 @@
 Andify(...)
 }
 \arguments{
-\item{...}{n functions to apply in order from right to left}
+\item{...}{n functions to apply in order from left to right}
 }
 \value{
 a function
