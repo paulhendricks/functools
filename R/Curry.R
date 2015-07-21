@@ -1,6 +1,7 @@
 #' Curry
 #'
-#' Explanation
+#' Explanation.
+#' Test.
 #'
 #' @param x an object.
 #' @return a value.
