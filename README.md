@@ -35,12 +35,3 @@ Learning functools
 ------------------
 
 To get started, read the notes below, then read the intro vignette: `vignette("introduction", package = "functools")`.
-
-Examples
---------
-
-``` r
-library(functools)
-1 + 1
-#> [1] 2
-```
