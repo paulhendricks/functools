@@ -14,8 +14,8 @@
 #'
 #' @export
 IterateUntil <- function(f, check, init) {
-  force(f); f <- match.fun(f)
-  force(check); check <- match.fun(check)
+  f <- match.fun(f)
+  check <- match.fun(check)
   ret <- list()
   result <- f(init)
   while(check(result)) {

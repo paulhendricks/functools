@@ -20,5 +20,7 @@ Wrapper for \code{\link[base]{apply}}.
 }
 \seealso{
 \code{\link[base]{apply}} for code and documentation.
+
+Other functionals: \code{\link{Lapply}}
 }
 

@@ -10,11 +10,10 @@ Splat(f)
 \item{f}{a predicate function.}
 }
 \value{
-the negation of that function.
+example.
 }
 \description{
-\code{negate()} takes a function that returns a logical vector (a predicate function), and returns the negation of that function.
-This can be a useful shortcut when a function returns the opposite of what you need.
+Splat
 }
 \examples{
 # Some examples

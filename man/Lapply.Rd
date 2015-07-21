@@ -18,5 +18,7 @@ Wrapper for \code{\link[base]{lapply}}.
 }
 \seealso{
 \code{\link[base]{lapply}} for code and documentation.
+
+Other functionals: \code{\link{Apply}}
 }
 

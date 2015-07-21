@@ -13,7 +13,8 @@ Curry(x)
 a value.
 }
 \description{
-Explanation
+Explanation.
+Test.
 }
 \examples{
 # comment here

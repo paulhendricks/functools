@@ -23,6 +23,10 @@ is simple: it is just a wrapper around try(), the function that
 captures errors and allows execution to continue.
 }
 \examples{
-# Some examples:
+# Some examples
+}
+\seealso{
+Other function operators: \code{\link{Compose}},
+  \code{\link{\%O\%}}
 }
 

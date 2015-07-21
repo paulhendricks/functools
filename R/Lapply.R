@@ -5,6 +5,7 @@
 #' @param f a function.
 #' @param x a value.
 #' @param ... optional arguments to f.
+#' @family functionals
 #' @seealso \code{\link[base]{lapply}} for code and documentation.
 #' @export
 Lapply <- function(f, x, ...) {

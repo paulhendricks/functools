@@ -27,4 +27,8 @@ Best(function(x, y) return(x < y), 1:10)
 # This comparison function prefers values that begin with l
 Best(function(x, y) return(x[1] == "l"), letters)
 }
+\seealso{
+Other aggregate functionals: \code{\link{Finder}};
+  \code{\link{Max}}; \code{\link{Min}}
+}
 

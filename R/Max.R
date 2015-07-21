@@ -5,7 +5,7 @@
 #' @param f a predicate function.
 #' @param x a value.
 #' @return  something.
-#' @family aggregate functions
+#' @family aggregate functionals
 #' @examples
 #' # Some examples
 #'
