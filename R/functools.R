@@ -1,4 +1,4 @@
-#' functools
+#' functools: Extending Functional Programming in R
 #'
 #' functools is an R package for extending functional programming in R. It has three main goals:
 #'

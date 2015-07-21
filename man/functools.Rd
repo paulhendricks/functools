@@ -4,7 +4,7 @@
 \name{functools}
 \alias{functools}
 \alias{functools-package}
-\title{functools}
+\title{functools: Extending Functional Programming in R}
 \description{
 functools is an R package for extending functional programming in R. It has three main goals:
 }
