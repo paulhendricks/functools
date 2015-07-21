@@ -4,8 +4,8 @@
 #'
 #' @param ... n functions to apply in order from right to left
 #' @param f,g two functions to compose for the infix form
-#'
-#' @export
+#' @return a function
+#' @family function operators
 #' @examples
 #' not_null <- `!` %O% is.null
 #' not_null(4)
@@ -13,7 +13,6 @@
 #'
 #' add1 <- function(x) x + 1
 #' Compose(add1,add1)(8)
-#'
 #' @export
 Compose <- function(...) {
   fs <- lapply(list(...), match.fun)

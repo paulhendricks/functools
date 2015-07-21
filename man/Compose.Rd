@@ -14,6 +14,9 @@ f \%O\% g
 
 \item{f,g}{two functions to compose for the infix form}
 }
+\value{
+a function
+}
 \description{
 In infix and prefix forms.
 }

@@ -21,7 +21,7 @@ something.
 # Some examples
 }
 \seealso{
-Other aggregate functions: \code{\link{Best}};
-  \code{\link{Finder}}; \code{\link{Min}}
+Other aggregate functions: \code{\link{Finder}};
+  \code{\link{Min}}
 }
 

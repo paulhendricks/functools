@@ -5,6 +5,7 @@
 #'
 #' @param x an object.
 #' @return a function that itself returns x.
+#' @family closures
 #' @examples
 #' # comment here
 #' always_0 <- Always(0)
