@@ -24,7 +24,6 @@ and returns the that function reduced over that vector. It is assumed that:
 # Some examples:
 }
 \seealso{
-Other aggregate functionals: \code{\link{Best}};
-  \code{\link{Max}}; \code{\link{Min}}
+Other aggregate functionals: \code{\link{Best}}
 }
 
