@@ -4,10 +4,4 @@
 * win-builder (devel and release)
 
 ## R CMD check results
-There were no ERRORs or WARNINGs.
-
-There was 1 NOTE:
-
-  * checking for hidden files and directories ... NOTE
-Found the following hidden files and directories:
-  .travis.yml
+There were no ERRORs, WARNINGs, or NOTEs.
