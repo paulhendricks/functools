@@ -8,9 +8,9 @@ functools is an R package for extending functional programming in R. It has thre
 
 -   Add support to the usual higher order functional suspects (Map, Reduce, Filter, etc.) without extending any core R objects.
 
--   Provide blazing fast performance for in-memory data by writing key pieces in C++ and options for parallelization, where possible.
-
 -   Use a consistent API to access different functionals in base R such as `lapply` or `apply`.
+
+-   Provide options for easy parallelization, and if possible, write key pieces in C++ for blazing fast performance.
 
 functools achieves these goals through three main types of function design patterns:
 
