@@ -20,14 +20,22 @@ functools achieves these goals through three main types of function design patte
 
 -   Function Operators (functions that take functions and return functions)
 
-You can install the latest development version from github with:
+You can install:
 
-``` r
-if (packageVersion("devtools") < 1.6) {
-  install.packages("devtools")
-}
-devtools::install_github("paulhendricks/functools")
-```
+-   the latest released version from CRAN with
+
+    ``` r
+    install.packages("functools")
+    ```
+
+-   the latest development version from github with
+
+    ``` r
+    if (packageVersion("devtools") < 1.6) {
+      install.packages("devtools")
+    }
+    devtools::install_github("paulhendricks/functools")
+    ```
 
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
 
