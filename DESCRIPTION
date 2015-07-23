@@ -1,7 +1,9 @@
 Package: functools
 Title: Extending Functional Programming in R
 Version: 0.1.0
-Description: functools is an R package for extending functional programming in R.
+Description: functools extends functional programming in R by providing
+    support to support to the usual higher order functional suspects
+    (Map, Reduce, Filter, etc.) without extending any core R objects.
 Authors@R: person("Paul", "Hendricks", , "paul.hendricks.2013@owu.edu", c("aut", "cre"))
 URL: https://github.com/paulhendricks/functools
 BugReports: https://github.com/paulhendricks/functools/issues
