@@ -27,8 +27,7 @@ Best(function(x, y) return(x < y), 1:10)
 Best(function(x, y) return(x[1] == "l"), letters)
 }
 \seealso{
-Other aggregate functionals: \code{\link{Max}};
-  \code{\link{Min}}; \code{\link{Sapply}};
+Other aggregate functionals: \code{\link{Sapply}};
   \code{\link{Tapply}}; \code{\link{Vapply}}
 }
 
