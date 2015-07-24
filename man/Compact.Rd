@@ -2,18 +2,19 @@
 % Please edit documentation in R/Compact.R
 \name{Compact}
 \alias{Compact}
-\title{Compact}
+\title{Filter NA and NULL values out of a vector, list, or data.frame.}
 \usage{
 Compact(x)
 }
 \arguments{
-\item{x}{a vector.}
+\item{x}{A vector.}
 }
 \value{
-vector x but with all NULL and NA values filtered out.
+Vector x but with all NULL and NA values filtered out.
 }
 \description{
-\code{Compact()} takes a vector x and returns it with all NULL and NA values filtered out.
+\code{Compact()} takes a vector \code{x} and returns it with all NULL and
+NA values filtered out.
 }
 \examples{
 # Removes all null elements from a vector:

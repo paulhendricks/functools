@@ -1,4 +1,4 @@
-#' Compose multiple functions
+#' Compose multiple functions.
 #'
 #' In infix and prefix forms.
 #'

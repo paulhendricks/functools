@@ -1,12 +1,17 @@
 library(functools)
 context("Compose()")
 
-lu <- Compose(length, unique)
-test_that("Compose() returns a function composed of two functions", {
-  expect_equal(lu(c(1:10, 5:15, 20:25)), 21)
+test_that("Produces the correct output.", {
+  expect_equal(Compose(Identity, Identity)(Identity), Identity(Identity))
+  expect_equal(Compose("Identity", "Identity")(Identity), Identity(Identity))
+
 })
 
-III <- Compose(Identity, Identity, Identity)
-test_that("Compose() returns a function", {
-  expect_is(III, "function")
+test_that("Produces the correct output type.", {
+  expect_is(Compose(Identity, Identity), "function")
+  expect_is(Compose("Identity", "Identity"), "function")
+})
+
+test_that("Produces the correct errors.", {
+  expect_error(Compose("a", "b"))
 })

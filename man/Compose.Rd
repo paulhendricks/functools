@@ -3,7 +3,7 @@
 \name{Compose}
 \alias{Compose}
 \alias{\%O\%}
-\title{Compose multiple functions}
+\title{Compose multiple functions.}
 \usage{
 Compose(...)
 
