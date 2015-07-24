@@ -2,21 +2,20 @@
 % Please edit documentation in R/Reduce-Right.R
 \name{Reduce_Right}
 \alias{Reduce_Right}
-\title{Reduce Right}
+\title{Title}
 \usage{
-Reduce_Right(f, x, ...)
+Reduce_Right(x)
 }
 \arguments{
-\item{f}{A predicate function.}
-
-\item{x}{A vector.}
-
-\item{...}{Further arguments passed to the predicate function.}
+\item{x}{an object.}
 }
 \value{
-To be updated.
+a value.
 }
 \description{
-Reduce Right
+Explanation
+}
+\examples{
+# comment here
 }
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Curry.R
 \name{Curry}
 \alias{Curry}
-\title{Curry}
+\title{Title}
 \usage{
 Curry(x)
 }
@@ -13,8 +13,7 @@ Curry(x)
 a value.
 }
 \description{
-Explanation.
-Test.
+Explanation
 }
 \examples{
 # comment here
