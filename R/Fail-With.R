@@ -1,9 +1,9 @@
-#' Failwith
+#' Fail with a default value.
 #'
-#' Failwith() turns a function that throws an error into a function that
-#' returns a default value when there is an error. The essence of Failwith()
-#' is simple: it is just a wrapper around try(), the function that
-#' captures errors and allows execution to continue.
+#' \code{Fail_With()} turns a function that throws an error into a function
+#' that returns a default value when there is an error. The essence of
+#' \code{Fail_With()} is simple: it is just a wrapper around \code{try()},
+#' the function that captures errors and allows execution to continue.
 #'
 #' @param default default value.
 #' @param f any function that throws an error.
@@ -16,7 +16,7 @@
 #'
 #'
 #' @export
-Failwith <- function(default = NULL, f, silent = FALSE) {
+Fail_With <- function(default = NULL, f, silent = FALSE) {
   f <- match.fun(f)
   return(function(...) {
     out <- default

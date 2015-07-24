@@ -1,5 +1,5 @@
 library(functools)
-context("Failwith()")
+context("Fail_With()")
 
 default_value <- 0
 
@@ -9,7 +9,7 @@ new_function <- function(x) {
 }
 
 new_function_with_default <-
-  Failwith(default_value, new_function, silent = TRUE)
+  Fail_With(default_value, new_function, silent = TRUE)
 
 test_that("Produces the correct output.", {
   expect_equal(new_function_with_default("a"), default_value)
@@ -22,6 +22,7 @@ test_that("Produces the correct output.", {
 
 test_that("Produces the correct output type.", {
   expect_is(new_function, "function")
+  expect_is(new_function_with_default, "function")
 })
 
 test_that("Produces the correct errors.", {

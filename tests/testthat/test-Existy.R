@@ -19,7 +19,13 @@ test_that("Produces the correct output.", {
 })
 
 test_that("Produces the correct output type.", {
-  expect_is(unlist(Lapply(Existy, foo)), "logical")
+  expect_is(Existy(NULL), "logical")
+  expect_is(Existy(NA), "logical")
+  expect_is(Existy(1), "logical")
+  expect_is(Existy(2.4), "logical")
+  expect_is(Existy("hello"), "logical")
+  expect_is(Existy(FALSE), "logical")
+  expect_is(Existy(TRUE), "logical")
 })
 
 test_that("Produces the correct errors.", {
