@@ -70,13 +70,13 @@ Plain functionals
 -   Reject
 
 Predicate functionals
-=====================
+---------------------
 
 -   All
 -   Any
 
 Aggregate functionals
-=====================
+---------------------
 
 -   Best
 

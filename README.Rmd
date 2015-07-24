@@ -78,11 +78,11 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 * Reduce_Right
 * Reject
 
-# Predicate functionals
+## Predicate functionals
 * All
 * Any
 
-# Aggregate functionals
+## Aggregate functionals
 * Best
 
 # Function Operators 
