@@ -10,6 +10,6 @@
 #' @family functionals
 #' @seealso \code{\link[base]{mapply}} for code and documentation.
 #' @export
-Mapply <- function(f, x, ..., more_args = NULL, simplify = TRUE, use_names = TRUE) {
+Mapply <- function(f, ..., more_args = NULL, simplify = TRUE, use_names = TRUE) {
   return(mapply(FUN = f, ..., MoreArgs = more_args, SIMPLIFY = simplify, USE.NAMES = use_names))
 }

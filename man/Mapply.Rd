@@ -4,7 +4,7 @@
 \alias{Mapply}
 \title{Wrapper for mapply function.}
 \usage{
-Mapply(f, x, ..., more_args = NULL, simplify = TRUE, use_names = TRUE)
+Mapply(f, ..., more_args = NULL, simplify = TRUE, use_names = TRUE)
 }
 \arguments{
 \item{f}{A function.}
