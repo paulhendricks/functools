@@ -10,9 +10,16 @@ test_that("Produces the correct output.", {
 })
 
 test_that("Produces the correct output type.", {
-  expect_equal(1, 1)
+  expect_is(True(), "logical")
+  expect_is(False(), "logical")
+  expect_is(Identity(Identity), "function")
+  expect_is(Na(), "logical")
+  expect_is(Null(), "NULL")
 })
 
 test_that("Produces the correct errors.", {
-  expect_equal(1, 1)
+  expect_error(True(1))
+  expect_error(False(1))
+  expect_error(Na(1))
+  expect_error(Null(1))
 })
