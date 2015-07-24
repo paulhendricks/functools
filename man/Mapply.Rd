@@ -2,28 +2,28 @@
 % Please edit documentation in R/Mapply.R
 \name{Mapply}
 \alias{Mapply}
-\title{Mapply}
+\title{Wrapper for mapply function.}
 \usage{
-Mapply(f, x)
+Mapply(f, x, ..., more_args = NULL, simplify = TRUE, use_names = TRUE)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{f}{A function.}
 
-\item{x}{a value.}
-}
-\value{
-something.
+\item{...}{Arguments to vectorize over (vectors or lists of strictly positive length, or all of zero length).}
+
+\item{more_args}{A list of other arguments to FUN.}
+
+\item{simplify}{Logical or character string; attempt to reduce the result to a vector, matrix or higher dimensional array; see the simplify argument of \code{\link[base]{sapply}}.}
+
+\item{use_names}{Logical; use names if the first ... argument has names, or if it is a character vector, use that character vector as the names.}
 }
 \description{
-\code{Mapply()}
-}
-\examples{
-# Some examples
+Wrapper for \code{\link[base]{mapply}}.
 }
 \seealso{
-Other aggregate functionals: \code{\link{Best}};
-  \code{\link{Max}}; \code{\link{Min}};
-  \code{\link{Sapply}}; \code{\link{Split}};
-  \code{\link{Tapply}}; \code{\link{Vapply}}
+\code{\link[base]{mapply}} for code and documentation.
+
+Other functionals: \code{\link{Apply}};
+  \code{\link{Lapply}}
 }
 

@@ -22,8 +22,8 @@ something.
 }
 \seealso{
 Other aggregate functionals: \code{\link{Best}};
-  \code{\link{Mapply}}; \code{\link{Max}};
-  \code{\link{Sapply}}; \code{\link{Split}};
-  \code{\link{Tapply}}; \code{\link{Vapply}}
+  \code{\link{Max}}; \code{\link{Sapply}};
+  \code{\link{Split}}; \code{\link{Tapply}};
+  \code{\link{Vapply}}
 }
 

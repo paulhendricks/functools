@@ -2,9 +2,9 @@
 #'
 #' Wrapper for \code{\link[base]{lapply}}.
 #'
-#' @param f a function.
-#' @param x a value.
-#' @param ... optional arguments to f.
+#' @param f A function.
+#' @param x A value.
+#' @param ... Optional arguments to f.
 #' @family functionals
 #' @seealso \code{\link[base]{lapply}} for code and documentation.
 #' @export
