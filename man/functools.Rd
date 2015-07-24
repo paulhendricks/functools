@@ -6,13 +6,13 @@
 \alias{functools-package}
 \title{functools: Extending Functional Programming in R}
 \description{
-functools is an R package for extending functional programming in R. It has three main goals:
+functools extends functional programming in R. It has three main goals:
 }
 \details{
 \itemize{
 \item Add support to the usual higher order functional suspects (Map, Reduce, Filter, etc.) without extending any core R objects.
-\item Provide blazing fast performance for in-memory data by writing key pieces in C++ and options for parallelization, where possible.
 \item Use a consistent API to access different functionals in base R such as `lapply` or `apply`.
+\item Provide blazing fast performance for in-memory data by writing key pieces in C++ and options for parallelization, where possible.
 }
 
 functools achieves these goals through three main types of function design patterns:
