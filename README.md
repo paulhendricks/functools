@@ -45,12 +45,15 @@ Closures
 Convenience Functions
 ---------------------
 
-Always Compact Constants
+-   Always
+-   Compact
+-   Constants
 
 Predicate Functions
 -------------------
 
-Existy Truthy
+-   Existy
+-   Truthy
 
 Functionals
 ===========
@@ -58,17 +61,24 @@ Functionals
 Plain functionals
 -----------------
 
-Apply Lapply Mapply Sapply Tapply Reduce\_Right Reject
+-   Apply
+-   Lapply
+-   Mapply
+-   Sapply
+-   Tapply
+-   Reduce\_Right
+-   Reject
 
 Predicate functionals
 =====================
 
-All Any
+-   All
+-   Any
 
 Aggregate functionals
 =====================
 
-Best
+-   Best
 
 Function Operators
 ==================
@@ -76,9 +86,14 @@ Function Operators
 Create new new predicate functions
 ----------------------------------
 
-Andify Orify
+-   Andify
+-   Orify
 
 Modify function behavior
 ------------------------
 
-Compose Curry Fail\_With Memoize Partial
+-   Compose
+-   Curry
+-   Fail\_With
+-   Memoize
+-   Partial
