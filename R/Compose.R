@@ -2,9 +2,9 @@
 #'
 #' In infix and prefix forms.
 #'
-#' @param ... n functions to apply in order from right to left
-#' @param f,g two functions to compose for the infix form
-#' @return a function
+#' @param ... n functions to apply in order from right to left.
+#' @param f,g Two functions to compose for the infix form
+#' @return A function that
 #' @family function operators
 #' @examples
 #' not_null <- `!` %O% is.null

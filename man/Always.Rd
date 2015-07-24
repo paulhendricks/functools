@@ -7,10 +7,10 @@
 Always(x)
 }
 \arguments{
-\item{x}{an object.}
+\item{x}{An object.}
 }
 \value{
-a function that itself returns x.
+A function that itself returns x.
 }
 \description{
 \code{Always(x)} is a closure function that takes any object x, and

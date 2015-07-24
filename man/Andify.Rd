@@ -7,10 +7,10 @@
 Andify(...)
 }
 \arguments{
-\item{...}{n functions to apply in order from left to right}
+\item{...}{n functions to apply in order from left to right.}
 }
 \value{
-a function
+A predicate function linked by the && operator.
 }
 \description{
 Predicate function operator that creates new predicate functions linked by the && operator.

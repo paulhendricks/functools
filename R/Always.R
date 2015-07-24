@@ -3,8 +3,8 @@
 #' \code{Always(x)} is a closure function that takes any object x, and
 #' returns a function that always returns object x.
 #'
-#' @param x an object.
-#' @return a function that itself returns x.
+#' @param x An object.
+#' @return A function that itself returns x.
 #' @family closures
 #' @examples
 #' # comment here

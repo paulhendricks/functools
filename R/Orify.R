@@ -1,15 +1,15 @@
 #' Predicate function operator that creates new predicate functions linked by the || operator.
 #'
 #' @param ... n functions to apply in order from left to right
-#' @return a function
+#' @return A predicate function linked by the || operator.
 #' @family predicate function operators
 #' @seealso \code{\link{Andify}} to create new predicate functions linked by the && operator.
 #' @examples
 #' # Examples
 #' is_character_or_factor <- Orify(is.character, is.factor)
-#' is_character_or_factor(letters)
-#' is_character_or_factor(factor(state.abb))
-#' is_character_or_factor(1:100)
+#' is_character_or_factor(letters) # TRUE
+#' is_character_or_factor(factor(state.abb)) # TRUE
+#' is_character_or_factor(1:100) # FALSE
 #' @export
 Orify <- function(...) {
   fs <- lapply(list(...), match.fun)
@@ -25,8 +25,3 @@ Orify <- function(...) {
     out
   }
 }
-
-
-
-
-

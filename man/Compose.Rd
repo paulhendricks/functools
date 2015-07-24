@@ -10,12 +10,12 @@ Compose(...)
 f \%O\% g
 }
 \arguments{
-\item{...}{n functions to apply in order from right to left}
+\item{...}{n functions to apply in order from right to left.}
 
-\item{f,g}{two functions to compose for the infix form}
+\item{f,g}{Two functions to compose for the infix form}
 }
 \value{
-a function
+A function that
 }
 \description{
 In infix and prefix forms.

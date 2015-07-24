@@ -1,7 +1,7 @@
 #' Predicate function operator that creates new predicate functions linked by the && operator.
 #'
-#' @param ... n functions to apply in order from left to right
-#' @return a function
+#' @param ... n functions to apply in order from left to right.
+#' @return A predicate function linked by the && operator.
 #' @family predicate function operators
 #' @seealso \code{\link{Orify}} to create new predicate functions linked by the || operator.
 #' @examples
@@ -38,8 +38,3 @@ Andify <- function(...) {
     out
   }
 }
-
-
-
-
-

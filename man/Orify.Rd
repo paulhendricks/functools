@@ -10,7 +10,7 @@ Orify(...)
 \item{...}{n functions to apply in order from left to right}
 }
 \value{
-a function
+A predicate function linked by the || operator.
 }
 \description{
 Predicate function operator that creates new predicate functions linked by the || operator.
@@ -18,9 +18,9 @@ Predicate function operator that creates new predicate functions linked by the |
 \examples{
 # Examples
 is_character_or_factor <- Orify(is.character, is.factor)
-is_character_or_factor(letters)
-is_character_or_factor(factor(state.abb))
-is_character_or_factor(1:100)
+is_character_or_factor(letters) # TRUE
+is_character_or_factor(factor(state.abb)) # TRUE
+is_character_or_factor(1:100) # FALSE
 }
 \seealso{
 \code{\link{Andify}} to create new predicate functions linked by the && operator.
