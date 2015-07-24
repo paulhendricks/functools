@@ -7,16 +7,16 @@
 All(f, x, ..., na.rm = FALSE)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{f}{A predicate function.}
 
-\item{x}{an iterable object.}
+\item{x}{An iterable object.}
 
-\item{...}{further arguments passed to the predicate function.}
+\item{...}{Further arguments passed to the predicate function.}
 
-\item{na.rm}{a logical value indicating whether NA values should be stripped before the computation proceeds.}
+\item{na.rm}{A logical value indicating whether NA values should be stripped before the computation proceeds.}
 }
 \value{
-a logical value.
+A logical value indicating if all items evaluated as TRUE.
 }
 \description{
 \code{All()} is a predicate functional that takes a predicate function

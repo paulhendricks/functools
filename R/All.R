@@ -8,11 +8,11 @@
 #'   \item and ultimately returns TRUE if all items \code{i} in object \code{x} evaluate as TRUE.
 #'   }
 #'
-#' @param f a predicate function.
-#' @param x an iterable object.
-#' @param ... further arguments passed to the predicate function.
-#' @param na.rm a logical value indicating whether NA values should be stripped before the computation proceeds.
-#' @return a logical value.
+#' @param f A predicate function.
+#' @param x An iterable object.
+#' @param ... Further arguments passed to the predicate function.
+#' @param na.rm A logical value indicating whether NA values should be stripped before the computation proceeds.
+#' @return A logical value indicating if all items evaluated as TRUE.
 #' @family predicate functionals
 #' @seealso \code{\link{Any}} to test if all items in an object evaluate to TRUE.
 #' @examples
