@@ -1,5 +1,5 @@
 library(functools)
-context("Apply()")
+context("function()")
 
 test_that("Produces the correct output.", {
   expect_equal(1, 1)

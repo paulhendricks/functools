@@ -1,12 +1,7 @@
 library(functools)
 context("Always()")
 
-test_that("Always() returns a function.", {
-  expect_equal(class(Always(TRUE)), "function")
-  expect_equal(typeof(Always(TRUE)), "closure")
-})
-
-test_that("Always() creates a function that always returns what was has been passed.", {
+test_that("Produces the correct output.", {
   expect_equal(Always(TRUE)(), TRUE)
   expect_equal(Always(FALSE)(), FALSE)
   expect_equal(Always("a")(), "a")
@@ -16,5 +11,13 @@ test_that("Always() creates a function that always returns what was has been pas
   expect_equal(Always(NA)(), NA)
 })
 
+test_that("Produces the correct output type.", {
+  expect_is(Always(), "function")
+  expect_is(Always(TRUE), "function")
+  expect_is(Always(TRUE)(), "logical")
+})
 
+test_that("Produces the correct errors.", {
+  expect_error(Always()())
+})
 
