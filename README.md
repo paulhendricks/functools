@@ -38,3 +38,47 @@ You can install:
     ```
 
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
+
+Closures
+========
+
+Convenience Functions
+---------------------
+
+Always Compact Constants
+
+Predicate Functions
+-------------------
+
+Existy Truthy
+
+Functionals
+===========
+
+Plain functionals
+-----------------
+
+Apply Lapply Mapply Sapply Tapply Reduce\_Right Reject
+
+Predicate functionals
+=====================
+
+All Any
+
+Aggregate functionals
+=====================
+
+Best
+
+Function Operators
+==================
+
+Create new new predicate functions
+----------------------------------
+
+Andify Orify
+
+Modify function behavior
+------------------------
+
+Compose Curry Fail\_With Memoize Partial
