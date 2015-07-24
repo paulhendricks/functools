@@ -1,12 +1,11 @@
-#' Best
+#' Find the best value in a vector.
 #'
-#' \code{Best()} takes a vector and a two-argument function that returns
-#' a logical constant (either TRUE or FALSE), and returns that function
-#' reduced over that vector.
+#' \code{Best()} takes a vector \code{x} and a binary predicate function
+#' \code{f} and returns the result of \code{f} reduced over \code{x}.
 #'
-#' @param f a function.
-#' @param x a value.
-#' @return  a two-argument function that returns a logical constant.
+#' @param f A binary predicate function.
+#' @param x A vector.
+#' @return The best value in that vector, as determined by the binary predicate function.
 #' @family aggregate functionals
 #' @examples
 #' # Simulate the behavior of max with numerics

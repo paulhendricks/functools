@@ -2,22 +2,21 @@
 % Please edit documentation in R/Best.R
 \name{Best}
 \alias{Best}
-\title{Best}
+\title{Find the best value in a vector.}
 \usage{
 Best(f, x)
 }
 \arguments{
-\item{f}{a function.}
+\item{f}{A binary predicate function.}
 
-\item{x}{a value.}
+\item{x}{A vector.}
 }
 \value{
-a two-argument function that returns a logical constant.
+The best value in that vector, as determined by the binary predicate function.
 }
 \description{
-\code{Best()} takes a vector and a two-argument function that returns
-a logical constant (either TRUE or FALSE), and returns that function
-reduced over that vector.
+\code{Best()} takes a vector \code{x} and a binary predicate function
+\code{f} and returns the result of \code{f} reduced over \code{x}.
 }
 \examples{
 # Simulate the behavior of max with numerics
