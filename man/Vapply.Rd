@@ -23,7 +23,6 @@ something.
 \seealso{
 Other aggregate functionals: \code{\link{Best}};
   \code{\link{Max}}; \code{\link{Min}};
-  \code{\link{Sapply}}; \code{\link{Split}};
-  \code{\link{Tapply}}
+  \code{\link{Sapply}}; \code{\link{Tapply}}
 }
 

@@ -23,7 +23,4 @@ always_0() # 0
 always_true <- Always(TRUE)
 always_true() # TRUE
 }
-\seealso{
-Other closures: \code{\link{Plucker}}
-}
 
