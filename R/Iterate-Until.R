@@ -1,6 +1,6 @@
-#' IterateUntil
+#' Iterate until conpletion.
 #'
-#' \code{IterateUntil}
+#' \code{Iterate_Until}
 #'
 #' @param f a function.
 #' @param check a function.
@@ -8,12 +8,12 @@
 #' @return a list.
 #' @examples
 #' # Iterate until the check condition is met
-#' IterateUntil(function(n) { return(n + n) },
+#' Iterate_Until(function(n) { return(n + n) },
 #' function(n) { return(n <= 1024) },
 #' 1)
 #'
 #' @export
-IterateUntil <- function(f, check, init) {
+Iterate_Until <- function(f, check, init) {
   f <- match.fun(f)
   check <- match.fun(check)
   ret <- list()
