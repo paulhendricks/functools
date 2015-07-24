@@ -7,7 +7,7 @@
 Mapply(f, ..., more_args = NULL, simplify = TRUE, use_names = TRUE)
 }
 \arguments{
-\item{f}{A function.}
+\item{f}{A function to be applied.}
 
 \item{...}{Arguments to vectorize over (vectors or lists of strictly positive length, or all of zero length).}
 
@@ -24,6 +24,7 @@ Wrapper for \code{\link[base]{mapply}}.
 \code{\link[base]{mapply}} for code and documentation.
 
 Other functionals: \code{\link{Apply}};
-  \code{\link{Lapply}}
+  \code{\link{Lapply}}; \code{\link{Sapply}};
+  \code{\link{Tapply}}; \code{\link{Vapply}}
 }
 

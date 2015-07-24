@@ -7,13 +7,13 @@
 Apply(f, x, margin, ...)
 }
 \arguments{
-\item{f}{the function to be applied.}
+\item{f}{A function to be applied.}
 
-\item{x}{an array, including a matrix.}
+\item{x}{An array, including a matrix.}
 
-\item{margin}{a vector giving the subscripts which the function will be applied over.}
+\item{margin}{A vector giving the subscripts which the function will be applied over.}
 
-\item{...}{optional arguments to f.}
+\item{...}{Optional arguments to f.}
 }
 \description{
 Wrapper for \code{\link[base]{apply}}.
@@ -22,6 +22,7 @@ Wrapper for \code{\link[base]{apply}}.
 \code{\link[base]{apply}} for code and documentation.
 
 Other functionals: \code{\link{Lapply}};
-  \code{\link{Mapply}}
+  \code{\link{Mapply}}; \code{\link{Sapply}};
+  \code{\link{Tapply}}; \code{\link{Vapply}}
 }
 

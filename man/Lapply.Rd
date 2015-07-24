@@ -7,9 +7,9 @@
 Lapply(f, x, ...)
 }
 \arguments{
-\item{f}{A function.}
+\item{f}{A function to be applied.}
 
-\item{x}{A value.}
+\item{x}{A vector.}
 
 \item{...}{Optional arguments to f.}
 }
@@ -20,6 +20,7 @@ Wrapper for \code{\link[base]{lapply}}.
 \code{\link[base]{lapply}} for code and documentation.
 
 Other functionals: \code{\link{Apply}};
-  \code{\link{Mapply}}
+  \code{\link{Mapply}}; \code{\link{Sapply}};
+  \code{\link{Tapply}}; \code{\link{Vapply}}
 }
 

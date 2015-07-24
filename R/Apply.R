@@ -2,10 +2,10 @@
 #'
 #' Wrapper for \code{\link[base]{apply}}.
 #'
-#' @param f the function to be applied.
-#' @param x an array, including a matrix.
-#' @param margin a vector giving the subscripts which the function will be applied over.
-#' @param ... optional arguments to f.
+#' @param f A function to be applied.
+#' @param x An array, including a matrix.
+#' @param margin A vector giving the subscripts which the function will be applied over.
+#' @param ... Optional arguments to f.
 #' @family functionals
 #' @seealso \code{\link[base]{apply}} for code and documentation.
 #' @export

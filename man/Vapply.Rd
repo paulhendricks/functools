@@ -2,26 +2,29 @@
 % Please edit documentation in R/Vapply.R
 \name{Vapply}
 \alias{Vapply}
-\title{Vapply}
+\title{Wrapper for vapply function.}
 \usage{
-Vapply(f, x)
+Vapply(f, x, fun_value, ..., use_names = TRUE)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{f}{A function to be applied.}
 
-\item{x}{a value.}
-}
-\value{
-something.
+\item{x}{A vector.}
+
+\item{fun_value}{A (generalized) vector; a template for the return value from f.}
+
+\item{...}{Optional arguments to f.}
+
+\item{use_names}{Logical; if TRUE and if X is character, use X as names for the result unless it had names already. Since this argument follows ... its name cannot be abbreviated.}
 }
 \description{
-\code{Vapply()}
-}
-\examples{
-# Some examples
+Wrapper for \code{\link[base]{vapply}}.
 }
 \seealso{
-Other aggregate functionals: \code{\link{Best}};
+\code{\link[base]{vapply}} for code and documentation.
+
+Other functionals: \code{\link{Apply}};
+  \code{\link{Lapply}}; \code{\link{Mapply}};
   \code{\link{Sapply}}; \code{\link{Tapply}}
 }
 

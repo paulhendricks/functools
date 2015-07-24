@@ -2,26 +2,29 @@
 % Please edit documentation in R/Tapply.R
 \name{Tapply}
 \alias{Tapply}
-\title{Tapply}
+\title{Wrapper for tapply function.}
 \usage{
-Tapply(f, x)
+Tapply(f = NULL, x, index, ..., simplify = TRUE)
 }
 \arguments{
-\item{f}{a predicate function.}
+\item{f}{A function to be applied.}
 
-\item{x}{a value.}
-}
-\value{
-something.
+\item{x}{A vector.}
+
+\item{index}{List of one or more factors, each of same length as X. The elements are coerced to factors by as.factor.}
+
+\item{...}{Optional arguments to f.}
+
+\item{simplify}{If FALSE, tapply always returns an array of mode "list". If TRUE (the default), then if FUN always returns a scalar, tapply returns an array with the mode of the scalar.}
 }
 \description{
-\code{Tapply()}
-}
-\examples{
-# Some examples
+Wrapper for \code{\link[base]{tapply}}.
 }
 \seealso{
-Other aggregate functionals: \code{\link{Best}};
+\code{\link[base]{tapply}} for code and documentation.
+
+Other functionals: \code{\link{Apply}};
+  \code{\link{Lapply}}; \code{\link{Mapply}};
   \code{\link{Sapply}}; \code{\link{Vapply}}
 }
 

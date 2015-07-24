@@ -2,7 +2,7 @@
 #'
 #' Wrapper for \code{\link[base]{mapply}}.
 #'
-#' @param f A function.
+#' @param f A function to be applied.
 #' @param ... Arguments to vectorize over (vectors or lists of strictly positive length, or all of zero length).
 #' @param more_args A list of other arguments to FUN.
 #' @param simplify Logical or character string; attempt to reduce the result to a vector, matrix or higher dimensional array; see the simplify argument of \code{\link[base]{sapply}}.
