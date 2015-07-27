@@ -27,6 +27,6 @@ the function that captures errors and allows execution to continue.
 }
 \seealso{
 Other function operators: \code{\link{Compose}},
-  \code{\link{\%O\%}}
+  \code{\link{\%O\%}}; \code{\link{Memoise}}
 }
 
