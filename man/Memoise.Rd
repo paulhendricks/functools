@@ -19,6 +19,7 @@ Wrapper for \code{\link[memoise]{memoise}}.
 \code{\link[memoise]{memoise}} for code and documentation.
 
 Other function operators: \code{\link{Compose}},
-  \code{\link{\%O\%}}; \code{\link{Fail_With}}
+  \code{\link{\%O\%}}; \code{\link{Fail_With}};
+  \code{\link{Partial}}
 }
 

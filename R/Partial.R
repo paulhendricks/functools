@@ -1,13 +1,16 @@
-#' Title
+#' Partial apply a function, filling in some arguments.
 #'
-#' Explanation
+#' Wrapper for \code{\link[pryr]{partial}}.
 #'
-#' @param x an object.
-#' @return a value.
-#' @examples
-#' # comment here
-#'
+#' @param ... Arguments to be passed to \code{\link[pryr]{partial}}.
+#' @family function operators
+#' @seealso \code{\link[pryr]{partial}} for code and documentation.
 #' @export
-Partial <- function(x) {
-  return(1L) # Placeholder
+Partial <- function(...) {
+  if (!requireNamespace("pryr", quietly = TRUE)) {
+    stop("pryr needed for this function to work. Please install it.",
+         call. = FALSE)
+  }
+  return(pryr::partial(...))
 }
+

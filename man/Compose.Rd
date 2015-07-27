@@ -30,6 +30,6 @@ Compose(add1,add1)(8)
 }
 \seealso{
 Other function operators: \code{\link{Fail_With}};
-  \code{\link{Memoise}}
+  \code{\link{Memoise}}; \code{\link{Partial}}
 }
 

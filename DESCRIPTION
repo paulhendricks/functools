@@ -12,4 +12,6 @@ License: MIT + file LICENSE
 LazyData: true
 Suggests:
     testthat,
-    memoise
+    memoise,
+    purr,
+    pryr

@@ -2,20 +2,21 @@
 % Please edit documentation in R/Partial.R
 \name{Partial}
 \alias{Partial}
-\title{Title}
+\title{Partial apply a function, filling in some arguments.}
 \usage{
-Partial(x)
+Partial(...)
 }
 \arguments{
-\item{x}{an object.}
-}
-\value{
-a value.
+\item{...}{Arguments to be passed to \code{\link[pryr]{partial}}.}
 }
 \description{
-Explanation
+Wrapper for \code{\link[pryr]{partial}}.
 }
-\examples{
-# comment here
+\seealso{
+\code{\link[pryr]{partial}} for code and documentation.
+
+Other function operators: \code{\link{Compose}},
+  \code{\link{\%O\%}}; \code{\link{Fail_With}};
+  \code{\link{Memoise}}
 }
 
