@@ -17,6 +17,6 @@ Wrapper for \code{\link[pryr]{partial}}.
 
 Other function operators: \code{\link{Compose}},
   \code{\link{\%O\%}}; \code{\link{Fail_With}};
-  \code{\link{Memoise}}
+  \code{\link{Memoise}}; \code{\link{Reduce_Right}}
 }
 

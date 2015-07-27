@@ -2,20 +2,21 @@
 % Please edit documentation in R/Reduce-Right.R
 \name{Reduce_Right}
 \alias{Reduce_Right}
-\title{Title}
+\title{Simple wrapper for Reduce, proceeding from the right.}
 \usage{
-Reduce_Right(x)
+Reduce_Right(...)
 }
 \arguments{
-\item{x}{an object.}
-}
-\value{
-a value.
+\item{...}{Arguments to be passed to \code{\link[base]{Reduce}}.}
 }
 \description{
-Explanation
+Wrapper for \code{\link[base]{Reduce}} with \code{right} set to \code{TRUE}.
 }
-\examples{
-# comment here
+\seealso{
+\code{\link[base]{Reduce}} for code and documentation.
+
+Other function operators: \code{\link{Compose}},
+  \code{\link{\%O\%}}; \code{\link{Fail_With}};
+  \code{\link{Memoise}}; \code{\link{Partial}}
 }
 

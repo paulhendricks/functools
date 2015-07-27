@@ -20,6 +20,6 @@ Wrapper for \code{\link[memoise]{memoise}}.
 
 Other function operators: \code{\link{Compose}},
   \code{\link{\%O\%}}; \code{\link{Fail_With}};
-  \code{\link{Partial}}
+  \code{\link{Partial}}; \code{\link{Reduce_Right}}
 }
 
