@@ -8,8 +8,8 @@
 #'   \item and ultimately returns TRUE if all items \code{i} in object \code{x} evaluate as TRUE.
 #'   }
 #'
-#' @param f A predicate function.
 #' @param x An iterable object.
+#' @param f A predicate function.
 #' @param ... Further arguments passed to the predicate function.
 #' @param na.rm A logical value indicating whether NA values should be stripped before the computation proceeds.
 #' @return A logical value indicating if all items evaluated as TRUE.
@@ -18,22 +18,22 @@
 #' @examples
 #' # Examples
 #' data(mtcars)
-#' All(is.numeric, mtcars) # TRUE
-#' All(is.character, mtcars) # FALSE
+#' All(mtcars, is.numeric) # TRUE
+#' All(mtcars, is.character) # FALSE
 #' mtcars$am <- factor(mtcars$am)
-#' All(is.numeric, mtcars) # FALSE
-#' All(is.factor, mtcars) # FALSE
+#' All(mtcars, is.numeric) # FALSE
+#' All(mtcars, is.factor) # FALSE
 #'
 #' # Handles NAs and NULLs
-#' All(is.numeric, list(NA, "3", NULL)) # FALSE
-#' All(is.numeric, list(NA, 3, NULL)) # FALSE
-#' All(is.numeric, list(NA, "3", NULL, 5)) # FALSE
+#' All(list(NA, "3", NULL), is.numeric) # FALSE
+#' All(list(NA, 3, NULL) is.numeric) # FALSE
+#' All(list(NA, "3", NULL, 5), is.numeric) # FALSE
 #'
 #' # Use na.rm = TRUE to remove NAs and NULLS
-#' All(Identity, list(NA, TRUE)) # NA
-#' All(Identity, list(NA, TRUE), na.rm = TRUE) # TRUE
+#' All(list(NA, TRUE), Identity) # NA
+#' All(list(NA, TRUE), Identity, na.rm = TRUE) # TRUE
 #' @export
-All <- function(f, x, ..., na.rm = FALSE) {
+All <- function(x, f, ..., na.rm = FALSE) {
   f <- match.fun(f)
   return(all(vapply(x, f, logical(1), ...), na.rm = na.rm))
 }
