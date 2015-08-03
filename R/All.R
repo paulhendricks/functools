@@ -26,7 +26,7 @@
 #'
 #' # Handles NAs and NULLs
 #' All(list(NA, "3", NULL), is.numeric) # FALSE
-#' All(list(NA, 3, NULL) is.numeric) # FALSE
+#' All(list(NA, 3, NULL), is.numeric) # FALSE
 #' All(list(NA, "3", NULL, 5), is.numeric) # FALSE
 #'
 #' # Use na.rm = TRUE to remove NAs and NULLS
