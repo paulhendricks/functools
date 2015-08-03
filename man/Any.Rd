@@ -4,12 +4,12 @@
 \alias{Any}
 \title{Test if any items in an object evaluate to TRUE.}
 \usage{
-Any(f, x, ..., na.rm = FALSE)
+Any(x, f, ..., na.rm = FALSE)
 }
 \arguments{
-\item{f}{A predicate function.}
-
 \item{x}{An iterable object.}
+
+\item{f}{A predicate function.}
 
 \item{...}{Further arguments passed to the predicate function.}
 
@@ -30,20 +30,20 @@ A logical value indicating if any items evaluated as TRUE.
 \examples{
 # Examples
 data(mtcars)
-Any(is.numeric, mtcars) # TRUE
-Any(is.character, mtcars) # FALSE
+Any(mtcars, is.numeric) # TRUE
+Any(mtcars, is.character) # FALSE
 mtcars$am <- factor(mtcars$am)
-Any(is.numeric, mtcars) # TRUE
-Any(is.factor, mtcars) # TRUE
+Any(mtcars, is.numeric) # TRUE
+Any(mtcars, is.factor) # TRUE
 
 # Handles NAs and NULLs
-Any(is.numeric, list(NA, "3", NULL)) # FALSE
-Any(is.numeric, list(NA, 3, NULL)) # TRUE
-Any(is.numeric, list(NA, "3", NULL, 5)) #TRUE
+Any(list(NA, "3", NULL), is.numeric) # FALSE
+Any(list(NA, 3, NULL), is.numeric) # TRUE
+Any(list(NA, "3", NULL, 5), is.numeric) #TRUE
 
 # Use na.rm = TRUE to remove NULLS
-Any(Identity, list(NA, FALSE)) # NA
-Any(Identity, list(NA, FALSE), na.rm = TRUE) # FALSE
+Any(list(NA, FALSE), Identity) # NA
+Any(list(NA, FALSE), Identity, na.rm = TRUE) # FALSE
 }
 \seealso{
 \code{\link{All}} to test if all items in an object evaluate to TRUE.
