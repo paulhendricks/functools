@@ -4,16 +4,16 @@
 \alias{Compact}
 \title{Filter NA and NULL values out of a vector, list, or data.frame.}
 \usage{
-Compact(x)
+Compact(.x)
 }
 \arguments{
-\item{x}{A vector.}
+\item{.x}{A vector.}
 }
 \value{
-Vector x but with all NULL and NA values filtered out.
+Vector .x but with all NULL and NA values filtered out.
 }
 \description{
-\code{Compact()} takes a vector \code{x} and returns it with all NULL and
+\code{Compact()} takes a vector \code{.x} and returns it with all NULL and
 NA values filtered out.
 }
 \examples{

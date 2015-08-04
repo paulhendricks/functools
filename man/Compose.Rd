@@ -7,15 +7,17 @@
 \usage{
 Compose(...)
 
-f \%O\% g
+.f \%O\% .g
 }
 \arguments{
 \item{...}{n functions to apply in order from right to left.}
 
-\item{f,g}{Two functions to compose for the infix form}
+\item{.f}{A function.}
+
+\item{.g}{A function.}
 }
 \value{
-A function that
+A function that will apply each function in order from right to left.
 }
 \description{
 In infix and prefix forms.

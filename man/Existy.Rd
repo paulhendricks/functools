@@ -4,10 +4,10 @@
 \alias{Existy}
 \title{Existy}
 \usage{
-Existy(x)
+Existy(.x)
 }
 \arguments{
-\item{x}{an object.}
+\item{.x}{an object.}
 }
 \value{
 a logical value.

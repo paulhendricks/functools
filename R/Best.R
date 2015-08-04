@@ -1,10 +1,10 @@
 #' Find the best value in a vector.
 #'
-#' \code{Best()} takes a vector \code{x} and a binary predicate function
-#' \code{f} and returns the result of \code{f} reduced over \code{x}.
+#' \code{Best()} takes a vector \code{.x} and a binary predicate function
+#' \code{.f} and returns the result of \code{.f} reduced over \code{.x}.
 #'
-#' @param f A binary predicate function.
-#' @param x A vector.
+#' @param .f A binary predicate function.
+#' @param .x A vector.
 #' @return The best value in that vector, as determined by the binary predicate function.
 #' @family aggregate functionals
 #' @examples
@@ -15,7 +15,7 @@
 #' # This comparison function prefers values that begin with l
 #' Best(function(x, y) return(x[1] == "l"), letters)
 #' @export
-Best <- function(f, x) {
-  f <- match.fun(f)
-  return(Reduce(function(x, y) ifelse(f(x, y), x, y), x))
+Best <- function(.f, .x) {
+  .f <- match.fun(.f)
+  return(Reduce(function(.y, .z) ifelse(.f(.y, .z), .y, .z), .x))
 }

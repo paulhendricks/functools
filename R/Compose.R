@@ -3,8 +3,9 @@
 #' In infix and prefix forms.
 #'
 #' @param ... n functions to apply in order from right to left.
-#' @param f,g Two functions to compose for the infix form
-#' @return A function that
+#' @param .f A function.
+#' @param .g A function.
+#' @return A function that will apply each function in order from right to left.
 #' @family function operators
 #' @examples
 #' not_null <- `!` %O% is.null
@@ -32,11 +33,11 @@ Compose <- function(...) {
 
 #' @rdname Compose
 #' @export
-#' @usage f \%O\% g
-'%O%' <- function(f, g) {
-  f <- match.fun(f)
-  g <- match.fun(g)
+#' @usage .f \%O\% .g
+'%O%' <- function(.f, .g) {
+  .f <- match.fun(.f)
+  .g <- match.fun(.g)
   function(...) {
-    f(g(...))
+    .f(.g(...))
   }
 }

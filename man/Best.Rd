@@ -4,19 +4,19 @@
 \alias{Best}
 \title{Find the best value in a vector.}
 \usage{
-Best(f, x)
+Best(.f, .x)
 }
 \arguments{
-\item{f}{A binary predicate function.}
+\item{.f}{A binary predicate function.}
 
-\item{x}{A vector.}
+\item{.x}{A vector.}
 }
 \value{
 The best value in that vector, as determined by the binary predicate function.
 }
 \description{
-\code{Best()} takes a vector \code{x} and a binary predicate function
-\code{f} and returns the result of \code{f} reduced over \code{x}.
+\code{Best()} takes a vector \code{.x} and a binary predicate function
+\code{.f} and returns the result of \code{.f} reduced over \code{.x}.
 }
 \examples{
 # Simulate the behavior of max with numerics
