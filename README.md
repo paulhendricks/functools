@@ -41,61 +41,24 @@ You can install:
 
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
 
-Closures
-========
-
-Convenience Functions
----------------------
-
--   Always
--   Compact
--   Constants
-
-Predicate Functions
--------------------
-
--   Existy
--   Truthy
-
-Functionals
-===========
-
-Plain functionals
------------------
-
--   Apply
--   Lapply
--   Mapply
--   Sapply
--   Tapply
--   Reduce\_Right
--   Reject
-
-Predicate functionals
----------------------
-
--   All
--   Any
-
-Aggregate functionals
----------------------
-
--   Best
-
-Function Operators
+Additional Support
 ==================
 
-Create new new predicate functions
-----------------------------------
+Compose
+-------
 
--   Andify
--   Orify
+``` r
+is_not_null <- Compose(`!`, is.null)
+is_not_null(TRUE)
+is_not_null(FALSE)
+is_not_null(2)
+is_not_null(NULL)
 
-Modify function behavior
-------------------------
+rmse <- 
+  sqrt %O% 
+  mean %O% 
+  {function(x) x * x} %O% 
+  {function(actual, forecast) actual - forecast}
 
--   Compose
--   Curry
--   Fail\_With
--   Memoize
--   Partial
+rmse(1:10, 10:1)
+```
