@@ -60,9 +60,9 @@ You can install:
 
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
 
-# Additional Support
+## Additional Support
 
-## Compose
+### Compose
 
 ```R
 is_not_null <- Compose(`!`, is.null)
@@ -79,3 +79,39 @@ rmse <-
 
 rmse(1:10, 10:1)
 ```
+
+### Memoise
+
+```R
+
+```
+
+### Partial
+
+```R
+
+```
+### Reject
+
+```R
+
+```
+### Andify
+
+```R
+
+```
+
+### Orify
+
+```R
+
+```
+
+## Consistent API
+
+```R
+
+```
+
+

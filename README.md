@@ -42,10 +42,9 @@ You can install:
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
 
 Additional Support
-==================
+------------------
 
-Compose
--------
+### Compose
 
 ``` r
 is_not_null <- Compose(`!`, is.null)
@@ -61,4 +60,35 @@ rmse <-
   {function(actual, forecast) actual - forecast}
 
 rmse(1:10, 10:1)
+```
+
+### Memoise
+
+``` r
+```
+
+### Partial
+
+``` r
+```
+
+### Reject
+
+``` r
+```
+
+### Andify
+
+``` r
+```
+
+### Orify
+
+``` r
+```
+
+Consistent API
+--------------
+
+``` r
 ```
