@@ -23,13 +23,15 @@ knitr::opts_chunk$set(
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/functools)](http://cran.rstudio.com/package=functools)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-functools extends functional programming in R. It has three main goals:
+functools extends functional programming in R. It has four main goals:
 
-* Add support to the usual higher order functional suspects (Map, Reduce, Filter, etc.) without extending any core R objects.
+* Add support to the usual higher order functional suspects (`Filter`, `Map`, `Reduce`, etc.) with higher order functions such as `Compose`, `Memoise`, `Partial`, `Reject`, `Andify`, and `Orify`.
 
-* Use a consistent API to access different functionals in base R such as `lapply` or `apply`.
+* Provide wrappers around base R functionals such as `lapply` or `apply` so as to create a consistent API.
 
-* Provide options for easy parallelization, and if possible, write key pieces in C++ for blazing fast performance.
+* Implement common constants and functions such as `True` or `Identity` for point-free programming.
+
+* If possible, provide options for easy parallelization and write key pieces in C++ for blazing fast performance.
 
 functools achieves these goals through three main types of function design patterns:
 
