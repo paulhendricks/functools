@@ -4,14 +4,14 @@
 \alias{Apply}
 \title{Wrapper for apply function.}
 \usage{
-Apply(f, x, margin, ...)
+Apply(.x, .f, .margin, ...)
 }
 \arguments{
-\item{f}{A function to be applied.}
+\item{.x}{An array, including a matrix.}
 
-\item{x}{An array, including a matrix.}
+\item{.f}{A function to be applied.}
 
-\item{margin}{A vector giving the subscripts which the function will be applied over.}
+\item{.margin}{A vector giving the subscripts which the function will be applied over.}
 
 \item{...}{Optional arguments to f.}
 }

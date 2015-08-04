@@ -4,17 +4,17 @@
 \alias{Always}
 \title{Create a function that that always returns a specific object.}
 \usage{
-Always(x)
+Always(.x)
 }
 \arguments{
-\item{x}{An object.}
+\item{.x}{An object.}
 }
 \value{
-A function that itself returns x.
+A function that itself returns \code{.x}.
 }
 \description{
-\code{Always(x)} is a closure function that takes any object x, and
-returns a function that always returns object x.
+\code{Always(.x)} is a closure function that takes any object \code{.x},
+and returns a function that always returns object \code{.x}.
 }
 \examples{
 # comment here

@@ -4,12 +4,12 @@
 \alias{All}
 \title{Test if all items in an object evaluate to TRUE.}
 \usage{
-All(x, f, ..., na.rm = FALSE)
+All(.x, .f, ..., na.rm = FALSE)
 }
 \arguments{
-\item{x}{An iterable object.}
+\item{.x}{An iterable object.}
 
-\item{f}{A predicate function.}
+\item{.f}{A predicate function.}
 
 \item{...}{Further arguments passed to the predicate function.}
 
@@ -20,11 +20,11 @@ A logical value indicating if all items evaluated as TRUE.
 }
 \description{
 \code{All()} is a predicate functional that takes a predicate function
-\code{f} and an iterable object \code{x} and:
+\code{.f} and an iterable object \code{.x} and:
 \enumerate{
-  \item iterates over each item \code{i} in object \code{x},
-  \item evaluates \code{f(i)},
-  \item and ultimately returns TRUE if all items \code{i} in object \code{x} evaluate as TRUE.
+  \item iterates over each item \code{i} in object \code{.x},
+  \item evaluates \code{.f(i)},
+  \item and ultimately returns TRUE if all items \code{i} in object \code{.x} evaluate as TRUE.
   }
 }
 \examples{
