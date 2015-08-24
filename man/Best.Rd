@@ -4,12 +4,12 @@
 \alias{Best}
 \title{Find the best value in a vector.}
 \usage{
-Best(.f, .x)
+Best(.x, .f)
 }
 \arguments{
-\item{.f}{A binary predicate function.}
-
 \item{.x}{A vector.}
+
+\item{.f}{A binary predicate function.}
 }
 \value{
 The best value in that vector, as determined by the binary predicate function.
@@ -20,10 +20,10 @@ The best value in that vector, as determined by the binary predicate function.
 }
 \examples{
 # Simulate the behavior of max with numerics
-Best(function(x, y) return(x > y), 1:10)
+Best(1:10, function(x, y) return(x > y))
 # Simulate the behavior of min with numerics
-Best(function(x, y) return(x < y), 1:10)
+Best(1:10, function(x, y) return(x < y))
 # This comparison function prefers values that begin with l
-Best(function(x, y) return(x[1] == "l"), letters)
+Best(letters, function(x, y) return(x[1] == "l"))
 }
 

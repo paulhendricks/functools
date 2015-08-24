@@ -9,7 +9,7 @@ new_function <- function(x) {
 }
 
 new_function_with_default <-
-  Fail_With(default_value, new_function, silent = TRUE)
+  Fail_With(default_value, new_function, .silent = TRUE)
 
 test_that("Produces the correct output.", {
   expect_equal(new_function_with_default("a"), default_value)

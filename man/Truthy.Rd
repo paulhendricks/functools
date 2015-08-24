@@ -4,10 +4,10 @@
 \alias{Truthy}
 \title{Truthy}
 \usage{
-Truthy(x)
+Truthy(.x)
 }
 \arguments{
-\item{x}{an object.}
+\item{.x}{an object.}
 }
 \value{
 a logical value.

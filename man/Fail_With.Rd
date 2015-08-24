@@ -4,14 +4,14 @@
 \alias{Fail_With}
 \title{Fail with a default value.}
 \usage{
-Fail_With(default = NULL, f, silent = FALSE)
+Fail_With(.default = NULL, .f, .silent = FALSE)
 }
 \arguments{
-\item{default}{default value.}
+\item{.default}{default value.}
 
-\item{f}{any function that throws an error.}
+\item{.f}{any function that throws an error.}
 
-\item{silent}{logical: should the report of error messages be suppressed?.}
+\item{.silent}{logical: should the report of error messages be suppressed?}
 }
 \value{
 a function that returns a default value when there's an error.
@@ -21,9 +21,6 @@ a function that returns a default value when there's an error.
 that returns a default value when there is an error. The essence of
 \code{Fail_With()} is simple: it is just a wrapper around \code{try()},
 the function that captures errors and allows execution to continue.
-}
-\examples{
-# Some examples
 }
 \seealso{
 Other function operators: \code{\link{Compose}},

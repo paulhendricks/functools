@@ -3,7 +3,7 @@
 #' \code{Truthy()} returns TRUE or FALSE if an object is TRUE or not.
 #' An object is is "TRUE" if it is exists and is TRUE.
 #'
-#' @param x an object.
+#' @param .x an object.
 #' @return a logical value.
 #' @family predicate functions
 #' @examples
@@ -18,6 +18,6 @@
 #' Truthy("a") # TRUE
 #'
 #' @export
-Truthy <- function(x) {
-  return(Existy(x) && identical(x, True()))
+Truthy <- function(.x) {
+  return(Existy(.x) && identical(.x, True()))
 }
