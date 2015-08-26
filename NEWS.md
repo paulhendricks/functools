@@ -1,12 +1,13 @@
-# functools 0.2.0
+# functools 0.1.0.9000
 
 ## Improvements
 
-* Added new functions.
+* Added new functions such as...TO BE UPDATED.
+* Improved documentation for better SEO.
   
 ## Bug fixes
 
-* To be edited.
+* None.
 
 # functools 0.1.0
 
