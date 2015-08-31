@@ -4,10 +4,10 @@
 \alias{Memoise}
 \title{Memoise a function.}
 \usage{
-Memoise(f)
+Memoise(.f)
 }
 \arguments{
-\item{f}{Function of which to create a memoised copy.}
+\item{.f}{Function of which to create a memoised copy.}
 }
 \value{
 A memoised copy of the original function.
