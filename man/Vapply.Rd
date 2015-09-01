@@ -4,18 +4,18 @@
 \alias{Vapply}
 \title{Wrapper for vapply function.}
 \usage{
-Vapply(f, x, fun_value, ..., use_names = TRUE)
+Vapply(.x, .f, fun_value, ..., use_names = TRUE)
 }
 \arguments{
-\item{f}{A function to be applied.}
+\item{.x}{A vector.}
 
-\item{x}{A vector.}
+\item{.f}{A function to be applied.}
 
-\item{fun_value}{A (generalized) vector; a template for the return value from f.}
+\item{fun_value}{A (generalized) vector; a template for the return value from .f.}
 
-\item{...}{Optional arguments to f.}
+\item{...}{Optional arguments to .f.}
 
-\item{use_names}{Logical; if TRUE and if X is character, use X as names for the result unless it had names already. Since this argument follows ... its name cannot be abbreviated.}
+\item{use_names}{Logical; if TRUE and if X is character, use .x as names for the result unless it had names already.}
 }
 \description{
 Wrapper for \code{\link[base]{vapply}}.

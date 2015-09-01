@@ -4,18 +4,18 @@
 \alias{Sapply}
 \title{Wrapper for sapply function.}
 \usage{
-Sapply(f, x, ..., simplify = TRUE, use_names = TRUE)
+Sapply(.x, .f, ..., simplify = TRUE, use_names = TRUE)
 }
 \arguments{
-\item{f}{A function to be applied.}
+\item{.x}{A vector.}
 
-\item{x}{A vector.}
+\item{.f}{A function to be applied.}
 
 \item{...}{Optional arguments to f.}
 
-\item{simplify}{Logical or character string; should the result be simplified to a vector, matrix or higher dimensional array if possible? For sapply it must be named and not abbreviated. The default value, TRUE, returns a vector or matrix if appropriate, whereas if simplify = "array" the result may be an array of 'rank' (=length(dim(.))) one higher than the result of FUN(X[[i]]).}
+\item{simplify}{Logical or character string; should the result be simplified to a vector, matrix or higher dimensional array if possible?}
 
-\item{use_names}{Logical; if TRUE and if X is character, use X as names for the result unless it had names already. Since this argument follows ... its name cannot be abbreviated.}
+\item{use_names}{Logical; if TRUE and if .x is character, use .x as names for the result unless it had names already.}
 }
 \description{
 Wrapper for \code{\link[base]{sapply}}.

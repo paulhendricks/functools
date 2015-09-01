@@ -4,16 +4,16 @@
 \alias{Tapply}
 \title{Wrapper for tapply function.}
 \usage{
-Tapply(f = NULL, x, index, ..., simplify = TRUE)
+Tapply(.x, index, .f = NULL, ..., simplify = TRUE)
 }
 \arguments{
-\item{f}{A function to be applied.}
+\item{.x}{A vector.}
 
-\item{x}{A vector.}
+\item{index}{List of one or more factors, each of same length as .x. The elements are coerced to factors by as.factor.}
 
-\item{index}{List of one or more factors, each of same length as X. The elements are coerced to factors by as.factor.}
+\item{.f}{A function to be applied.}
 
-\item{...}{Optional arguments to f.}
+\item{...}{Optional arguments to .f.}
 
 \item{simplify}{If FALSE, tapply always returns an array of mode "list". If TRUE (the default), then if FUN always returns a scalar, tapply returns an array with the mode of the scalar.}
 }
