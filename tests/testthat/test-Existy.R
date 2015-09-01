@@ -8,7 +8,7 @@ bar <- c(FALSE, TRUE, FALSE, TRUE, FALSE,
          TRUE, FALSE, TRUE, TRUE, FALSE)
 
 test_that("Produces the correct output.", {
-  expect_equal(unlist(Lapply(Existy, foo)), bar)
+  expect_equal(unlist(lapply(foo, Existy)), bar)
   expect_equal(Existy(NULL), FALSE)
   expect_equal(Existy(NA), FALSE)
   expect_equal(Existy(1), TRUE)

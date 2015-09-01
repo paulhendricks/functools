@@ -2,8 +2,8 @@
 #'
 #' Wrapper for \code{\link[base]{lapply}}.
 #'
-#' @param .f A function to be applied.
 #' @param .x A vector.
+#' @param .f A function to be applied.
 #' @param ... Optional arguments to .f.
 #' @family functionals
 #' @seealso \code{\link[base]{lapply}} for code and documentation.

@@ -7,7 +7,7 @@ bar <- c(FALSE, TRUE, FALSE, FALSE, FALSE,
          FALSE, FALSE, FALSE, FALSE, FALSE)
 
 test_that("Produces the correct output.", {
-  expect_equal(unlist(Lapply(Truthy, foo)), bar)
+  expect_equal(unlist(lapply(foo, Truthy)), bar)
   expect_equal(Truthy(NULL), FALSE)
   expect_equal(Truthy(NA), FALSE)
   expect_warning(Truthy(Truthy), "is.na() applied to non-(list or vector) of type 'closure'", fixed = TRUE)
