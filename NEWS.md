@@ -1,8 +1,8 @@
-# functools 0.1.0.9000
+# functools 0.2.0
 
 ## Improvements
 
-* Added new functions such as...TO BE UPDATED.
+* Improved API for use with `magrittr`.
 * Improved documentation for better SEO.
   
 ## Bug fixes
