@@ -4,15 +4,17 @@ functools
 
 [![Build Status](https://travis-ci.org/paulhendricks/functools.png?branch=master)](https://travis-ci.org/paulhendricks/functools) [![Build status](https://ci.appveyor.com/api/projects/status/au9ww7v8mhgr59s8/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/functools/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/functools/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/functools?branch=master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/functools)](http://cran.r-project.org/package=functools) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/functools)](http://cran.rstudio.com/package=functools) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-`functools` extends functional programming in R. It has four main goals:
+`functools` extends functional programming in R. It accomplishes several goals:
 
--   Add support to the usual higher order functional suspects (`Filter`, `Map`, `Reduce`, etc.) with higher order functions such as `Compose`, `Memoise`, `Partial`, `Reject`, `Andify`, and `Orify`.
+-   Add support to the usual higher order functional suspects (`Filter()`, `Map()`, `Reduce()`, etc.) with higher order functions (`Compose()`, `Memoise()`, `Partial()`, `Reject()`, `Fail_With()`, `Reduce_Right()`, `All()`, `Any()`, and `Best()`).
 
--   Provide wrappers around base R functionals such as `lapply` or `apply` so as to create a consistent API.
+-   Supply higher order function generators (`Andify()`, `Orify()`) to make composing predicate functions easier.
 
--   Implement common constants and functions such as `True` or `Identity` for point-free programming.
+-   Provide wrappers (`Apply()`, `Lapply()`, `Mapply()`, `Sapply()`, `Tapply()`, and `Vapply()`) around their respective base R functionals to create an API with consistent naming convention, positional arguments, and argument names.
 
--   If possible, provide options for easy parallelization and write key pieces in C++ for blazing fast performance.
+-   Implement common constants as functions (`True()`, `False()`, `Identity()`, `Null()`, `Na()`) for point-free programming.
+
+-   Extend abstract concepts of existiness and truthiness through functions (`Existy()`, `Truthy()`).
 
 functools achieves these goals through three main types of function design patterns:
 
@@ -43,53 +45,3 @@ You can install:
     ```
 
 If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
-
-API
----
-
-### Compose
-
-``` r
-library(functools)
-is_not_null <- Compose(`!`, is.null)
-is_not_null(TRUE)
-#> [1] TRUE
-
-rmse <- 
-  sqrt %O% 
-  mean %O% 
-  {function(x) x * x} %O% 
-  {function(actual, forecast) actual - forecast}
-rmse(1:10, 10:1)
-#> [1] 5.744563
-```
-
-### Memoise
-
-``` r
-```
-
-### Partial
-
-``` r
-```
-
-### Reject
-
-``` r
-```
-
-### Andify
-
-``` r
-```
-
-### Orify
-
-``` r
-```
-
-### Apply and friends
-
-``` r
-```
