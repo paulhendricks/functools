@@ -4,12 +4,12 @@
 \alias{Mapply}
 \title{Wrapper for mapply function.}
 \usage{
-Mapply(f, ..., more_args = NULL, simplify = TRUE, use_names = TRUE)
+Mapply(..., .f, more_args = NULL, simplify = TRUE, use_names = TRUE)
 }
 \arguments{
-\item{f}{A function to be applied.}
-
 \item{...}{Arguments to vectorize over (vectors or lists of strictly positive length, or all of zero length).}
+
+\item{.f}{A function to be applied.}
 
 \item{more_args}{A list of other arguments to FUN.}
 
