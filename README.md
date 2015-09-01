@@ -53,17 +53,15 @@ API
 library(functools)
 is_not_null <- Compose(`!`, is.null)
 is_not_null(TRUE)
-is_not_null(FALSE)
-is_not_null(2)
-is_not_null(NULL)
+#> [1] TRUE
 
 rmse <- 
   sqrt %O% 
   mean %O% 
   {function(x) x * x} %O% 
   {function(actual, forecast) actual - forecast}
-
 rmse(1:10, 10:1)
+#> [1] 5.744563
 ```
 
 ### Memoise
