@@ -27,13 +27,13 @@ knitr::opts_chunk$set(
 
 * Add support to the usual higher order functional suspects (`Filter()`, `Map()`, `Reduce()`, etc.) with higher order functions (`Compose()`, `Memoise()`, `Partial()`, `Reject()`, `Fail_With()`, `Reduce_Right()`, `All()`, `Any()`, and `Best()`).
 
-* Supply higher order function generators (`Andify()`, `Orify()`) to make composing predicate functions easier.
+* Supply higher order function generators (`Andify()` and `Orify()`) to make composing predicate functions easier.
 
 * Provide wrappers (`Apply()`, `Lapply()`, `Mapply()`, `Sapply()`, `Tapply()`, and `Vapply()`) around their respective base R functionals to create an API with consistent naming convention, positional arguments, and argument names.
 
-* Implement common constants as functions (`True()`, `False()`, `Identity()`, `Null()`, `Na()`) for point-free programming.
+* Implement common constants as functions (`True()`, `False()`, `Identity()`, `Null()`, and `Na()`) for point-free programming.
 
-* Extend abstract concepts of existiness and truthiness through functions (`Existy()`, `Truthy()`).
+* Extend abstract concepts of existiness and truthiness through functions (`Existy()` and `Truthy()`).
 
 functools achieves these goals through three main types of function design patterns:
 
