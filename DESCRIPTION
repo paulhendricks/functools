@@ -1,6 +1,6 @@
 Package: functools
 Title: Functional Programming in R
-Version: 0.2.0
+Version: 0.2.0.9000
 Description: Extends functional programming in R by
     providing support to the usual higher order functional
     suspects (Map, Reduce, Filter, etc.).
