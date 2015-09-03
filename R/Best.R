@@ -17,5 +17,5 @@
 #' @export
 Best <- function(.x, .f) {
   .f <- match.fun(.f)
-  return(Reduce(function(.y, .z) ifelse(.f(.y, .z), .y, .z), .x))
+  return(base::Reduce(function(.y, .z) ifelse(.f(.y, .z), .y, .z), .x))
 }

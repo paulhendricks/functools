@@ -7,7 +7,7 @@ z <- c(128, 2, 2, 2, 2, 2, 2, 2)
 
 test_that("Produces the correct output.", {
   expect_equal(Reduce_Right(divide_x_by_y, z),
-               Reduce(divide_x_by_y, z, right = TRUE))
+               base::Reduce(divide_x_by_y, z, right = TRUE))
 })
 
 test_that("Produces the correct output type.", {

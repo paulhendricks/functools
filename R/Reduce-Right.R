@@ -7,6 +7,6 @@
 #' @seealso \code{\link[base]{Reduce}} for code and documentation.
 #' @export
 Reduce_Right <- function(...) {
-  Reduce(..., right = TRUE)
+  base::Reduce(..., right = TRUE)
 }
 

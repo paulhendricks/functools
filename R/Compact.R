@@ -14,4 +14,4 @@
 #' Compact(b)
 #'
 #' @export
-Compact <- function(.x) return(Filter(Existy, .x))
+Compact <- function(.x) return(base::Filter(Existy, .x))

@@ -17,6 +17,6 @@
 #' @export
 Reject <- function (.x, .f)
 {
-  ind <- as.logical(unlist(lapply(.x, Negate(.f))))
+  ind <- as.logical(unlist(lapply(.x, base::Negate(.f))))
   return(.x[!is.na(ind) & ind])
 }
