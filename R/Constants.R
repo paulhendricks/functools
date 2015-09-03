@@ -1,4 +1,4 @@
-#' True
+#' Return the value TRUE.
 #'
 #' \code{True()} is a function that returns TRUE.
 #'
@@ -12,7 +12,7 @@ True <- function() {
   return(TRUE)
 }
 
-#' False
+#' Return the value FALSE.
 #'
 #' \code{False()} is a function that returns FALSE.
 #'
@@ -26,11 +26,11 @@ False <- function() {
   return(FALSE)
 }
 
-#' Identity
+#' Return the object passed to it.
 #'
 #' \code{Identity()} returns itself.
 #'
-#' @param x an object.
+#' @param .x an object.
 #' @return the object.
 #' @family constants
 #' @examples
@@ -40,11 +40,11 @@ False <- function() {
 #' Identity(lm(data = mtcars, mpg ~ cyl))
 #'
 #' @export
-Identity <- function(x) {
-  return(x)
+Identity <- function(.x) {
+  return(.x)
 }
 
-#' Null
+#' Return the value NULL.
 #'
 #' \code{Null()} is a function that returns NULL.
 #'
@@ -59,7 +59,7 @@ Null <- function() {
   return(NULL)
 }
 
-#' Na
+#' Return the value NA.
 #'
 #' \code{Na()} is a function that returns NA.
 #'

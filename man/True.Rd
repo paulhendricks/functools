@@ -2,7 +2,7 @@
 % Please edit documentation in R/Constants.R
 \name{True}
 \alias{True}
-\title{True}
+\title{Return the value TRUE.}
 \usage{
 True()
 }

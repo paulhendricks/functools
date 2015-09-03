@@ -2,7 +2,7 @@
 % Please edit documentation in R/Existy.R
 \name{Existy}
 \alias{Existy}
-\title{Existy}
+\title{Tests the "existiness" of an object.}
 \usage{
 Existy(.x)
 }

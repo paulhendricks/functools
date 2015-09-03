@@ -2,12 +2,12 @@
 % Please edit documentation in R/Constants.R
 \name{Identity}
 \alias{Identity}
-\title{Identity}
+\title{Return the object passed to it.}
 \usage{
-Identity(x)
+Identity(.x)
 }
 \arguments{
-\item{x}{an object.}
+\item{.x}{an object.}
 }
 \value{
 the object.

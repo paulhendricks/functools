@@ -1,4 +1,4 @@
-#' Truthy
+#' Tests the "truthiness" of an object.
 #'
 #' \code{Truthy()} returns TRUE or FALSE if an object is TRUE or not.
 #' An object is is "TRUE" if it is exists and is TRUE.

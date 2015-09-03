@@ -2,7 +2,7 @@
 % Please edit documentation in R/Truthy.R
 \name{Truthy}
 \alias{Truthy}
-\title{Truthy}
+\title{Tests the "truthiness" of an object.}
 \usage{
 Truthy(.x)
 }

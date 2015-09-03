@@ -2,7 +2,7 @@
 % Please edit documentation in R/Constants.R
 \name{Na}
 \alias{Na}
-\title{Na}
+\title{Return the value NA.}
 \usage{
 Na()
 }

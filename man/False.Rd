@@ -2,7 +2,7 @@
 % Please edit documentation in R/Constants.R
 \name{False}
 \alias{False}
-\title{False}
+\title{Return the value FALSE.}
 \usage{
 False()
 }

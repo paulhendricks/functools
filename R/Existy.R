@@ -1,4 +1,4 @@
-#' Existy
+#' Tests the "existiness" of an object.
 #'
 #' \code{Existy()} returns TRUE or FALSE if an object exists or not.
 #' An object exists if it is not NULL or NA.

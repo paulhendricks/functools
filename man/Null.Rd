@@ -2,7 +2,7 @@
 % Please edit documentation in R/Constants.R
 \name{Null}
 \alias{Null}
-\title{Null}
+\title{Return the value NULL.}
 \usage{
 Null()
 }
