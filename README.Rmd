@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/functools)](http://cran.rstudio.com/package=functools)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-`functools` extends functional programming in R. It accomplishes several goals:
+`functools` provides tools for functional programming in R. It accomplishes several goals:
 
 * Add support to the usual higher order functional suspects (`Filter()`, `Map()`, `Reduce()`, etc.) with higher order functions (`Compose()`, `Memoise()`, `Partial()`, `Reject()`, `Fail_With()`, `Reduce_Right()`, `All()`, `Any()`, and `Best()`).
 

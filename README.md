@@ -4,7 +4,7 @@ functools
 
 [![Build Status](https://travis-ci.org/paulhendricks/functools.png?branch=master)](https://travis-ci.org/paulhendricks/functools) [![Build status](https://ci.appveyor.com/api/projects/status/au9ww7v8mhgr59s8/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/functools/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/functools/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/functools?branch=master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/functools)](http://cran.r-project.org/package=functools) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/functools)](http://cran.rstudio.com/package=functools) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
-`functools` extends functional programming in R. It accomplishes several goals:
+`functools` provides tools for functional programming in R. It accomplishes several goals:
 
 -   Add support to the usual higher order functional suspects (`Filter()`, `Map()`, `Reduce()`, etc.) with higher order functions (`Compose()`, `Memoise()`, `Partial()`, `Reject()`, `Fail_With()`, `Reduce_Right()`, `All()`, `Any()`, and `Best()`).
 
