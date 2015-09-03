@@ -24,7 +24,7 @@ always taken as false; control over NA handling may be added in the future.
 \examples{
 # Some examples
 Filter(function(x) x < 5, 1:10)
-Reject(function(x) x < 5, 1:10)
+Reject(1:10, function(x) x < 5)
 }
 \seealso{
 Other predicate functionals: \code{\link{All}};

@@ -13,7 +13,7 @@
 #' @examples
 #' # Some examples
 #' Filter(function(x) x < 5, 1:10)
-#' Reject(function(x) x < 5, 1:10)
+#' Reject(1:10, function(x) x < 5)
 #' @export
 Reject <- function (.x, .f)
 {
