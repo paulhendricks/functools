@@ -22,7 +22,8 @@ Wrapper for \code{\link[base]{apply}}.
 \code{\link[base]{apply}} for code and documentation.
 
 Other functionals: \code{\link{Lapply}};
-  \code{\link{Mapply}}; \code{\link{Sapply}};
-  \code{\link{Tapply}}; \code{\link{Vapply}}
+  \code{\link{Mapply}}; \code{\link{Map}};
+  \code{\link{Sapply}}; \code{\link{Tapply}};
+  \code{\link{Vapply}}
 }
 

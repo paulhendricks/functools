@@ -25,6 +25,7 @@ Wrapper for \code{\link[base]{tapply}}.
 
 Other functionals: \code{\link{Apply}};
   \code{\link{Lapply}}; \code{\link{Mapply}};
-  \code{\link{Sapply}}; \code{\link{Vapply}}
+  \code{\link{Map}}; \code{\link{Sapply}};
+  \code{\link{Vapply}}
 }
 
