@@ -2,7 +2,9 @@
 
 ## Improvements
 
-* None.
+* Changed all function names to lower case.
+* Removed wrappers for `lapply()` and friends.
+* Created lower case wrappers for `Map()` and friends.
   
 ## Bug fixes
 
