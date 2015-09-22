@@ -69,5 +69,3 @@ If you encounter a clear bug, please file a minimal reproducible example on [git
 The original author of `functools` is [Paul Hendricks](https://github.com/paulhendricks).
 
 [![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/paulhendricks/)
-
-
