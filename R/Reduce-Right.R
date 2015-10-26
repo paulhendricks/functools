@@ -9,4 +9,3 @@
 Reduce_Right <- function(...) {
   base::Reduce(..., right = TRUE)
 }
-

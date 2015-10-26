@@ -15,8 +15,7 @@
 #' Filter(function(x) x < 5, 1:10)
 #' Reject(1:10, function(x) x < 5)
 #' @export
-Reject <- function (.x, .f)
-{
+Reject <- function (.x, .f) {
   ind <- as.logical(unlist(lapply(.x, base::Negate(.f))))
   return(.x[!is.na(ind) & ind])
 }

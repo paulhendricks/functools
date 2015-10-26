@@ -11,5 +11,6 @@
 #' @seealso \code{\link[base]{vapply}} for code and documentation.
 #' @export
 Vapply <- function(.x, .f, fun_value, ..., use_names = TRUE) {
-  return(vapply(X = .x, FUN = .f, FUN.VALUE = fun_value, ..., USE.NAMES = use_names))
+  return(vapply(X = .x, FUN = .f, FUN.VALUE = fun_value, ...,
+                USE.NAMES = use_names))
 }

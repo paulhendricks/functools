@@ -5,7 +5,8 @@ test_that("Produces the correct output.", {
   expect_equal(Compose(Identity, Identity)(Identity), Identity(Identity))
   expect_equal(Compose("Identity", "Identity")(Identity), Identity(Identity))
   expect_equal(`%O%`(Identity, Identity)(Identity), Identity(Identity))
-  expect_equal(Compose(Identity, Identity)(Identity), `%O%`(Identity, Identity)(Identity))
+  expect_equal(Compose(Identity, Identity)(Identity),
+               `%O%`(Identity, Identity)(Identity))
 
 })
 

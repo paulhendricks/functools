@@ -29,5 +29,7 @@ test_that("Produces the correct output type.", {
 })
 
 test_that("Produces the correct errors.", {
-  expect_warning(Existy(Existy), "is.na() applied to non-(list or vector) of type 'closure'", fixed = TRUE)
+  expect_warning(Existy(Existy),
+                 "is.na() applied to non-(list or vector) of type 'closure'",
+                 fixed = TRUE)
 })

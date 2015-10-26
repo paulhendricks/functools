@@ -34,7 +34,7 @@ Compose <- function(...) {
 #' @rdname Compose
 #' @export
 #' @usage .f \%O\% .g
-'%O%' <- function(.f, .g) {
+`%O%` <- function(.f, .g) {
   .f <- match.fun(.f)
   .g <- match.fun(.g)
   function(...) {

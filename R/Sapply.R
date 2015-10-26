@@ -11,5 +11,6 @@
 #' @seealso \code{\link[base]{sapply}} for code and documentation.
 #' @export
 Sapply <- function(.x, .f, ..., simplify = TRUE, use_names = TRUE) {
-  return(sapply(X = .x, FUN = .f, ..., simplify = simplify, USE.NAMES = use_names))
+  return(sapply(X = .x, FUN = .f, ...,
+                simplify = simplify, USE.NAMES = use_names))
 }

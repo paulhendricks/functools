@@ -20,4 +20,3 @@ test_that("Produces the correct output type.", {
 test_that("Produces the correct errors.", {
   expect_error(Always()())
 })
-

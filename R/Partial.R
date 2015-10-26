@@ -9,4 +9,3 @@
 Partial <- function(...) {
   return(pryr::partial(...))
 }
-

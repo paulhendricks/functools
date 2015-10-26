@@ -10,7 +10,9 @@ test_that("Produces the correct output.", {
   expect_equal(unlist(lapply(foo, Truthy)), bar)
   expect_equal(Truthy(NULL), FALSE)
   expect_equal(Truthy(NA), FALSE)
-  expect_warning(Truthy(Truthy), "is.na() applied to non-(list or vector) of type 'closure'", fixed = TRUE)
+  expect_warning(Truthy(Truthy),
+                 "is.na() applied to non-(list or vector) of type 'closure'",
+                 fixed = TRUE)
   expect_equal(Truthy(1), FALSE)
   expect_equal(Truthy(0), FALSE)
   expect_equal(Truthy(2.4), FALSE)
@@ -31,5 +33,7 @@ test_that("Produces the correct output type.", {
 })
 
 test_that("Produces the correct errors.", {
-  expect_warning(Truthy(Truthy), "is.na() applied to non-(list or vector) of type 'closure'", fixed = TRUE)
+  expect_warning(Truthy(Truthy),
+                 "is.na() applied to non-(list or vector) of type 'closure'",
+                 fixed = TRUE)
 })

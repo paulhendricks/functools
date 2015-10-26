@@ -15,5 +15,5 @@
 #'
 #' @export
 Always <- function(.x) {
-  return(function() {return(.x)})
+  return(function() return(.x))
 }
