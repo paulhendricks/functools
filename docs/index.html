@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Home. functools 0.2.0.9000</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">functools 0.2.0.9000</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<style>#forkongithub a{background:#500;color:#ccc;text-decoration:none;font-family:arial,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#711;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:fixed;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style>
+<span id="forkongithub"><a href="https://github.com/paulhendricks/functools">Find me on GitHub!</a></span>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <div class="row">
+  <div class="span8">
+    <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<h1>functools</h1>
+
+<p><a href="https://travis-ci.org/paulhendricks/functools"><img src="https://travis-ci.org/paulhendricks/functools.png?branch=master" alt="Build Status"/></a> <a href="https://ci.appveyor.com/project/paulhendricks/functools/branch/master"><img src="https://ci.appveyor.com/api/projects/status/au9ww7v8mhgr59s8/branch/master?svg=true" alt="Build status"/></a> <a href="http://codecov.io/github/paulhendricks/functools?branch=master"><img src="http://codecov.io/github/paulhendricks/functools/coverage.svg?branch=master" alt="codecov.io"/></a> <a href="http://cran.r-project.org/package=functools"><img src="http://www.r-pkg.org/badges/version/functools" alt="CRAN\_Status\_Badge"/></a> <a href="http://cran.rstudio.com/package=functools"><img src="http://cranlogs.r-pkg.org/badges/functools" alt="Downloads from the RStudio CRAN mirror"/></a> <a href="http://www.repostatus.org/#active"><img src="http://www.repostatus.org/badges/0.1.0/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."/></a></p>
+
+<p><code>functools</code> provides tools for Functional Programming in R. It accomplishes several goals:</p>
+
+<ul>
+<li><p>Add support to the usual higher order functional suspects (<code>Filter()</code>, <code>Map()</code>, <code>Reduce()</code>, etc.) with higher order functions (<code>Compose()</code>, <code>Memoise()</code>, <code>Partial()</code>, <code>Reject()</code>, <code>Fail_With()</code>, <code>Reduce_Right()</code>, <code>All()</code>, <code>Any()</code>, and <code>Best()</code>).</p></li>
+<li><p>Supply higher order function generators (<code>Andify()</code> and <code>Orify()</code>) to make composing predicate functions easier.</p></li>
+<li><p>Provide wrappers (<code>Apply()</code>, <code>Lapply()</code>, <code>Mapply()</code>, <code>Sapply()</code>, <code>Tapply()</code>, and <code>Vapply()</code>) around their respective base R functionals to create an API with consistent naming convention, positional arguments, and argument names.</p></li>
+<li><p>Implement common constants as functions (<code>True()</code>, <code>False()</code>, <code>Identity()</code>, <code>Null()</code>, and <code>Na()</code>) for point-free programming.</p></li>
+<li><p>Extend abstract concepts of existiness and truthiness through functions (<code>Existy()</code> and <code>Truthy()</code>).</p></li>
+</ul>
+
+<p>functools achieves these goals through three main types of function design patterns:</p>
+
+<ul>
+<li><p>Closures (functions that take data and return functions)</p></li>
+<li><p>Functionals (functions that take functions and return data)</p></li>
+<li><p>Function Operators (functions that take functions and return functions)</p></li>
+</ul>
+
+<h2>Installation</h2>
+
+<p>You can install:</p>
+
+<ul>
+<li><p>the latest released version from CRAN with</p>
+
+<pre><code class="r">install.packages(&quot;functools&quot;)
+</code></pre></li>
+<li><p>the latest development version from github with</p>
+
+<pre><code class="r">if (packageVersion(&quot;devtools&quot;) &lt; 1.6) {
+  install.packages(&quot;devtools&quot;)
+}
+devtools::install_github(&quot;paulhendricks/functools&quot;)
+</code></pre></li>
+</ul>
+
+<p>If you encounter a clear bug, please file a minimal reproducible example on <a href="https://github.com/paulhendricks/functools/issues">github</a>.</p>
+
+<h2>Author</h2>
+
+<p>The original author of <code>functools</code> is <a href="https://github.com/paulhendricks">Paul Hendricks</a>.</p>
+
+<p><a href="https://gratipay.com/paulhendricks/"><img src="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" alt="Support via Gratipay"/></a></p>
+
+  </div>
+
+  <div class="span3 offset1 sidebar">
+        <h2>Authors</h2>
+    <ul>
+      <li><a href='mailto:paul.hendricks.2013@owu.edu'>Paul Hendricks</a> [aut, cre]</li>
+    </ul>
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
