@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Best. functools 0.2.0.9000</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">functools 0.2.0.9000</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Find the best value in a vector.</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='Best.html'>Best</a></span><span class="keyword">(</span><span class="symbol">.x</span><span class="keyword">,</span> <span class="symbol">.f</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>.x</dt>
+      <dd>A vector.</dd>
+      <dt>.f</dt>
+      <dd>A binary predicate function.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+
+      <p><dl>
+The best value in that vector, as determined by the binary predicate function.
+</dl></p>
+
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p><code>Best()</code> takes a vector <code>.x</code> and a binary predicate function
+<code>.f</code> and returns the result of <code>.f</code> reduced over <code>.x</code>.</p>
+
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'><span class="comment"># Simulate the behavior of max with numerics</span>
+<span class="functioncall"><a href='Best.html'>Best</a></span><span class="keyword">(</span><span class="number">1</span><span class="keyword">:</span><span class="number">10</span><span class="keyword">,</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">)</span> <span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/function'>return</a></span><span class="keyword">(</span><span class="symbol">x</span> <span class="keyword">&gt;</span> <span class="symbol">y</span><span class="keyword">)</span><span class="keyword">)</span></div>
+<div class='output'>[1] 10
+</div>
+<div class='input'><span class="comment"># Simulate the behavior of min with numerics</span>
+<span class="functioncall"><a href='Best.html'>Best</a></span><span class="keyword">(</span><span class="number">1</span><span class="keyword">:</span><span class="number">10</span><span class="keyword">,</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">)</span> <span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/function'>return</a></span><span class="keyword">(</span><span class="symbol">x</span> <span class="keyword">&lt;</span> <span class="symbol">y</span><span class="keyword">)</span><span class="keyword">)</span></div>
+<div class='output'>[1] 1
+</div>
+<div class='input'><span class="comment"># This comparison function prefers values that begin with l</span>
+<span class="functioncall"><a href='Best.html'>Best</a></span><span class="keyword">(</span><span class="symbol">letters</span><span class="keyword">,</span> <span class="keyword">function</span><span class="keyword">(</span><span class="formalargs">x</span><span class="keyword">,</span> <span class="formalargs">y</span><span class="keyword">)</span> <span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/function'>return</a></span><span class="keyword">(</span><span class="symbol">x</span><span class="keyword">[</span><span class="number">1</span><span class="keyword">]</span> == <span class="string">"l"</span><span class="keyword">)</span><span class="keyword">)</span></div>
+<div class='output'>[1] &quot;l&quot;
+</div></pre>
+  </div>
+  <div class="span4 sidebar">
+    <!-- <ul>
+      <li>Best</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+
+
+
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>

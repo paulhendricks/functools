@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<title>Any. functools 0.2.0.9000</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/highlight.css" rel="stylesheet">
+<link href="css/staticdocs.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  </head>
+
+  <body>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="index.html">functools 0.2.0.9000</a>
+      <div class="nav">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reference.html">Reference</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <header>
+        
+      </header>
+      
+      <h1>Test if any items in an object evaluate to TRUE.</h1>
+
+<div class="row">
+  <div class="span8">
+    <h2>Usage</h2>
+    <pre><span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="symbol">.x</span><span class="keyword">,</span> <span class="symbol">.f</span><span class="keyword">,</span> <span class="symbol">...</span><span class="keyword">,</span> <span class="argument">na.rm</span>&nbsp;<span class="argument">=</span>&nbsp;<span class="number">FALSE</span><span class="keyword">)</span></pre>
+    
+    <h2>Arguments</h2>
+    <dl>
+      <dt>.x</dt>
+      <dd>An iterable object.</dd>
+      <dt>.f</dt>
+      <dd>A predicate function.</dd>
+      <dt>...</dt>
+      <dd>Further arguments passed to the predicate function.</dd>
+      <dt>na.rm</dt>
+      <dd>A logical value indicating whether NA values should be stripped before the computation proceeds.</dd>
+    </dl>
+    
+    <div class="Value">
+      <h2>Value</h2>
+
+      <p><dl>
+A logical value indicating if any items evaluated as TRUE.
+</dl></p>
+
+    </div>
+
+    <div class="Description">
+      <h2>Description</h2>
+
+      <p><code>Any()</code> is a predicate functional that takes a predicate function
+<code>.f</code> and an iterable object <code>.x</code> and:
+<ol>
+<li> iterates over each item <code>i</code> in object <code>.x</code>,
+  </li>
+<li> evaluates <code>.f(i)</code>,
+  </li>
+<li> and ultimately returns TRUE if any items <code>i</code> in object <code>.x</code> evaluate as TRUE.
+  </li>
+</ol></p>
+
+      <p></p>
+
+    </div>
+    
+    <h2 id="examples">Examples</h2>
+    <pre class="examples"><div class='input'><span class="comment"># Examples</span>
+<span class="functioncall"><a href='http://www.rdocumentation.org/packages/utils/topics/data'>data</a></span><span class="keyword">(</span><span class="symbol">mtcars</span><span class="keyword">)</span>
+<span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="symbol">mtcars</span><span class="keyword">,</span> <span class="symbol">is.numeric</span><span class="keyword">)</span> <span class="comment"># TRUE</span></div>
+<div class='output'>[1] TRUE
+</div>
+<div class='input'><span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="symbol">mtcars</span><span class="keyword">,</span> <span class="symbol">is.character</span><span class="keyword">)</span> <span class="comment"># FALSE</span></div>
+<div class='output'>[1] FALSE
+</div>
+<div class='input'><span class="symbol">mtcars</span><span class="keyword">$</span><span class="symbol">am</span> <span class="assignement">&lt;-</span> <span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/factor'>factor</a></span><span class="keyword">(</span><span class="symbol">mtcars</span><span class="keyword">$</span><span class="symbol">am</span><span class="keyword">)</span>
+<span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="symbol">mtcars</span><span class="keyword">,</span> <span class="symbol">is.numeric</span><span class="keyword">)</span> <span class="comment"># TRUE</span></div>
+<div class='output'>[1] TRUE
+</div>
+<div class='input'><span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="symbol">mtcars</span><span class="keyword">,</span> <span class="symbol">is.factor</span><span class="keyword">)</span> <span class="comment"># TRUE</span></div>
+<div class='output'>[1] TRUE
+</div>
+<div class='input'>
+<span class="comment"># Handles NAs and NULLs</span>
+<span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/list'>list</a></span><span class="keyword">(</span><span class="number">NA</span><span class="keyword">,</span> <span class="string">"3"</span><span class="keyword">,</span> NULL<span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">is.numeric</span><span class="keyword">)</span> <span class="comment"># FALSE</span></div>
+<div class='output'>[1] FALSE
+</div>
+<div class='input'><span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/list'>list</a></span><span class="keyword">(</span><span class="number">NA</span><span class="keyword">,</span> <span class="number">3</span><span class="keyword">,</span> NULL<span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">is.numeric</span><span class="keyword">)</span> <span class="comment"># TRUE</span></div>
+<div class='output'>[1] TRUE
+</div>
+<div class='input'><span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/list'>list</a></span><span class="keyword">(</span><span class="number">NA</span><span class="keyword">,</span> <span class="string">"3"</span><span class="keyword">,</span> NULL<span class="keyword">,</span> <span class="number">5</span><span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">is.numeric</span><span class="keyword">)</span> <span class="comment">#TRUE</span></div>
+<div class='output'>[1] TRUE
+</div>
+<div class='input'>
+<span class="comment"># Use na.rm = TRUE to remove NULLS</span>
+<span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/list'>list</a></span><span class="keyword">(</span><span class="number">NA</span><span class="keyword">,</span> <span class="number">FALSE</span><span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">Identity</span><span class="keyword">)</span> <span class="comment"># NA</span></div>
+<div class='output'>[1] NA
+</div>
+<div class='input'><span class="functioncall"><a href='Any.html'>Any</a></span><span class="keyword">(</span><span class="functioncall"><a href='http://www.rdocumentation.org/packages/base/topics/list'>list</a></span><span class="keyword">(</span><span class="number">NA</span><span class="keyword">,</span> <span class="number">FALSE</span><span class="keyword">)</span><span class="keyword">,</span> <span class="symbol">Identity</span><span class="keyword">,</span> <span class="argument">na.rm</span> <span class="argument">=</span> <span class="number">TRUE</span><span class="keyword">)</span> <span class="comment"># FALSE</span></div>
+<div class='output'>[1] FALSE
+</div></pre>
+  </div>
+  <div class="span4 sidebar">
+    <!-- <ul>
+      <li>Any</li>
+    </ul>
+    <ul>
+      
+    </ul> -->
+
+    <h2>See also</h2>
+      <p><code><a href='All.html'>All</a></code> to test if all items in an object evaluate to TRUE.</p>
+
+      <p>Other predicate functionals: <code><a href='All.html'>All</a></code>;
+  <code><a href='Reject.html'>Reject</a></code></p>
+
+    
+
+
+  </div>
+</div>
+      
+      <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+<p>Built by <a href="https://github.com/hadley/staticdocs">staticdocs</a>. Styled with <a href="https://getbootstrap.com/2.0.4/">bootstrap</a>.</p>
+      </footer>
+    </div>
+  </body>
+</html>
