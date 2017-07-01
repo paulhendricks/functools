@@ -1,8 +1,9 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 functools
 =========
 
-[![Build Status](https://travis-ci.org/paulhendricks/functools.png?branch=master)](https://travis-ci.org/paulhendricks/functools) [![Build status](https://ci.appveyor.com/api/projects/status/au9ww7v8mhgr59s8/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/functools/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/functools/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/functools?branch=master) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/functools)](http://cran.r-project.org/package=functools) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/functools)](http://cran.rstudio.com/package=functools) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/functools)](http://cran.r-project.org/package=functools) [![Downloads from the RStudio CRAN mirror](http://cranlogs.r-pkg.org/badges/functools)](http://cran.rstudio.com/package=functools) [![Build Status](https://travis-ci.org/paulhendricks/functools.png?branch=master)](https://travis-ci.org/paulhendricks/functools) [![Build status](https://ci.appveyor.com/api/projects/status/au9ww7v8mhgr59s8/branch/master?svg=true)](https://ci.appveyor.com/project/paulhendricks/functools/branch/master) [![codecov.io](http://codecov.io/github/paulhendricks/functools/coverage.svg?branch=master)](http://codecov.io/github/paulhendricks/functools?branch=master) [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
 
 `functools` provides tools for Functional Programming in R. It accomplishes several goals:
 
@@ -27,28 +28,36 @@ functools achieves these goals through three main types of function design patte
 Installation
 ------------
 
-You can install:
+You can install the latest development version from CRAN:
 
--   the latest released version from CRAN with
+``` r
+install.packages("functools")
+```
 
-    ``` r
-    install.packages("functools")
-    ```
+Or from GitHub with:
 
--   the latest development version from github with
+``` r
+if (packageVersion("devtools") < 1.6) {
+  install.packages("devtools")
+}
+devtools::install_github("paulhendricks/functools")
+```
 
-    ``` r
-    if (packageVersion("devtools") < 1.6) {
-      install.packages("devtools")
+If you encounter a clear bug, please file a [minimal reproducible example](http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example) on [GitHub](https://github.com/paulhendricks/functools/issues).
+
+Citation
+--------
+
+To cite package ‘functools’ in publications use:
+
+    Paul Hendricks (2015). functools: Functional Programming in R. R package version 0.2.0. https://CRAN.R-project.org/package=functools
+
+A BibTeX entry for LaTeX users is
+
+    @Manual{,
+      title = {functools: Functional Programming in R},
+      author = {Paul Hendricks},
+      year = {2015},
+      note = {R package version 0.2.0},
+      url = {https://CRAN.R-project.org/package=functools},
     }
-    devtools::install_github("paulhendricks/functools")
-    ```
-
-If you encounter a clear bug, please file a minimal reproducible example on [github](https://github.com/paulhendricks/functools/issues).
-
-Author
-------
-
-The original author of `functools` is [Paul Hendricks](https://github.com/paulhendricks).
-
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/paulhendricks/)
